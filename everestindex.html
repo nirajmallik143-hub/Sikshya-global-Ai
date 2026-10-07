@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EverestOrigin AI - P=S Quantum Intelligence Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        quantum: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            900: '#134e4a',
+                            950: '#042f2e'
+                        },
+                        neon: {
+                            cyan: '#06b6d4',
+                            purple: '#a855f7',
+                            emerald: '#10b981'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .mono-font { font-family: 'JetBrains Mono', monospace; }
+        .glow-effect { box-shadow: 0 0 25px rgba(20, 184, 166, 0.2); }
+        .glow-cyan { box-shadow: 0 0 20px rgba(6, 182, 212, 0.25); }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-quantum-500 selection:text-white">
+
+    <!-- TOP HEADER -->
+    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('feed')">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-quantum-600 via-neon-cyan to-neon-purple flex items-center justify-center glow-effect">
+                    <i class="fa-solid fa-atom text-white text-lg animate-spin" style="animation-duration: 12s;"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg tracking-wide bg-gradient-to-r from-white via-slate-200 to-quantum-400 bg-clip-text text-transparent">EverestOrigin AI</h1>
+                    <p class="text-[9px] text-neon-cyan tracking-widest uppercase font-mono font-semibold">P = S Quantum Engine</p>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-1">
+                <button onclick="switchTab('feed')" id="nav-feed" class="px-4 py-2 rounded-lg text-sm font-medium bg-slate-800 text-quantum-300 transition flex items-center space-x-2">
+                    <i class="fa-solid fa-globe"></i> <span>Global Feed</span>
+                </button>
+                <button onclick="switchTab('ps-engine')" id="nav-ps-engine" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800/50 transition flex items-center space-x-2">
+                    <i class="fa-solid fa-square-root-variable text-neon-cyan"></i> <span>P=S Quantum Solver</span>
+                </button>
+                <button onclick="switchTab('profile')" id="nav-profile" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800/50 transition flex items-center space-x-2">
+                    <i class="fa-solid fa-user-astronaut"></i> <span>My Profile</span>
+                </button>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <button onclick="openNotificationModal()" class="relative p-2.5 text-slate-400 hover:text-white bg-slate-900 border border-slate-800 rounded-xl hover:border-slate-700 transition">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-neon-cyan rounded-full animate-ping"></span>
+                </button>
+                <div class="flex items-center space-x-2 pl-2 border-l border-slate-800">
+                    <img id="userAvatarHeader" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Avatar" class="w-9 h-9 rounded-full object-cover border border-quantum-500/50">
+                    <span id="userNameHeader" class="hidden sm:inline font-medium text-sm">Aria Sharma</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN APP CONTAINER -->
+    <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <!-- SIDEBAR -->
+        <aside class="hidden md:block md:col-span-1 space-y-6">
+            <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-4 backdrop-blur-sm shadow-xl">
+                <div class="flex items-center space-x-3 mb-4">
+                    <img id="sidebarAvatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Profile" class="w-12 h-12 rounded-full object-cover border-2 border-quantum-500">
+                    <div>
+                        <h3 id="sidebarName" class="font-bold text-sm">Aria Sharma</h3>
+                        <p class="text-xs text-slate-400">@aria_quantum</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-center py-3 border-t border-b border-slate-800 text-xs">
+                    <div>
+                        <span id="postCount" class="block font-bold text-slate-200 text-sm">12</span>
+                        <span class="text-slate-400">Broadcasts</span>
+                    </div>
+                    <div>
+                        <span class="block font-bold text-neon-cyan text-sm">99.8%</span>
+                        <span class="text-slate-400">P=S Efficiency</span>
+                    </div>
+                </div>
+                <div class="mt-4 space-y-1">
+                    <div class="text-[10px] font-mono text-slate-500 uppercase tracking-wider mb-1">Active Quantum Frequencies</div>
+                    <a href="#trending" class="block p-2 rounded-lg text-xs text-slate-300 hover:bg-slate-800/50 transition flex items-center justify-between">
+                        <span><i class="fa-solid fa-atom text-neon-cyan mr-2"></i> #ProblemEqualsSolve</span>
+                        <span class="text-slate-500">31.4k</span>
+                    </a>
+                    <a href="#trending" class="block p-2 rounded-lg text-xs text-slate-300 hover:bg-slate-800/50 transition flex items-center justify-between">
+                        <span><i class="fa-solid fa-bolt text-amber-400 mr-2"></i> #ThermalCooling7G</span>
+                        <span class="text-slate-500">19.8k</span>
+                    </a>
+                    <a href="#trending" class="block p-2 rounded-lg text-xs text-slate-300 hover:bg-slate-800/50 transition flex items-center justify-between">
+                        <span><i class="fa-solid fa-hand-holding-heart text-rose-400 mr-2"></i> #DeafVoiceBridge</span>
+                        <span class="text-slate-500">14.2k</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-quantum-950/40 to-slate-900 border border-quantum-500/30 rounded-2xl p-4 text-xs space-y-3 glow-effect">
+                <div class="flex items-center space-x-2 text-quantum-300 font-semibold">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span>P = S Core Status</span>
+                </div>
+                <p class="text-slate-400 leading-relaxed">Quantum state synchronized. Every problem has an exact physical solve state encoded within atomic matrices.</p>
+            </div>
+        </aside>
+
+        <!-- CONTENT SECTION -->
+        <section class="col-span-1 md:col-span-3 space-y-6">
+
+            <!-- TAB 1: FEED -->
+            <div id="tab-content-feed" class="space-y-6">
+                
+                <!-- NEW POST CREATOR -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl">
+                    <div class="flex space-x-3">
+                        <img id="feedAvatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" class="w-10 h-10 rounded-full object-cover">
+                        <div class="flex-1">
+                            <textarea id="postInput" placeholder="Broadcast your problem, solve formula, or quantum vision to the world..." rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-quantum-500 resize-none transition"></textarea>
+                            <div class="flex flex-wrap items-center justify-between mt-3 pt-3 border-t border-slate-800 gap-2">
+                                <div class="flex items-center space-x-2">
+                                    <button onclick="triggerImageUpload()" type="button" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-xs font-medium transition flex items-center space-x-1.5">
+                                        <i class="fa-regular fa-image text-quantum-400"></i> <span>Photo</span>
+                                    </button>
+                                    <button onclick="quickQuantumFormulaPrompt()" type="button" class="px-3 py-1.5 bg-cyan-950/50 hover:bg-cyan-900/50 border border-cyan-800/50 text-neon-cyan rounded-lg text-xs font-medium transition flex items-center space-x-1.5">
+                                        <i class="fa-solid fa-square-root-variable"></i> <span>P=S Formula</span>
+                                    </button>
+                                </div>
+                                <button onclick="createNewPost()" class="px-5 py-2 bg-quantum-600 hover:bg-quantum-500 text-white font-semibold rounded-xl text-xs shadow-lg shadow-quantum-600/20 transition flex items-center space-x-2">
+                                    <span>Broadcast</span> <i class="fa-solid fa-paper-plane text-[10px]"></i>
+                                </button>
+                            </div>
+                            <input type="file" id="imageFileInput" accept="image/*" class="hidden" onchange="handleImageSelect(event)">
+                            <div id="imagePreviewContainer" class="hidden mt-3 relative inline-block">
+                                <img id="imagePreview" src="" alt="Upload preview" class="h-32 rounded-lg object-cover border border-slate-700">
+                                <button onclick="removeImagePreview()" class="absolute -top-2 -right-2 bg-rose-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs shadow-md">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FEED LIST -->
+                <div id="postsFeed" class="space-y-4">
+                    <!-- Dynamic posts injected here -->
+                </div>
+            </div>
+
+            <!-- TAB 2: P=S QUANTUM SOLVER ENGINE -->
+            <div id="tab-content-ps-engine" class="hidden space-y-6">
+                <div class="bg-gradient-to-r from-slate-900 via-teal-950/30 to-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl glow-cyan">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-neon-cyan/10 border border-neon-cyan/30 flex items-center justify-center text-neon-cyan text-xl">
+                            <i class="fa-solid fa-square-root-variable"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold">P = S Quantum Intelligence Engine</h2>
+                            <p class="text-xs text-slate-400">Input any real-world problem. Configure atomic, thermal, and quantum parameters to algorithmically generate solutions.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-5 mt-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Problem Statement [P]</label>
+                            <input type="text" id="problemInput" placeholder="e.g. Communication barrier for deaf individuals or family financial support..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-neon-cyan transition">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                                <label class="block text-[11px] font-semibold text-slate-400 mb-1">Entropy State ($\Delta S$)</label>
+                                <select id="entropySelect" class="w-full bg-slate-900 border border-slate-800 rounded-lg p-2 text-xs text-slate-200 focus:outline-none">
+                                    <option value="low">Low Entropy (Ordered System)</option>
+                                    <option value="balanced" selected>Balanced Equilibrium</option>
+                                    <option value="high">High Chaos / Dynamic Shift</option>
+                                </select>
+                            </div>
+                            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                                <label class="block text-[11px] font-semibold text-slate-400 mb-1">Thermal / Energy State</label>
+                                <select id="thermalSelect" class="w-full bg-slate-900 border border-slate-800 rounded-lg p-2 text-xs text-slate-200 focus:outline-none">
+                                    <option value="cooled">Direct-to-Chip Cryo-Cooling</option>
+                                    <option value="standard" selected>Standard Thermodynamic</option>
+                                    <option value="high-energy">High-Yield Exascale Flow</option>
+                                </select>
+                            </div>
+                            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                                <label class="block text-[11px] font-semibold text-slate-400 mb-1">Quantum Superposition</label>
+                                <select id="quantumSelect" class="w-full bg-slate-900 border border-slate-800 rounded-lg p-2 text-xs text-slate-200 focus:outline-none">
+                                    <option value="single">Single State Vector</option>
+                                    <option value="multi" selected>Multi-Dimension Superposition</option>
+                                    <option value="entangled">Fully Entangled Neural Mesh</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button onclick="executeQuantumSolver()" class="w-full py-3 bg-gradient-to-r from-quantum-600 via-neon-cyan to-quantum-600 text-slate-950 font-bold rounded-xl text-sm shadow-xl shadow-neon-cyan/20 transition hover:opacity-95 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-atom"></i>
+                            <span>Execute P = S Quantum Calculation</span>
+                        </button>
+
+                        <div class="pt-4 border-t border-slate-800">
+                            <div class="flex items-center justify-between mb-2">
+                                <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Generated Solution [S]</label>
+                                <span id="solverStatus" class="text-[10px] font-mono text-neon-cyan">READY</span>
+                            </div>
+                            <div id="solverResultBox" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm text-slate-300 min-h-[140px] whitespace-pre-wrap mono-font leading-relaxed">
+[ Enter a problem statement above and run the P = S quantum solver to generate architectural solutions and technical blueprints ]
+                            </div>
+                            <div class="mt-4 flex justify-end">
+                                <button onclick="publishSolverResultToFeed()" id="publishSolverBtn" disabled class="px-4 py-2 bg-quantum-600/40 text-white/50 rounded-xl text-xs font-semibold cursor-not-allowed transition flex items-center space-x-2">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                    <span>Broadcast Solution to Global Feed</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: PROFILE -->
+            <div id="tab-content-profile" class="hidden space-y-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
+                    <div class="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-5">
+                        <img id="profileAvatarBig" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80" class="w-20 h-20 rounded-full object-cover border-4 border-quantum-500 shadow-lg">
+                        <div class="text-center sm:text-left flex-1">
+                            <h2 id="profileNameBig" class="text-xl font-bold">Aria Sharma</h2>
+                            <p class="text-xs text-neon-cyan font-mono font-medium mt-0.5">Quantum Architect & P=S Lead Innovator</p>
+                            <p id="profileBio" class="text-xs text-slate-400 mt-2 max-w-md">Bridging quantum physics principles, atomic hardware limits, and assistive technologies to elevate humanity globally.</p>
+                        </div>
+                        <button onclick="openEditProfileModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl text-xs font-medium transition">
+                            Edit Profile
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-800 text-center">
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                            <span class="block text-lg font-bold text-slate-100" id="profilePostCount">12</span>
+                            <span class="text-[11px] text-slate-400">Total Broadcasts</span>
+                        </div>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                            <span class="block text-lg font-bold text-neon-cyan">512</span>
+                            <span class="text-[11px] text-slate-400">Quantum Nodes</span>
+                        </div>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                            <span class="block text-lg font-bold text-quantum-400">Level 7G</span>
+                            <span class="text-[11px] text-slate-400">System Rank</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="font-bold text-sm text-slate-300 uppercase tracking-wider">Your Broadcast History</h3>
+                    <div id="userPostsFeed" class="space-y-4">
+                        <!-- User posts loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- NOTIFICATION MODAL -->
+    <div id="notificationModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-md p-5 space-y-4 shadow-2xl">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <h3 class="font-bold text-sm flex items-center space-x-2">
+                    <i class="fa-regular fa-bell text-neon-cyan"></i> <span>Quantum Mesh Notifications</span>
+                </h3>
+                <button onclick="closeNotificationModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="space-y-3 max-h-80 overflow-y-auto pr-1 text-xs">
+                <div class="p-3 bg-slate-950 rounded-xl border border-slate-800/60 flex items-start space-x-3">
+                    <div class="w-8 h-8 rounded-full bg-quantum-500/20 text-quantum-400 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-atom text-xs"></i>
+                    </div>
+                    <div>
+                        <p class="font-medium text-slate-200">P = S Formula Calibrated</p>
+                        <p class="text-slate-400 mt-0.5">Quantum intelligence solver successfully mapped atomic-level intent.</p>
+                        <span class="text-[10px] text-slate-500 mt-1 block">Just now</span>
+                    </div>
+                </div>
+                <div class="p-3 bg-slate-950 rounded-xl border border-slate-800/60 flex items-start space-x-3">
+                    <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-neon-cyan flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-globe text-xs"></i>
+                    </div>
+                    <div>
+                        <p class="font-medium text-slate-200">Global Node Synchronized</p>
+                        <p class="text-slate-400 mt-0.5">EverestOrigin mesh active across Kathmandu, UAE, and international hubs.</p>
+                        <span class="text-[10px] text-slate-500 mt-1 block">15 minutes ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EDIT PROFILE MODAL -->
+    <div id="editProfileModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-md p-5 space-y-4 shadow-2xl">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <h3 class="font-bold text-sm flex items-center space-x-2">
+                    <i class="fa-solid fa-user-pen text-quantum-400"></i> <span>Edit Profile</span>
+                </h3>
+                <button onclick="closeEditProfileModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="space-y-3 text-xs">
+                <div>
+                    <label class="block text-slate-400 font-semibold mb-1">Display Name</label>
+                    <input type="text" id="editNameInput" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-100 focus:outline-none focus:border-quantum-500">
+                </div>
+                <div>
+                    <label class="block text-slate-400 font-semibold mb-1">Avatar Image URL</label>
+                    <input type="text" id="editAvatarInput" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-100 focus:outline-none focus:border-quantum-500">
+                </div>
+                <div>
+                    <label class="block text-slate-400 font-semibold mb-1">Bio / Vision</label>
+                    <textarea id="editBioInput" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-100 focus:outline-none focus:border-quantum-500 resize-none"></textarea>
+                </div>
+                <div class="pt-2 flex justify-end space-x-2">
+                    <button onclick="closeEditProfileModal()" class="px-4 py-2 bg-slate-800 text-slate-300 rounded-xl">Cancel</button>
+                    <button onclick="saveProfileChanges()" class="px-4 py-2 bg-quantum-600 text-white font-semibold rounded-xl">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        let currentUser = {
+            name: "Aria Sharma",
+            handle: "@aria_quantum",
+            avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+            bio: "Bridging quantum physics principles, atomic hardware limits, and assistive technologies to elevate humanity globally."
+        };
+
+        let posts = [
+            {
+                id: 1,
+                author: "Dr. Tenzing Norbu",
+                handle: "@tenzing_tech",
+                avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+                time: "1 hour ago",
+                content: "Applying P = S to assistive technology: Problem [Deaf & Non-speaking] = Solve [7G Neural-Intent Voice Bridge]. When we combine quantum probabilistic decoding with clean thermal cooling, communication barriers disappear. #ProblemEqualsSolve #HumanityFirst",
+                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
+                likes: 248,
+                comments: 32,
+                liked: false
+            },
+            {
+                id: 2,
+                author: "Elena Rostova",
+                handle: "@elena_quantum",
+                avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
+                time: "4 hours ago",
+                content: "EverestOrigin AI's quantum solver is incredible. Every hardware limitation—from silicon lattice resistance to thermal limits—is just another problem waiting for an exact physical solve. ⚡ #QuantumPhysics #EverestOrigin",
+                image: null,
+                likes: 112,
+                comments: 18,
+                liked: true
+            }
+        ];
+
+        let pendingImageBase64 = null;
+        let lastGeneratedSolution = "";
+
+        function switchTab(tabId) {
+            ['feed', 'ps-engine', 'profile'].forEach(t => {
+                document.getElementById(`tab-content-${t}`).classList.add('hidden');
+                const navBtn = document.getElementById(`nav-${t}`);
+                if (navBtn) {
+                    navBtn.className = "px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800/50 transition flex items-center space-x-2";
+                }
+            });
+
+            document.getElementById(`tab-content-${tabId}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`nav-${tabId}`);
+            if (activeBtn) {
+                activeBtn.className = "px-4 py-2 rounded-lg text-sm font-medium bg-slate-800 text-quantum-300 transition flex items-center space-x-2";
+            }
+
+            if (tabId === 'profile') {
+                renderUserProfile();
+            }
+        }
+
+        function renderFeeds() {
+            const feedContainer = document.getElementById('postsFeed');
+            feedContainer.innerHTML = '';
+
+            posts.forEach(post => {
+                feedContainer.innerHTML += createPostCard(post);
+            });
+
+            document.getElementById('postCount').textContent = posts.filter(p => p.author === currentUser.name).length;
+        }
+
+        function createPostCard(post) {
+            return `
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <img src="${post.avatar}" class="w-10 h-10 rounded-full object-cover border border-quantum-500/40">
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-100">${post.author}</h4>
+                                <span class="text-xs text-slate-400">${post.handle} • ${post.time}</span>
+                            </div>
+                        </div>
+                        <span class="text-[10px] font-mono text-neon-cyan px-2 py-0.5 bg-cyan-950/60 rounded border border-cyan-800/50">P=S SYNCED</span>
+                    </div>
+                    <p class="text-sm text-slate-200 leading-relaxed">${escapeHtml(post.content)}</p>
+                    ${post.image ? `<img src="${post.image}" class="w-full h-64 object-cover rounded-xl border border-slate-800">` : ''}
+                    <div class="flex items-center justify-between pt-3 border-t border-slate-800 text-xs text-slate-400">
+                        <button onclick="toggleLike(${post.id})" class="flex items-center space-x-1.5 ${post.liked ? 'text-rose-500 font-semibold' : 'hover:text-slate-200'} transition">
+                            <i class="${post.liked ? 'fa-solid' : 'fa-regular'} fa-heart text-sm"></i>
+                            <span>${post.likes}</span>
+                        </button>
+                        <button class="flex items-center space-x-1.5 hover:text-slate-200 transition">
+                            <i class="fa-regular fa-comment text-sm"></i>
+                            <span>${post.comments} Comments</span>
+                        </button>
+                        <button onclick="sharePost(${post.id})" class="flex items-center space-x-1.5 hover:text-slate-200 transition">
+                            <i class="fa-solid fa-share text-sm"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function triggerImageUpload() {
+            document.getElementById('imageFileInput').click();
+        }
+
+        function handleImageSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    pendingImageBase64 = e.target.result;
+                    document.getElementById('imagePreview').src = pendingImageBase64;
+                    document.getElementById('imagePreviewContainer').classList.remove('hidden');
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function removeImagePreview() {
+            pendingImageBase64 = null;
+            document.getElementById('imagePreviewContainer').classList.add('hidden');
+            document.getElementById('imageFileInput').value = '';
+        }
+
+        function createNewPost() {
+            const text = document.getElementById('postInput').value.trim();
+            if (!text && !pendingImageBase64) return;
+
+            const newPost = {
+                id: Date.now(),
+                author: currentUser.name,
+                handle: currentUser.handle,
+                avatar: currentUser.avatar,
+                time: "Just now",
+                content: text,
+                image: pendingImageBase64,
+                likes: 0,
+                comments: 0,
+                liked: false
+            };
+
+            posts.unshift(newPost);
+            document.getElementById('postInput').value = '';
+            removeImagePreview();
+            renderFeeds();
+        }
+
+        function toggleLike(postId) {
+            const post = posts.find(p => p.id === postId);
+            if (post) {
+                post.liked = !post.liked;
+                post.likes += post.liked ? 1 : -1;
+                renderFeeds();
+            }
+        }
+
+        function sharePost(postId) {
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(window.location.href);
+            } else {
+                const dummy = document.createElement('input');
+                document.body.appendChild(dummy);
+                dummy.value = window.location.href;
+                dummy.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummy);
+            }
+            alert("EverestOrigin post link copied to clipboard!");
+        }
+
+        function quickQuantumFormulaPrompt() {
+            document.getElementById('postInput').value = "P = S Quantum Formula: Problem [Real-World Challenge] = Solve [Precision Hardware & Neural Mesh]. #ProblemEqualsSolve";
+        }
+
+        function executeQuantumSolver() {
+            const problem = document.getElementById('problemInput').value.trim();
+            const entropy = document.getElementById('entropySelect').value;
+            const thermal = document.getElementById('thermalSelect').value;
+            const quantum = document.getElementById('quantumSelect').value;
+
+            if (!problem) {
+                alert("Please enter a problem statement [P] to execute the quantum solver.");
+                return;
+            }
+
+            const solverStatus = document.getElementById('solverStatus');
+            const resultBox = document.getElementById('solverResultBox');
+            solverStatus.textContent = "CALCULATING MATRIX...";
+            solverStatus.className = "text-[10px] font-mono text-amber-400 animate-pulse";
+            resultBox.textContent = "Running quantum superposition and entropy state analysis across 7G mesh parameters...";
+
+            setTimeout(() => {
+                lastGeneratedSolution = `// P = S QUANTUM SOLUTION MATRIX\n` +
+                    `// Problem [P]: "${problem}"\n` +
+                    `// Parameters: Entropy [${entropy}] | Thermal [${thermal}] | Superposition [${quantum}]\n\n` +
+                    `[SOLVE STATE S]:\n` +
+                    `1. Atomic Mapping: Deconstructed core parameters into silicon-level energy states.\n` +
+                    `2. Thermodynamic Optimization: Applied ${thermal} cooling protocols to prevent resistance throttling.\n` +
+                    `3. Execution Vector: Deployed decentralized neural-intent bridge with zero-latency feedback.\n` +
+                    `Status: 99.9% Solution Accuracy Verified. Ready for Global Broadcast.`;
+
+                resultBox.textContent = lastGeneratedSolution;
+                solverStatus.textContent = "SOLVED";
+                solverStatus.className = "text-[10px] font-mono text-neon-cyan";
+
+                const pubBtn = document.getElementById('publishSolverBtn');
+                pubBtn.disabled = false;
+                pubBtn.className = "px-4 py-2 bg-quantum-600 hover:bg-quantum-500 text-white font-semibold rounded-xl text-xs shadow-lg shadow-quantum-600/20 transition cursor-pointer flex items-center space-x-2";
+            }, 800);
+        }
+
+        function publishSolverResultToFeed() {
+            if (!lastGeneratedSolution) return;
+            posts.unshift({
+                id: Date.now(),
+                author: currentUser.name,
+                handle: currentUser.handle,
+                avatar: currentUser.avatar,
+                time: "Just now",
+                content: `⚡ P = S Quantum Solution Broadcast:\n${lastGeneratedSolution}`,
+                image: null,
+                likes: 3,
+                comments: 0,
+                liked: false
+            });
+            switchTab('feed');
+            renderFeeds();
+        }
+
+        function renderUserProfile() {
+            document.getElementById('profileNameBig').textContent = currentUser.name;
+            document.getElementById('profileAvatarBig').src = currentUser.avatar;
+            document.getElementById('profileBio').textContent = currentUser.bio;
+            document.getElementById('profilePostCount').textContent = posts.filter(p => p.author === currentUser.name).length;
+
+            const userFeed = document.getElementById('userPostsFeed');
+            userFeed.innerHTML = '';
+            const userPosts = posts.filter(p => p.author === currentUser.name);
+            if (userPosts.length === 0) {
+                userFeed.innerHTML = `<div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-center text-xs text-slate-400">No broadcasts published yet. Use the P=S solver or Global Feed to share your vision!</div>`;
+            } else {
+                userPosts.forEach(p => {
+                    userFeed.innerHTML += createPostCard(p);
+                });
+            }
+        }
+
+        function openEditProfileModal() {
+            document.getElementById('editNameInput').value = currentUser.name;
+            document.getElementById('editAvatarInput').value = currentUser.avatar;
+            document.getElementById('editBioInput').value = currentUser.bio;
+            document.getElementById('editProfileModal').classList.remove('hidden');
+        }
+
+        function closeEditProfileModal() {
+            document.getElementById('editProfileModal').classList.add('hidden');
+        }
+
+        function saveProfileChanges() {
+            currentUser.name = document.getElementById('editNameInput').value || currentUser.name;
+            currentUser.avatar = document.getElementById('editAvatarInput').value || currentUser.avatar;
+            currentUser.bio = document.getElementById('editBioInput').value || currentUser.bio;
+
+            document.getElementById('userNameHeader').textContent = currentUser.name;
+            document.getElementById('userAvatarHeader').src = currentUser.avatar;
+            document.getElementById('sidebarAvatar').src = currentUser.avatar;
+            document.getElementById('sidebarName').textContent = currentUser.name;
+            document.getElementById('feedAvatar').src = currentUser.avatar;
+
+            closeEditProfileModal();
+            renderUserProfile();
+        }
+
+        function openNotificationModal() {
+            document.getElementById('notificationModal').classList.remove('hidden');
+        }
+        function closeNotificationModal() {
+            document.getElementById('notificationModal').classList.add('hidden');
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+        window.onload = function() {
+            renderFeeds();
+        }
+    </script>
+
+</body>
+</html>
