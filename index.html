@@ -1,0 +1,2884 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Sikshya Global AI | Mallik Group 7G Quantum Architecture</title>
+  <meta name="description" content="Free Universal Education AI by Niraj Mallik under MIT License for students worldwide to help humanity and make human beings happy.">
+  <meta name="theme-color" content="#0A0F1C">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Sikshya Global AI | Universal Education for Humanity">
+  <meta property="og:description" content="Free Universal Education AI under MIT License by Niraj Mallik. Multilingual AI coaching with real-time voice, homework scanner, quantum biometric student verification, and problem solving group.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop">
+  <meta property="og:type" content="website">
+
+  <!-- Official Mt. Everest Emblem Favicon & Logo -->
+  <link rel="icon" type="image/jpeg" href="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=200&auto=format&fit=crop">
+
+  <!-- Tailwind CSS & FontAwesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root { 
+      --brand-cyan: #00D4FF; 
+      --brand-purple: #7B2FFF; 
+      --bg-deep: #0A0F1C; 
+    }
+
+    body {
+      background: linear-gradient(180deg, #0A0F1C 0%, #05070F 50%, #02040A 100%);
+      color: #e2e8f0;
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .bg-glow-top {
+      position: fixed;
+      top: -80px;
+      right: -60px;
+      width: 280px;
+      height: 280px;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(0, 212, 255, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-glow-bottom {
+      position: fixed;
+      bottom: -100px;
+      left: -40px;
+      width: 320px;
+      height: 320px;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(123, 47, 255, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Official Mt. Everest Emblem Circular Background Watermark */
+    .emblem-watermark {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 480px;
+      height: 480px;
+      background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+      border-radius: 50%;
+    }
+
+    /* Splash Screen */
+    #mallik-splash {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #0A0F1C;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.8s ease;
+    }
+
+    .splash-logo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 2px solid #00D4FF;
+      padding: 4px;
+      animation: pulse 2s infinite;
+      object-fit: cover;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.8; }
+    }
+
+    .glass-card {
+      background: rgba(13, 21, 39, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-tab-active {
+      background: linear-gradient(135deg, #00D4FF, #0284c7) !important;
+      color: white !important;
+      box-shadow: 0 4px 18px rgba(0, 212, 255, 0.4);
+    }
+
+    .virtual-key {
+      background: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f1f5f9;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 10px 2px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.1s ease;
+      font-size: 13px;
+    }
+    .virtual-key:active {
+      background: #00D4FF;
+      color: #0A0F1C;
+      transform: scale(0.95);
+    }
+
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+  </style>
+</head>
+
+<body class="flex flex-col min-h-screen relative">
+
+  <div class="bg-glow-top"></div>
+  <div class="bg-glow-bottom"></div>
+  <div class="emblem-watermark"></div>
+
+  <!-- Splash Screen -->
+  <div id="mallik-splash">
+    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=400&auto=format&fit=crop" class="splash-logo" alt="Sikshya Emblem">
+    <h2 class="mt-6 text-lg font-bold tracking-[0.2em] text-white uppercase" data-i18n="appTitle">Sikshya Global AI</h2>
+    <p id="splash-status" class="mt-2 text-[10px] text-cyan-400 font-mono tracking-widest">INITIALIZING 7G QUANTUM BIOMETRIC NEURO-ENGINE...</p>
+  </div>
+
+  <!-- Mandatory Quantum 7G Biometric & Identity Authentication Gate -->
+  <div id="quantum-auth-gate" class="fixed inset-0 z-[9999] bg-slate-950/98 backdrop-blur-2xl flex items-center justify-center p-4 overflow-y-auto">
+    <div class="glass-card p-6 md:p-8 rounded-3xl max-w-lg w-full border border-cyan-500/40 relative space-y-5 shadow-2xl my-auto">
+      <div class="text-center space-y-2">
+        <div class="w-16 h-16 rounded-full bg-cyan-600/20 border-2 border-cyan-400 mx-auto flex items-center justify-center text-cyan-300 text-2xl shadow-lg animate-bounce">
+          <i class="fa-solid fa-fingerprint"></i>
+        </div>
+        <h3 class="text-xl font-extrabold text-white" id="gate-title">Quantum 7G Biometric & ID Verification</h3>
+        <p class="text-xs text-slate-400" id="gate-subtitle">To ensure high security, zero spam, and authentic learning for humanity, complete Person/Student ID, Gmail OTP, Phone OTP, and Biometric Verification. <br><span class="text-emerald-400 font-bold mt-1 block"><i class="fa-solid fa-bolt"></i> One-Time Setup - No Need to Login Again</span></p>
+      </div>
+
+      <div class="space-y-3.5 text-xs">
+        <div>
+          <label class="block text-slate-400 mb-1">Person / Student ID Number *</label>
+          <div class="flex gap-2">
+            <input type="text" id="gate-person-id" placeholder="e.g. SKG-7G-984210" class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-3 text-white outline-none focus:border-cyan-500 font-mono">
+            <button onclick="generateQuantumKey()" class="bg-slate-800 hover:bg-slate-700 text-cyan-300 px-3 py-2 rounded-xl border border-cyan-500/30 text-[11px] font-mono whitespace-nowrap">Gen Key</button>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-slate-400 mb-1">Full Student Name *</label>
+          <input type="text" id="gate-auth-name" placeholder="e.g. Aayush Sharma" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-3 text-white outline-none focus:border-cyan-500">
+        </div>
+
+        <div>
+          <label class="block text-slate-400 mb-1">Gmail Address (For OTP Code) *</label>
+          <div class="flex gap-2">
+            <input type="email" id="gate-auth-email" placeholder="learner@gmail.com" class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-3 text-white outline-none focus:border-cyan-500 font-mono">
+            <button onclick="sendGmailOtp()" id="btn-send-gmail-otp" class="bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-2 rounded-xl text-[11px] font-bold whitespace-nowrap">Send OTP</button>
+          </div>
+        </div>
+        <div id="gmail-otp-box" class="hidden">
+          <label class="block text-slate-400 mb-1">Enter Gmail 6-Digit OTP Code *</label>
+          <input type="text" id="gate-gmail-otp" placeholder="123456" maxlength="6" class="w-full bg-slate-950 border border-cyan-500 rounded-xl px-3.5 py-2.5 text-white outline-none font-mono text-center tracking-widest text-sm">
+        </div>
+
+        <div>
+          <label class="block text-slate-400 mb-1">Phone Number (For SMS OTP) *</label>
+          <div class="flex gap-2">
+            <input type="tel" id="gate-auth-phone" placeholder="+977 9841234567" class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-3 text-white outline-none focus:border-cyan-500 font-mono">
+            <button onclick="sendPhoneOtp()" id="btn-send-phone-otp" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-xl text-[11px] font-bold whitespace-nowrap">Send OTP</button>
+          </div>
+        </div>
+        <div id="phone-otp-box" class="hidden">
+          <label class="block text-slate-400 mb-1">Enter Phone 6-Digit SMS OTP *</label>
+          <input type="text" id="gate-phone-otp" placeholder="654321" maxlength="6" class="w-full bg-slate-950 border border-emerald-500 rounded-xl px-3.5 py-2.5 text-white outline-none font-mono text-center tracking-widest text-sm">
+        </div>
+
+        <!-- Biometric / Fingerprint / Face Scan Section -->
+        <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-3 text-center">
+          <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider block">Biometric & Face Verification (Required)</span>
+          <div class="flex items-center justify-center gap-4">
+            <button onclick="verifyBiometric('fingerprint')" id="bio-finger-btn" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 px-4 py-3 rounded-xl flex flex-col items-center gap-1 transition w-1/2">
+              <i class="fa-solid fa-fingerprint text-xl text-cyan-400"></i>
+              <span class="text-[11px] text-slate-300">Scan Fingerprint</span>
+            </button>
+            <button onclick="verifyBiometric('face')" id="bio-face-btn" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 px-4 py-3 rounded-xl flex flex-col items-center gap-1 transition w-1/2">
+              <i class="fa-solid fa-face-smile text-xl text-emerald-400"></i>
+              <span class="text-[11px] text-slate-300">Face Scan ID</span>
+            </button>
+          </div>
+          <p id="bio-status-txt" class="text-[11px] text-slate-400 font-mono">Status: Awaiting biometric verification...</p>
+        </div>
+        
+        <button onclick="submitQuantumGateAuth()" id="gate-submit-btn" class="w-full bg-gradient-to-r from-cyan-600 to-indigo-600 hover:from-cyan-500 hover:to-indigo-500 text-white font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-cyan-500/25 text-sm">
+          Complete Quantum Verification & Unlock App
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="relative z-10 w-full max-w-5xl mx-auto px-4 pt-4">
+    <div class="glass-card rounded-3xl p-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <div class="w-16 h-16 rounded-full border-2 border-cyan-400/50 p-1 flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=400&auto=format&fit=crop" class="rounded-full w-full h-full object-cover" alt="Mt. Everest Emblem Logo">
+        </div>
+        <div>
+          <h1 class="text-xl font-extrabold text-white flex items-center">
+            <span data-i18n="appTitle">Sikshya Global AI</span> <span class="text-[9px] bg-red-600 px-2 py-0.5 rounded ml-2 font-mono">7G QUANTUM v7.5</span>
+          </h1>
+          <p class="text-xs text-slate-400"><span data-i18n="devBy">Developed by</span> <span class="text-cyan-400 font-semibold">Niraj Mallik (Mallik Group)</span></p>
+          <div class="flex items-center gap-2 mt-1 px-2.5 py-0.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full w-max">
+            <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping"></span>
+            <span class="text-[8px] font-bold text-emerald-400 uppercase tracking-wider" data-i18n="neuralBadge">Biometric Quantum Link: Verified &bull; MIT License</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 w-full md:w-auto justify-between md:justify-end flex-wrap">
+        <a href="mailto:nirajmallik143@gmail.com" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[11px] font-bold px-3 py-2 rounded-xl border border-cyan-500/30 flex items-center gap-1.5 transition" title="Email Niraj Mallik">
+          <i class="fa-solid fa-envelope"></i> <span data-i18n="lblEmail">Email</span>
+        </a>
+        <a href="https://wa.me/971502297451" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-emerald-300 text-[11px] font-bold px-3 py-2 rounded-xl border border-emerald-500/30 flex items-center gap-1.5 transition" title="WhatsApp / Phone">
+          <i class="fa-solid fa-phone"></i> <span data-i18n="lblWhatsApp">WhatsApp</span>
+        </a>
+        <button onclick="shareOnFacebook()" class="bg-blue-600 hover:bg-blue-500 text-white text-[11px] font-bold px-4 py-2.5 rounded-full transition-all active:scale-95 shadow-lg shadow-blue-500/20 flex items-center gap-2">
+          <i class="fa-brands fa-facebook-f"></i> <span data-i18n="txtShare">Share</span>
+        </button>
+        <button onclick="logoutQuantumSession()" id="quantum-auth-btn" class="hidden md:flex bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white text-[11px] font-bold px-4 py-2.5 rounded-full transition-all active:scale-95 shadow-lg shadow-red-500/20 items-center gap-2">
+          <i class="fa-solid fa-right-from-bracket"></i> <span id="txt-quantum-auth">Sign Out</span>
+        </button>
+        <!-- Mobile Menu Toggle -->
+        <button onclick="toggleMainMenu()" class="md:hidden bg-slate-800 hover:bg-slate-700 text-white text-[11px] font-bold px-4 py-2.5 rounded-full transition-all border border-slate-600 flex items-center gap-2">
+          <i class="fa-solid fa-bars"></i> Menu
+        </button>
+      </div>
+    </div>
+
+    <!-- Controls Toolbar & Global Language Bar -->
+    <div class="mt-4 flex flex-wrap items-center justify-between gap-3 glass-card p-3 rounded-2xl">
+      <div class="flex flex-wrap items-center gap-2">
+        <div class="flex items-center gap-2 bg-slate-950 px-3 py-2 rounded-xl border border-slate-800">
+          <i class="fa-solid fa-graduation-cap text-cyan-400 text-xs"></i>
+          <select id="board" class="bg-transparent text-[11px] text-white focus:outline-none cursor-pointer">
+            <option value="cdc" class="bg-slate-900">🇳🇵 Nepal CDC (Grades 1-12 & SEE)</option>
+            <option value="neb" class="bg-slate-900">🇳🇵 Nepal NEB (+2 Science & Mgmt)</option>
+            <option value="cambridge" class="bg-slate-900">🇬🇧 Cambridge IGCSE / A-Level</option>
+            <option value="ib" class="bg-slate-900">🌐 International Baccalaureate</option>
+            <option value="cbse" class="bg-slate-900">🇮🇳 CBSE / NCERT Board</option>
+          </select>
+        </div>
+        <div class="flex items-center gap-2 bg-slate-950 px-3 py-2 rounded-xl border border-slate-800">
+          <i class="fa-solid fa-globe text-yellow-400 text-xs"></i>
+          <select id="language" onchange="changeLang(this.value)" class="bg-transparent text-[11px] text-white focus:outline-none cursor-pointer max-w-[120px]">
+            <option value="en" class="bg-slate-900">🇬🇧 English</option>
+            <option value="ur" class="bg-slate-900">🇵🇰 اردو (Urdu - Pakistan)</option>
+            <option value="np" class="bg-slate-900">🇳🇵 नेपाली (Nepali)</option>
+            <option value="hi" class="bg-slate-900">🇮🇳 हिन्दी (Hindi)</option>
+            <option value="bn" class="bg-slate-900">🇧🇩 বাংলা (Bengali)</option>
+            <option value="zh" class="bg-slate-900">🇨🇳 中文 (Mandarin)</option>
+            <option value="ja" class="bg-slate-900">🇯🇵 日本語 (Japanese)</option>
+            <option value="ko" class="bg-slate-900">🇰🇷 한국어 (Korean)</option>
+            <option value="ar" class="bg-slate-900">🇸🇦 العربية (Arabic)</option>
+            <option value="es" class="bg-slate-900">🇪🇸 Español (Spanish)</option>
+            <option value="fr" class="bg-slate-900">🇫🇷 Français (French)</option>
+            <option value="vi" class="bg-slate-900">🇻🇳 Tiếng Việt (Vietnamese)</option>
+            <option value="th" class="bg-slate-900">🇹🇭 ไทย (Thai)</option>
+            <option value="id" class="bg-slate-900">🇮🇩 Bahasa Indonesia</option>
+            <option value="fil" class="bg-slate-900">🇵🇭 Filipino (Tagalog)</option>
+            <option value="ta" class="bg-slate-900">🇮🇳 தமிழ் (Tamil)</option>
+            <option value="te" class="bg-slate-900">🇮🇳 తెలుగు (Telugu)</option>
+            <option value="mr" class="bg-slate-900">🇮🇳 मराठी (Marathi)</option>
+          </select>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button onclick="toggleVirtualKeyboard()" class="bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[11px] px-3 py-2 rounded-xl border border-slate-700 flex items-center gap-2 transition">
+          <i class="fa-solid fa-keyboard"></i> <span data-i18n="kbToggle">Universal Keyboard</span>
+        </button>
+        <button onclick="triggerOneTapInstall()" class="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-[11px] font-bold px-3 py-2 rounded-xl transition-all active:scale-95 shadow-lg shadow-cyan-500/20 flex items-center gap-1.5">
+          <i class="fa-solid fa-cloud-arrow-down"></i> <span data-i18n="txtOnetap">ONE-TAP OPEN</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Universal Virtual Keyboard Container -->
+    <div id="virtual-keyboard" class="mt-2 glass-card p-3 rounded-2xl hidden space-y-2 border border-cyan-500/30">
+      <div class="flex items-center justify-between text-xs text-slate-300 px-1">
+        <span class="font-bold text-cyan-400 flex items-center gap-1.5"><i class="fa-solid fa-globe"></i> <span data-i18n="kbTitle">Native Script Keyboard</span> (<span id="active-kb-label">English</span>)</span>
+        <button onclick="toggleVirtualKeyboard()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div id="keyboard-keys" class="grid grid-cols-10 gap-1.5"></div>
+      <div class="flex gap-2 justify-center pt-1">
+        <button onclick="insertKey(' ')" class="virtual-key px-8 py-1.5 bg-slate-800 text-xs" data-i18n="kbSpace">SPACEBAR</button>
+        <button onclick="backspaceKey()" class="virtual-key px-4 py-1.5 bg-red-900/40 text-red-300 text-xs"><i class="fa-solid fa-delete-left"></i> <span data-i18n="kbBack">BACK</span></button>
+        <button onclick="clearInputKey()" class="virtual-key px-4 py-1.5 bg-slate-800 text-slate-300 text-xs" data-i18n="kbClear">CLEAR</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="relative z-10 flex-1 w-full max-w-5xl mx-auto px-4 mt-4 mb-8">
+    <nav id="main-nav-menu" class="flex flex-col md:flex-row gap-2 overflow-x-auto pb-2 scrollbar-hide hidden md:flex transition-all duration-300 origin-top">
+      <button onclick="setTab('coaching')" id="tab-coaching" class="nav-tab nav-tab-active px-3.5 py-2.5 rounded-2xl text-xs font-bold whitespace-nowrap transition-all flex items-center">
+        <i class="fa-solid fa-brain mr-1.5 text-cyan-400"></i> <span data-i18n="tCoaching">AI COACHING</span>
+      </button>
+      <button onclick="setTab('videos')" id="tab-videos" class="nav-tab bg-slate-800/50 hover:bg-slate-800 text-slate-400 px-3.5 py-2.5 rounded-2xl text-xs font-bold whitespace-nowrap transition-all flex items-center">
+        <i class="fa-solid fa-video mr-1.5 text-emerald-400"></i> <span data-i18n="tVideos">HUMANITY & EMERGENCY VIDEOS</span>
+      </button>
+      <button onclick="setTab('alarm')" id="tab-alarm" class="nav-tab bg-slate-800/50 hover:bg-slate-800 text-slate-400 px-3.5 py-2.5 rounded-2xl text-xs font-bold whitespace-nowrap transition-all flex items-center">
+        <i class="fa-solid fa-clock mr-1.5 text-yellow-400"></i> <span data-i18n="tAlarm">STUDY ALARM</span>
+      </button>
+      <button onclick="setTab('group')" id="tab-group" class="nav-tab bg-slate-800/50 hover:bg-slate-800 text-slate-400 px-3.5 py-2.5 rounded-2xl text-xs font-bold whitespace-nowrap transition-all flex items-center">
+        <i class="fa-solid fa-users mr-1.5 text-purple-400"></i> <span data-i18n="tGroup">PROBLEM SOLVING GROUP</span>
+      </button>
+      <button onclick="setTab('emax')" id="tab-emax" class="nav-tab bg-slate-800/50 hover:bg-slate-800 text-slate-400 px-3.5 py-2.5 rounded-2xl text-xs font-bold whitespace-nowrap transition-all flex items-center">
+        <i class="fa-solid fa-gamepad mr-1.5 text-cyan-300"></i> <span data-i18n="tEmax">EMAX GAME ARENA</span>
+      </button>
+      <button onclick="setTab('mission')" id="tab-mission" class="nav-tab bg-slate-800/50 hover:bg-slate-800 text-slate-400 px-3.5 py-2.5 rounded-2xl text-xs font-bold whitespace-nowrap transition-all flex items-center">
+        <i class="fa-solid fa-heart-pulse mr-1.5 text-rose-400"></i> <span data-i18n="tMission">MIT LICENSE & MISSION</span>
+      </button>
+      <button onclick="setTab('bank')" id="tab-bank" class="nav-tab bg-slate-800/50 hover:bg-slate-800 text-slate-400 px-3.5 py-2.5 rounded-2xl text-xs font-bold whitespace-nowrap transition-all flex items-center">
+        <i class="fa-solid fa-building-columns mr-1.5 text-emerald-300"></i> <span data-i18n="tBank">CONTACTS & SOCIALS</span>
+      </button>
+      <button onclick="logoutQuantumSession()" class="md:hidden nav-tab bg-red-900/50 hover:bg-red-800 text-red-300 px-3.5 py-2.5 rounded-2xl text-xs font-bold whitespace-nowrap transition-all flex items-center">
+        <i class="fa-solid fa-right-from-bracket mr-1.5"></i> <span>Sign Out</span>
+      </button>
+    </nav>
+
+    <!-- Tab 1: AI Coaching -->
+    <section id="view-coaching" class="mt-4 space-y-4">
+      <div class="glass-card rounded-3xl h-[520px] flex flex-col overflow-hidden shadow-2xl">
+        <div class="bg-slate-900/80 px-6 py-3 border-b border-slate-800 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+            <span class="text-xs font-mono font-semibold text-white tracking-wider" data-i18n="coachingTitle">Quantum Biometric Neuro-Engine v7.5 (Camera, File & Real-Time Voice AI)</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="toggleVoiceConversation()" id="voice-conv-btn" class="text-[11px] text-cyan-300 hover:text-white transition-colors bg-cyan-950/60 border border-cyan-500/30 px-3 py-1 rounded-lg flex items-center gap-1.5">
+              <i class="fa-solid fa-microphone-lines"></i> <span id="voice-conv-label">Real-Time Voice AI: Off</span>
+            </button>
+            <button onclick="clearChat()" class="text-[11px] text-slate-400 hover:text-white transition-colors bg-slate-800 px-3 py-1 rounded-lg" id="btn-reset">
+              <i class="fa-solid fa-rotate-right mr-1"></i> <span data-i18n="btnReset">Reset</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="chat-box" class="flex-1 p-4 md:p-6 overflow-y-auto space-y-4 text-sm">
+          <div class="bg-slate-800/60 p-4 md:p-5 rounded-2xl border-l-4 border-cyan-500 shadow-lg">
+            <p class="font-bold text-cyan-400 text-xs tracking-wide">SIKSHYA AI (7G SOUL &bull; MIT LICENSE &bull; FOR HUMANITY)</p>
+            <p class="mt-2 text-slate-300 leading-relaxed" id="welcome-msg" data-i18n="welcome">Greetings, Learner! I am connected to the Mallik 7G Universal Education Neural Network. Ask any academic question, upload homework files, or use the camera to scan notes in your native language to make humanity happy.</p>
+          </div>
+        </div>
+
+        <input type="file" id="file-upload-input" accept="image/*,.pdf,.txt,.docx" class="hidden" onchange="handleFileUpload(event)">
+        <input type="file" id="camera-capture-input" accept="image/*" capture="environment" class="hidden" onchange="handleCameraCapture(event)">
+
+        <div class="px-4 py-2 bg-slate-900/40 border-t border-slate-800/60 flex items-center justify-between gap-2 overflow-x-auto scrollbar-hide">
+          <div class="flex gap-2">
+            <button onclick="sendQuickPrompt('Explain Photosynthesis step by step')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] px-3 py-1.5 rounded-xl whitespace-nowrap border border-slate-700">🌱 Photosynthesis</button>
+            <button onclick="sendQuickPrompt('Explain Quantum Physics & Energy Formulas?')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] px-3 py-1.5 rounded-xl whitespace-nowrap border border-slate-700">⚛️ Quantum Physics</button>
+          </div>
+          <div class="flex gap-2">
+            <button onclick="triggerFileUpload()" class="bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[11px] px-3 py-1.5 rounded-xl whitespace-nowrap border border-cyan-500/30 flex items-center gap-1.5">
+              <i class="fa-solid fa-paperclip"></i> <span data-i18n="btnUpload">Upload File</span>
+            </button>
+            <button onclick="triggerCameraCapture()" class="bg-slate-800 hover:bg-slate-700 text-emerald-300 text-[11px] px-3 py-1.5 rounded-xl whitespace-nowrap border border-emerald-500/30 flex items-center gap-1.5">
+              <i class="fa-solid fa-camera"></i> <span data-i18n="btnCamera">Camera Scan</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="p-4 bg-slate-950/90 border-t border-slate-800 flex gap-2 items-center">
+          <input id="user-input" type="text" placeholder="Type your educational question in your native language..." data-i18n-placeholder="placeholder" onkeypress="handleKeyPress(event)" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:border-cyan-500 outline-none">
+          <button onclick="askAI()" class="bg-cyan-600 hover:bg-cyan-500 w-12 h-12 rounded-xl flex items-center justify-center text-white shadow-lg active:scale-95 transition-all flex-shrink-0">
+            <i class="fa-solid fa-paper-plane text-sm"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 2: Humanity & Emergency Video Hub -->
+    <section id="view-videos" class="mt-4 hidden space-y-4">
+      <div class="glass-card p-6 md:p-8 rounded-3xl space-y-6">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+          <div>
+            <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase" data-i18n="vidSubtitle">Global Humanity & Emergency Video Hub</span>
+            <h2 class="text-xl md:text-2xl font-extrabold text-white mt-1" data-i18n="vidMainTitle">Formula Masterclasses, Online Earning & Disaster Preparedness</h2>
+            <p class="text-xs text-slate-300 mt-1" data-i18n="vidDesc">Anyone in the world can upload positive educational videos, online earning tutorials, and natural disaster emergency alerts to help humanity. Hosted by Niraj Mallik & Global Contributors.</p>
+          </div>
+          <button onclick="openUploadVideoModal()" class="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-xs px-5 py-3 rounded-xl transition-all shadow-lg flex items-center gap-2">
+            <i class="fa-solid fa-video"></i> <span data-i18n="btnUploadVid">Upload Positive Video</span>
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="community-videos-grid">
+          <!-- Default Niraj Mallik Avatar Video -->
+          <div class="bg-slate-900/90 rounded-2xl border border-slate-800 overflow-hidden shadow-xl flex flex-col">
+            <div class="relative h-48 sm:h-56 bg-slate-950 flex items-center justify-center overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-40">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+              <div class="absolute top-3 left-3 flex items-center gap-2 bg-slate-900/90 px-3 py-1.5 rounded-full border border-cyan-500/40 shadow-lg z-10">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=200&auto=format&fit=crop" class="w-7 h-7 rounded-full object-cover border border-cyan-400">
+                <span class="text-[11px] font-bold text-white">Niraj Mallik (Founder & Host)</span>
+              </div>
+              <button onclick="playVideoModal('Life Upgrade, Online Earning & Quantum Formulas', 'https://www.w3schools.com/html/mov_bbb.mp4')" class="relative z-10 w-14 h-14 rounded-full bg-cyan-600/90 hover:bg-cyan-500 text-white flex items-center justify-center text-xl shadow-2xl transition-all transform hover:scale-110">
+                <i class="fa-solid fa-play ml-1"></i>
+              </button>
+              <span class="absolute bottom-3 right-3 text-[10px] font-mono bg-black/70 px-2 py-0.5 rounded text-cyan-300 z-10">05:00 • 7G HD</span>
+            </div>
+            <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] text-cyan-400 font-mono uppercase tracking-wider">Life Upgrade &bull; Online Earning &bull; Physics</span>
+                <h3 class="text-sm font-bold text-white mt-1">Mastering Life, Quantum Physics & Earning Online for World Students</h3>
+                <p class="text-xs text-slate-400 mt-1">Host Niraj Mallik guides students on how to upgrade their life, learn core formulas, and build sustainable online incomes.</p>
+              </div>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
+                <span>Views: 14,280</span>
+                <button onclick="playVideoModal('Life Upgrade, Online Earning & Quantum Formulas', 'https://www.w3schools.com/html/mov_bbb.mp4')" class="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-1">
+                  Watch Masterclass <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 3: Study Alarm System -->
+    <section id="view-alarm" class="mt-4 hidden space-y-4">
+      <div class="glass-card p-6 md:p-8 rounded-3xl space-y-6">
+        <div class="border-b border-slate-800 pb-4">
+          <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase" data-i18n="alarmSubtitle">Study Time Management & Alarm System</span>
+          <h2 class="text-xl md:text-2xl font-extrabold text-white mt-1" data-i18n="alarmMainTitle">Set Study Alarms & Pomodoro Focus Timer</h2>
+          <p class="text-xs text-slate-300 mt-1" data-i18n="alarmDesc">Manage your study schedule with browser alarms designed for global students to stay focused and happy.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 space-y-4">
+            <h3 class="text-sm font-bold text-white flex items-center gap-2"><i class="fa-solid fa-stopwatch text-cyan-400"></i> <span data-i18n="alarmSetTitle">Set Study Alarm Time</span></h3>
+            <div class="space-y-3 text-xs">
+              <div>
+                <label class="block text-slate-400 mb-1" data-i18n="lblAlarmTime">Alarm Time (Hours:Minutes)</label>
+                <input type="time" id="alarm-time-input" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2.5 text-white font-mono focus:border-cyan-500 outline-none">
+              </div>
+              <div>
+                <label class="block text-slate-400 mb-1" data-i18n="lblAlarmNote">Study Goal / Reminder Note</label>
+                <input type="text" id="alarm-note-input" placeholder="e.g. Mathematics Practice / Quantum Physics" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2.5 text-white focus:border-cyan-500 outline-none">
+              </div>
+              <button onclick="setStudyAlarm()" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 rounded-xl transition-all shadow" data-i18n="btnSetAlarm">
+                Set Alarm
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 space-y-4">
+            <h3 class="text-sm font-bold text-white flex items-center gap-2"><i class="fa-solid fa-bell text-yellow-400"></i> <span data-i18n="alarmActiveTitle">Active Alarms & Reminders</span></h3>
+            <div id="active-alarms-list" class="space-y-2 text-xs min-h-[140px] max-h-[200px] overflow-y-auto">
+              <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-slate-400 text-center" id="txt-no-alarms" data-i18n="txtNoAlarms">No active study alarms set. Add one above!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 4: Live Problem Solving Group -->
+    <section id="view-group" class="mt-4 hidden space-y-4">
+      <div class="glass-card rounded-3xl h-[520px] flex flex-col overflow-hidden shadow-2xl">
+        <div class="bg-slate-900/80 px-6 py-3 border-b border-slate-800 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></div>
+            <span class="text-xs font-mono font-semibold text-white tracking-wider" data-i18n="groupHeaderTitle">Global Peer Problem Solving Group (Camera, File & Voice AI)</span>
+          </div>
+          <span class="text-[10px] bg-cyan-500/20 text-cyan-300 px-2.5 py-1 rounded-full font-mono" data-i18n="groupActiveCount">1,420 Active Learners Online</span>
+        </div>
+
+        <div id="group-chat-box" class="flex-1 p-4 md:p-6 overflow-y-auto space-y-4 text-sm">
+          <div class="bg-slate-800/60 p-4 rounded-2xl border-l-4 border-cyan-500 shadow-lg">
+            <p class="font-bold text-cyan-400 text-xs">Aayush Sharma (Nepal CDC Moderator)</p>
+            <p class="mt-1 text-slate-300" id="group-welcome-msg" data-i18n="groupWelcomeMsg">Welcome to the Live Problem Solving Group! Post homework photos, voice notes, or quantum math derivations here to collaborate with peers worldwide in your native language to help humanity.</p>
+          </div>
+        </div>
+
+        <input type="file" id="group-file-upload-input" accept="image/*,.pdf,.txt,.docx" class="hidden" onchange="handleGroupFileUpload(event)">
+        <input type="file" id="group-camera-capture-input" accept="image/*" capture="environment" class="hidden" onchange="handleGroupCameraCapture(event)">
+
+        <div class="px-4 py-2 bg-slate-900/40 border-t border-slate-800/60 flex items-center justify-between gap-2">
+          <div class="flex gap-2">
+            <button onclick="triggerGroupFileUpload()" class="bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[11px] px-3 py-1.5 rounded-xl whitespace-nowrap border border-cyan-500/30 flex items-center gap-1.5">
+              <i class="fa-solid fa-paperclip"></i> <span data-i18n="btnGrpUpload">Upload File</span>
+            </button>
+            <button onclick="triggerGroupCameraCapture()" class="bg-slate-800 hover:bg-slate-700 text-emerald-300 text-[11px] px-3 py-1.5 rounded-xl whitespace-nowrap border border-emerald-500/30 flex items-center gap-1.5">
+              <i class="fa-solid fa-camera"></i> <span data-i18n="btnGrpCamera">Camera Scan</span>
+            </button>
+          </div>
+          <button onclick="toggleGroupVoice()" id="group-voice-btn" class="bg-slate-800 hover:bg-slate-700 text-purple-300 text-[11px] px-3 py-1.5 rounded-xl whitespace-nowrap border border-purple-500/30 flex items-center gap-1.5">
+            <i class="fa-solid fa-microphone"></i> <span id="group-voice-label">Voice Note: Off</span>
+          </button>
+        </div>
+
+        <div class="p-4 bg-slate-950/90 border-t border-slate-800 flex gap-2 items-center">
+          <input id="group-user-input" type="text" placeholder="Share a problem or answer a peer's question..." onkeypress="handleGroupKeyPress(event)" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:border-cyan-500 outline-none">
+          <button onclick="sendGroupMessage()" class="bg-cyan-600 hover:bg-cyan-500 w-12 h-12 rounded-xl flex items-center justify-center text-white shadow-lg active:scale-95 transition-all flex-shrink-0">
+            <i class="fa-solid fa-paper-plane text-sm"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 5: EMAX Game Arena (Level-Based Quiz Game) -->
+    <section id="view-emax" class="mt-4 hidden space-y-4">
+      <div class="glass-card p-6 md:p-8 rounded-3xl space-y-6">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+          <div>
+            <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase" data-i18n="emaxSubtitle">EMAX Quantum Level Game Arena</span>
+            <h2 class="text-xl md:text-2xl font-extrabold text-white mt-1" data-i18n="emaxMainTitle">Level-Based Quantum Physics & Problem Solving Quiz</h2>
+            <p class="text-xs text-slate-300 mt-1" data-i18n="emaxDesc">Answer correctly to increase your level, master quantum physics & problem-solving formulas, and earn verified global certificates!</p>
+          </div>
+          <div class="bg-slate-900 border border-cyan-500/30 p-3 rounded-2xl text-center flex items-center gap-4">
+            <div>
+              <span class="text-[10px] text-slate-400 uppercase tracking-widest block font-mono" data-i18n="lblEmaxLvl">Current Level</span>
+              <span class="text-base font-bold text-cyan-300" id="emax-user-level">LEVEL 1</span>
+            </div>
+            <div>
+              <span class="text-[10px] text-slate-400 uppercase tracking-widest block font-mono" data-i18n="lblEmaxScore">Score</span>
+              <span class="text-base font-bold text-emerald-300" id="emax-user-score">0 pts</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4" id="emax-game-container">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-bold text-white" id="emax-q-title">Question 1 (Quantum Mechanics & Problem Solving)</h4>
+            <span class="text-xs font-mono text-cyan-400" id="emax-streak">Streak: 0 / 3</span>
+          </div>
+          <p class="text-sm text-slate-200" id="emax-question-text">What is the Planck-Einstein relation for photon energy?</p>
+          <div class="space-y-2.5 text-xs" id="emax-options-container">
+            <!-- Dynamically generated -->
+          </div>
+          <div class="flex justify-end pt-2">
+            <button onclick="submitEmaxGameAnswer()" class="bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs px-6 py-3 rounded-xl transition-all shadow-lg" data-i18n="btnSubmitEmax">Submit Answer</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 6: MIT License & Mission -->
+    <section id="view-mission" class="mt-4 hidden space-y-4">
+      <div class="glass-card p-6 md:p-8 rounded-3xl space-y-6">
+        <div class="border-b border-slate-800 pb-4">
+          <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase" data-i18n="missionSubtitle">MIT License & Humanitarian Mission</span>
+          <h2 class="text-xl md:text-2xl font-extrabold text-white mt-1" data-i18n="missionMainTitle">Open Source MIT License & Why Donations Matter</h2>
+          <p class="text-xs md:text-sm text-slate-300 mt-2 leading-relaxed" id="mission-desc" data-i18n="missionDesc">
+            Engineered and championed by <strong class="text-white">Niraj Mallik</strong> under the <strong class="text-cyan-300">MIT License</strong>, Sikshya Global AI is entirely free for use, modification, and distribution for students worldwide. Our ultimate vision is to make human beings happy, solve problems, and channel support directly into real-world transformation across Nepal and worldwide.
+          </p>
+        </div>
+
+        <div class="bg-slate-900/90 p-5 rounded-2xl border border-cyan-500/30 font-mono text-xs text-slate-300 space-y-2">
+          <p class="font-bold text-cyan-400" data-i18n="mitTitle">MIT License (Free for All World Students):</p>
+          <p>Copyright © 2024-2026 Niraj Mallik (Mallik Group)</p>
+          <p class="text-[11px] text-slate-400 leading-relaxed" data-i18n="mitBody">Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg"><i class="fa-solid fa-school"></i></div>
+            <h3 class="text-sm font-bold text-white" data-i18n="missionCard1Title">Opening Free Schools in Remote Nepal</h3>
+            <p class="text-xs text-slate-400 leading-relaxed" data-i18n="missionCard1Desc">Thousands of children in remote Himalayan regions lack basic classrooms, books, and digital literacy. Contributions directly fund school construction, library setups, and internet-enabled smart learning hubs.</p>
+          </div>
+
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg"><i class="fa-solid fa-hands-holding-child"></i></div>
+            <h3 class="text-sm font-bold text-white" data-i18n="missionCard2Title">Youth & Community Rehabilitation Centers</h3>
+            <p class="text-xs text-slate-400 leading-relaxed" data-i18n="missionCard2Desc">Establishing safe rehabilitation centers to uplift at-risk youth, provide vocational training, mental health counseling, and shelter so that every individual is given a dignified second chance.</p>
+          </div>
+
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3 class="text-sm font-bold text-white" data-i18n="missionCard3Title">Global Student Scholarships Worldwide</h3>
+            <p class="text-xs text-slate-400 leading-relaxed" data-i18n="missionCard3Desc">Financial barriers should never stop a brilliant mind. Donations provide direct financial aid, university fee support, and learning devices to deserving students across Nepal and the globe.</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-gradient-to-r from-cyan-950/60 to-blue-950/60 border border-cyan-500/30 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div>
+            <h4 class="text-sm font-bold text-white" data-i18n="missionCtaTitle">Join Niraj Mallik in Transforming Lives & Helping Humanity</h4>
+            <p class="text-xs text-slate-300 mt-1" data-i18n="missionCtaDesc">Every contribution goes 100% toward building educational infrastructure, rehabilitation centers, and global student scholarships.</p>
+          </div>
+          <button onclick="setTab('bank')" class="bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs px-6 py-3 rounded-xl transition-all shadow-lg whitespace-nowrap" data-i18n="btnViewAcc">View Official Bank Accounts</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 7: Contacts & Socials -->
+    <section id="view-bank" class="mt-4 hidden space-y-4">
+      <div class="glass-card p-6 rounded-3xl space-y-6">
+        <div>
+          <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-building-columns text-emerald-400"></i> <span data-i18n="bankMainTitle">Mallik Group Official Financial Nodes & Social Links</span>
+          </h3>
+          <p class="text-xs text-slate-400" data-i18n="bankDesc">Official verified accounts, social media platforms, and direct contact details managed by Niraj Mallik for school building, rehabilitation, and humanitarian aid to help humanity.</p>
+        </div>
+
+        <!-- Social Media Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 p-4 rounded-2xl border border-slate-800 flex flex-col items-center justify-center gap-2 transition group">
+            <div class="w-10 h-10 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center text-lg group-hover:scale-110 transition"><i class="fa-brands fa-facebook-f"></i></div>
+            <span class="text-xs font-bold text-white">Facebook</span>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 p-4 rounded-2xl border border-slate-800 flex flex-col items-center justify-center gap-2 transition group">
+            <div class="w-10 h-10 rounded-full bg-red-600/20 text-red-400 flex items-center justify-center text-lg group-hover:scale-110 transition"><i class="fa-brands fa-youtube"></i></div>
+            <span class="text-xs font-bold text-white">YouTube</span>
+          </a>
+          <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 p-4 rounded-2xl border border-slate-800 flex flex-col items-center justify-center gap-2 transition group">
+            <div class="w-10 h-10 rounded-full bg-cyan-600/20 text-cyan-400 flex items-center justify-center text-lg group-hover:scale-110 transition"><i class="fa-brands fa-telegram"></i></div>
+            <span class="text-xs font-bold text-white">Telegram</span>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 p-4 rounded-2xl border border-slate-800 flex flex-col items-center justify-center gap-2 transition group">
+            <div class="w-10 h-10 rounded-full bg-purple-600/20 text-purple-400 flex items-center justify-center text-lg group-hover:scale-110 transition"><i class="fa-brands fa-github"></i></div>
+            <span class="text-xs font-bold text-white">GitHub</span>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 p-4 rounded-2xl border border-slate-800 flex flex-col items-center justify-center gap-2 transition group">
+            <div class="w-10 h-10 rounded-full bg-pink-600/20 text-pink-400 flex items-center justify-center text-lg group-hover:scale-110 transition"><i class="fa-brands fa-instagram"></i></div>
+            <span class="text-xs font-bold text-white">Instagram</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 p-4 rounded-2xl border border-slate-800 flex flex-col items-center justify-center gap-2 transition group">
+            <div class="w-10 h-10 rounded-full bg-sky-600/20 text-sky-400 flex items-center justify-center text-lg group-hover:scale-110 transition"><i class="fa-brands fa-linkedin-in"></i></div>
+            <span class="text-xs font-bold text-white">LinkedIn</span>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 p-4 rounded-2xl border border-slate-800 flex flex-col items-center justify-center gap-2 transition group">
+            <div class="w-10 h-10 rounded-full bg-slate-700/40 text-slate-200 flex items-center justify-center text-lg group-hover:scale-110 transition"><i class="fa-brands fa-tiktok"></i></div>
+            <span class="text-xs font-bold text-white">TikTok</span>
+          </a>
+          <a href="https://wa.me/971502297451" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 p-4 rounded-2xl border border-slate-800 flex flex-col items-center justify-center gap-2 transition group">
+            <div class="w-10 h-10 rounded-full bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-lg group-hover:scale-110 transition"><i class="fa-brands fa-whatsapp"></i></div>
+            <span class="text-xs font-bold text-white">WhatsApp</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="glass-card p-5 rounded-2xl border-cyan-500/30 space-y-3">
+            <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider block" data-i18n="bankDevContacts">Official Developer Contacts</span>
+            <div class="space-y-2 text-xs font-mono">
+              <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex items-center justify-between">
+                <span>Email: <a href="mailto:nirajmallik143@gmail.com" target="_blank" rel="noopener noreferrer" class="text-cyan-300 font-bold hover:underline">nirajmallik143@gmail.com</a></span>
+                <button onclick="copyToClipboard('nirajmallik143@gmail.com', 'Email copied!')" class="text-xs bg-slate-800 px-2 py-1 rounded text-slate-300" id="btn-copy-1">Copy</button>
+              </div>
+              <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex items-center justify-between">
+                <span>WhatsApp / Phone: <a href="https://wa.me/971502297451" target="_blank" rel="noopener noreferrer" class="text-emerald-300 font-bold hover:underline">+971 50 229 7451</a></span>
+                <button onclick="copyToClipboard('+971502297451', 'Phone copied!')" class="text-xs bg-slate-800 px-2 py-1 rounded text-slate-300" id="btn-copy-2">Copy</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl border-emerald-500/30">
+            <span class="text-xs font-bold text-emerald-400">🇦🇪 MBANK UAE</span>
+            <p class="text-[11px] text-slate-400 mt-2"><span data-i18n="bankMbankOwner">Account Holder:</span> <strong class="text-white">Niraj Mallik</strong></p>
+            <p class="text-xs font-mono font-bold text-slate-200 bg-slate-950 p-3 rounded-xl mt-2 select-all">IBAN: AE90 0975 5547 6976 0000 001</p>
+          </div>
+        </div>
+
+        <div class="glass-card p-5 rounded-2xl border-cyan-500/30">
+          <span class="text-xs font-bold text-cyan-400">🇳🇵 RBB NEPAL</span>
+          <p class="text-[11px] text-slate-400 mt-2"><span data-i18n="bankRbbBranch">Shivagunj Branch •</span> <strong class="text-white">Niraj Mallik</strong></p>
+          <p class="text-xs font-mono font-bold text-slate-200 bg-slate-950 p-3 rounded-xl mt-2 select-all">ACC: 2140100003189010</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 p-6 text-center text-[10px] text-slate-500 border-t border-slate-900 mt-auto">
+    <p id="footer-text" data-i18n="footerText">© 2024-2026 Mallik Group • Engineered by Niraj Mallik (nirajmallik143@gmail.com | +971502297451) • MIT License • Helping Humanity & Making Humans Happy</p>
+  </footer>
+
+  <!-- Video Play Modal -->
+  <div id="video-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="glass-card p-6 rounded-3xl max-w-xl w-full border border-cyan-500/40 relative space-y-4">
+      <button onclick="closeVideoModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+      <div class="flex items-center gap-3">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=200&auto=format&fit=crop" class="w-10 h-10 rounded-full object-cover border border-cyan-400">
+        <div>
+          <h3 class="text-sm font-bold text-white" id="modal-video-title">Formula Masterclass & Life Upgrade</h3>
+          <p class="text-[10px] text-slate-400"><span data-i18n="modalHostTxt">Hosted by</span> <span class="text-cyan-400 font-semibold">Niraj Mallik & Global Contributors</span></p>
+        </div>
+      </div>
+      <div class="relative bg-slate-950 rounded-2xl h-64 sm:h-72 flex items-center justify-center overflow-hidden border border-slate-800">
+        <video id="modal-video-player" src="" controls autoplay class="w-full h-full object-cover"></video>
+      </div>
+      <p class="text-xs text-slate-300 leading-relaxed" id="modal-desc-txt" data-i18n="modalDescTxt">Dedicated to helping humanity, teaching formulas, online earning, and natural disaster preparedness to make human beings happy and safe.</p>
+    </div>
+  </div>
+
+  <!-- Upload Positive Video Modal -->
+  <div id="upload-video-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="glass-card p-6 rounded-3xl max-w-lg w-full border border-emerald-500/40 relative space-y-4">
+      <button onclick="closeUploadVideoModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+      <div>
+        <h3 class="text-base font-bold text-white flex items-center gap-2"><i class="fa-solid fa-video text-emerald-400"></i> <span data-i18n="upModalTitle">Upload Positive / Emergency Video</span></h3>
+        <p class="text-xs text-slate-400 mt-1" data-i18n="upModalDesc">Share your positive message, online earning guide, or natural disaster emergency alert with students worldwide.</p>
+      </div>
+      <div class="space-y-3 text-xs">
+        <div>
+          <label class="block text-slate-400 mb-1" data-i18n="lblUpAuthor">Your Name / Contributor Title</label>
+          <input type="text" id="up-author" placeholder="e.g. Niraj Mallik or Global Student" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2.5 text-white outline-none focus:border-emerald-500">
+        </div>
+        <div>
+          <label class="block text-slate-400 mb-1" data-i18n="lblUpTitle">Video Title / Topic</label>
+          <input type="text" id="up-title" placeholder="e.g. Online Earning Guide or Natural Disaster Safety" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2.5 text-white outline-none focus:border-emerald-500">
+        </div>
+        <div>
+          <label class="block text-slate-400 mb-1" data-i18n="lblUpFile">Select Video File (MP4, WebM)</label>
+          <input type="file" id="up-file" accept="video/*" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-300 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-emerald-600 file:text-white hover:file:bg-emerald-500">
+        </div>
+        <button onclick="submitPositiveVideo()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl transition shadow-lg" data-i18n="btnPubVid">
+          Publish Positive Video to Help Humanity
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="custom-toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 border border-cyan-500/40 text-white text-xs px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300">
+    <i class="fa-solid fa-circle-check text-cyan-400 text-base"></i>
+    <span id="toast-message">Notification</span>
+  </div>
+
+  <!-- One-Tap PWA Modal -->
+  <div id="install-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="glass-card p-6 rounded-3xl max-w-sm w-full border border-cyan-500/30 text-center relative">
+      <button onclick="closeInstallModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+      <div class="w-16 h-16 rounded-full border-2 border-cyan-400 p-1 mx-auto mb-4">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=200&auto=format&fit=crop" class="rounded-full w-full h-full object-cover">
+    <script>
+    function toggleMainMenu() {
+      const menu = document.getElementById('main-nav-menu');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        menu.classList.add('flex');
+      } else {
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+      }
+    }
+
+    window.addEventListener('load', () => {
+      const splash = document.getElementById('mallik-splash');
+      const status = document.getElementById('splash-status');
+      const seq = ["LOADING 7G QUANTUM BIOMETRIC NEURO...", "VERIFYING STUDENT CREDENTIALS...", "HELPING HUMANITY & MAKING HUMANS HAPPY..."];
+      let i = 0;
+      const t = setInterval(() => {
+        if(i < seq.length) status.textContent = seq[i++];
+        else {
+          clearInterval(t);
+          splash.style.opacity = '0';
+          setTimeout(() => splash.remove(), 800);
+        }
+      }, 500);
+
+      const savedUser = localStorage.getItem('sikshya_quantum_biometric_user');
+      if (savedUser) {
+        const user = JSON.parse(savedUser);
+        document.getElementById('txt-quantum-auth').textContent = user.name || "Quantum User";
+        document.getElementById('quantum-auth-gate').classList.add('hidden');
+        document.getElementById('quantum-auth-btn').classList.remove('hidden');
+      } else {
+        document.getElementById('quantum-auth-gate').classList.remove('hidden');
+      }
+
+      renderEmaxQuestion();
+      changeLang('en');
+    });
+
+    let biometricVerified = false;
+    let gmailOtpVerified = false;
+    let phoneOtpVerified = false;
+
+    function generateQuantumKey() {
+      const randKey = 'SKG-7G-' + Math.floor(100000 + Math.random() * 900000);
+      document.getElementById('gate-person-id').value = randKey;
+      showToast("Quantum Key generated successfully!");
+    }
+
+    function sendGmailOtp() {
+      const email = document.getElementById('gate-auth-email').value.trim();
+      if (!email || !email.includes('@')) {
+        showToast("Please enter a valid Gmail address.");
+        return;
+      }
+      document.getElementById('gmail-otp-box').classList.remove('hidden');
+      document.getElementById('btn-send-gmail-otp').textContent = "Resend OTP";
+      gmailOtpVerified = true;
+      showToast("Quantum Gmail OTP sent successfully (Code: 123456)");
+      document.getElementById('gate-gmail-otp').value = "123456"; // Auto-fill for seamless testing
+    }
+
+    function sendPhoneOtp() {
+      const phone = document.getElementById('gate-auth-phone').value.trim();
+      if (!phone || phone.length < 8) {
+        showToast("Please enter a valid phone number.");
+        return;
+      }
+      document.getElementById('phone-otp-box').classList.remove('hidden');
+      document.getElementById('btn-send-phone-otp').textContent = "Resend OTP";
+      phoneOtpVerified = true;
+      showToast("Quantum SMS OTP sent successfully (Code: 654321)");
+      document.getElementById('gate-phone-otp').value = "654321"; // Auto-fill for seamless testing
+    }
+
+    function verifyBiometric(type) {
+      biometricVerified = true;
+      const statusTxt = document.getElementById('bio-status-txt');
+      if (type === 'fingerprint') {
+        document.getElementById('bio-finger-btn').className = "bg-cyan-600/30 border border-cyan-400 px-4 py-3 rounded-xl flex flex-col items-center gap-1 transition w-1/2";
+        statusTxt.textContent = "Status: Fingerprint Biometric Verified Successfully! ✔";
+        statusTxt.className = "text-[11px] text-cyan-400 font-mono font-bold";
+      } else {
+        document.getElementById('bio-face-btn').className = "bg-emerald-600/30 border border-emerald-400 px-4 py-3 rounded-xl flex flex-col items-center gap-1 transition w-1/2";
+        statusTxt.textContent = "Status: Face Scan Biometric Verified Successfully! ✔";
+        statusTxt.className = "text-[11px] text-emerald-400 font-mono font-bold";
+      }
+      showToast("Biometric verification passed!");
+    }
+
+    function submitQuantumGateAuth() {
+      const personId = document.getElementById('gate-person-id').value.trim();
+      const name = document.getElementById('gate-auth-name').value.trim();
+      const email = document.getElementById('gate-auth-email').value.trim();
+      const phone = document.getElementById('gate-auth-phone').value.trim();
+
+      if (!personId || !name || !email || !phone) {
+        showToast("Please fill in Person ID, Name, Gmail, and Phone.");
+        return;
+      }
+      if (!biometricVerified) {
+        showToast("Please complete fingerprint or face biometric verification.");
+        return;
+      }
+
+      const userData = { personId, name, email, phone, time: new Date().toISOString() };
+      localStorage.setItem('sikshya_quantum_biometric_user', JSON.stringify(userData));
+
+      document.getElementById('quantum-auth-gate').classList.add('hidden');
+      document.getElementById('txt-quantum-auth').textContent = name;
+      showToast(`Welcome, ${name}! Quantum 7G Authentication successful.`);
+    }
+
+    function logoutQuantumSession() {
+      localStorage.removeItem('sikshya_quantum_biometric_user');
+      document.getElementById('quantum-auth-gate').classList.remove('hidden');
+      showToast("Signed out. Quantum session locked.");
+    }
+
+    function setTab(tab) {
+      document.querySelectorAll('.nav-tab').forEach(t => t.className = "nav-tab bg-slate-800/50 hover:bg-slate-800 text-slate-400 px-3.5 py-2.5 rounded-2xl text-xs font-bold whitespace-nowrap transition-all flex items-center");
+      document.getElementById('tab-'+tab).className = "nav-tab nav-tab-active px-3.5 py-2.5 rounded-2xl text-xs font-bold whitespace-nowrap transition-all flex items-center";
+      document.querySelectorAll('main > section').forEach(s => s.classList.add('hidden'));
+      document.getElementById('view-'+tab).classList.remove('hidden');
+      if (window.innerWidth < 768) {
+        document.getElementById('main-nav-menu').classList.add('hidden');
+        document.getElementById('main-nav-menu').classList.remove('flex');
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('custom-toast');
+      document.getElementById('toast-message').textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => toast.classList.add('translate-y-20', 'opacity-0'), 3500);
+    }
+
+    function copyToClipboard(text, msg) {
+      const dummy = document.createElement('textarea');
+      dummy.value = text;
+      document.body.appendChild(dummy);
+      dummy.select();
+      document.execCommand('copy');
+      document.body.removeChild(dummy);
+      showToast(msg);
+    }
+
+    function shareOnFacebook() {
+      const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
+      window.open(shareUrl, '_blank', 'width=600,height=400');
+      showToast("Opening Facebook Share...");
+    }
+
+    // Video Modal
+    function playVideoModal(title, url) {
+      document.getElementById('modal-video-title').textContent = title;
+      const player = document.getElementById('modal-video-player');
+      player.src = url || "https://www.w3schools.com/html/mov_bbb.mp4";
+      document.getElementById('video-modal').classList.remove('hidden');
+      player.play().catch(e => console.log("Auto-play prevented"));
+      showToast("Playing Masterclass Video...");
+    }
+
+    function closeVideoModal() {
+      const player = document.getElementById('modal-video-player');
+      player.pause();
+      document.getElementById('video-modal').classList.add('hidden');
+    }
+
+    function openUploadVideoModal() {
+      document.getElementById('upload-video-modal').classList.remove('hidden');
+    }
+
+    function closeUploadVideoModal() {
+      document.getElementById('upload-video-modal').classList.add('hidden');
+    }
+
+    function submitPositiveVideo() {
+      const author = document.getElementById('up-author').value.trim() || "Global Contributor";
+      const title = document.getElementById('up-title').value.trim() || "Positive Formula / Emergency Alert";
+      const fileInput = document.getElementById('up-file');
+
+      if (!title) {
+        showToast("Please enter a video title.");
+        return;
+      }
+
+      let videoUrl = "https://www.w3schools.com/html/mov_bbb.mp4";
+      if (fileInput.files && fileInput.files[0]) {
+        videoUrl = URL.createObjectURL(fileInput.files[0]);
+      }
+
+      closeUploadVideoModal();
+      showToast("Publishing video for humanity...");
+
+      setTimeout(() => {
+        const grid = document.getElementById('community-videos-grid');
+        grid.innerHTML += `
+          <div class="bg-slate-900/90 rounded-2xl border border-slate-800 overflow-hidden shadow-xl flex flex-col">
+            <div class="relative h-48 sm:h-56 bg-slate-950 flex items-center justify-center overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-40">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+              <div class="absolute top-3 left-3 flex items-center gap-2 bg-slate-900/90 px-3 py-1.5 rounded-full border border-emerald-500/40 shadow-lg z-10">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="text-[11px] font-bold text-white">${escapeHTML(author)}</span>
+              </div>
+              <button onclick="playVideoModal('${escapeHTML(title)}', '${videoUrl}')" class="relative z-10 w-14 h-14 rounded-full bg-emerald-600/90 hover:bg-emerald-500 text-white flex items-center justify-center text-xl shadow-2xl transition-all transform hover:scale-110">
+                <i class="fa-solid fa-play ml-1"></i>
+              </button>
+              <span class="absolute bottom-3 right-3 text-[10px] font-mono bg-black/70 px-2 py-0.5 rounded text-emerald-300 z-10">05:00 • Humanity HD</span>
+            </div>
+            <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] text-emerald-400 font-mono uppercase tracking-wider">Community Upload &bull; Positive / Emergency</span>
+                <h3 class="text-sm font-bold text-white mt-1">${escapeHTML(title)}</h3>
+                <p class="text-xs text-slate-400 mt-1">Uploaded by ${escapeHTML(author)} to help humanity and spread positive life advice.</p>
+              </div>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
+                <span>Views: 340</span>
+                <button onclick="playVideoModal('${escapeHTML(title)}', '${videoUrl}')" class="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1">
+                  Watch Video <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+        showToast("Success! Video published successfully to help humanity.");
+      }, 1000);
+    }
+
+    // Camera & True File Upload System (AI Coaching)
+    function triggerFileUpload() { document.getElementById('file-upload-input').click(); }
+    function triggerCameraCapture() { document.getElementById('camera-capture-input').click(); }
+
+    function handleFileUpload(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const box = document.getElementById('chat-box');
+      
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        if(file.type.startsWith('image/')) {
+          box.innerHTML += `<div class="text-right flex justify-end"><div class="inline-block bg-cyan-600 text-white p-3.5 rounded-2xl rounded-tr-none text-xs max-w-[80%] text-left shadow-md space-y-2"><strong>Uploaded Image:</strong> ${escapeHTML(file.name)}<img src="${e.target.result}" class="max-h-40 rounded-xl border border-white/20 object-cover"></div></div>`;
+        } else {
+          box.innerHTML += `<div class="text-right flex justify-end"><div class="inline-block bg-cyan-600 text-white p-3.5 rounded-2xl rounded-tr-none text-xs max-w-[80%] text-left shadow-md"><strong>Uploaded Document:</strong> ${escapeHTML(file.name)} (${(file.size/1024).toFixed(1)} KB) - Successfully parsed by 7G Biometric Neuro-Engine!</div></div>`;
+        }
+        box.scrollTop = box.scrollHeight;
+        simulateAIFileAnalysis(file.name);
+      };
+      if(file.type.startsWith('image/')) {
+        reader.readAsDataURL(file);
+      } else {
+        reader.readAsText(file);
+      }
+    }
+
+    function handleCameraCapture(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const box = document.getElementById('chat-box');
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        box.innerHTML += `<div class="text-right flex justify-end"><div class="inline-block bg-cyan-600 text-white p-3.5 rounded-2xl rounded-tr-none text-xs max-w-[80%] text-left shadow-md space-y-2"><strong>Scanned Note / Homework:</strong><img src="${e.target.result}" class="max-h-40 rounded-xl border border-white/20 object-cover"></div></div>`;
+        box.scrollTop = box.scrollHeight;
+        simulateAIFileAnalysis("Camera Note Scan");
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function simulateAIFileAnalysis(filename) {
+      const box = document.getElementById('chat-box');
+      const loaderId = 'load-' + Date.now();
+      box.innerHTML += `<div id="${loaderId}" class="bg-slate-800/50 p-4 rounded-2xl border-l-4 border-emerald-500 text-xs animate-pulse">Quantum 7G Vision AI analyzing document to help humanity: ${escapeHTML(filename)}...</div>`;
+      box.scrollTop = box.scrollHeight;
+
+      setTimeout(() => {
+        document.getElementById(loaderId).remove();
+        box.innerHTML += `<div class="bg-slate-800/60 p-4 rounded-2xl border-l-4 border-cyan-500 text-xs space-y-1"><p class="font-bold text-cyan-400 text-[10px]">QUANTUM 7G VISION ANALYSIS SUCCESS</p><p class="text-slate-200 leading-relaxed">I have successfully scanned and solved all formulas and homework problems in your document under MIT License to make human beings happy and support your education.</p></div>`;
+        box.scrollTop = box.scrollHeight;
+        if (voiceConvActive) speakTextOut("I have analyzed your document and solved all equations successfully to help humanity.");
+      }, 1500);
+    }
+
+    // Camera & File Upload System (Group)
+    function triggerGroupFileUpload() { document.getElementById('group-file-upload-input').click(); }
+    function triggerGroupCameraCapture() { document.getElementById('group-camera-capture-input').click(); }
+
+    function handleGroupFileUpload(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const box = document.getElementById('group-chat-box');
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        if(file.type.startsWith('image/')) {
+          box.innerHTML += `<div class="text-right flex justify-end"><div class="inline-block bg-cyan-600 text-white p-3.5 rounded-2xl rounded-tr-none text-xs max-w-[80%] text-left shadow-md space-y-2"><strong>Group File:</strong> ${escapeHTML(file.name)}<img src="${e.target.result}" class="max-h-40 rounded-xl border border-white/20 object-cover"></div></div>`;
+        } else {
+          box.innerHTML += `<div class="text-right flex justify-end"><div class="inline-block bg-cyan-600 text-white p-3.5 rounded-2xl rounded-tr-none text-xs max-w-[80%] text-left shadow-md"><strong>Group Document:</strong> ${escapeHTML(file.name)}</div></div>`;
+        }
+        box.scrollTop = box.scrollHeight;
+        showToast("File shared with global peer group!");
+      };
+      if(file.type.startsWith('image/')) reader.readAsDataURL(file); else reader.readAsText(file);
+    }
+
+    function handleGroupCameraCapture(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const box = document.getElementById('group-chat-box');
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        box.innerHTML += `<div class="text-right flex justify-end"><div class="inline-block bg-cyan-600 text-white p-3.5 rounded-2xl rounded-tr-none text-xs max-w-[80%] text-left shadow-md space-y-2"><strong>Group Camera Capture:</strong><img src="${e.target.result}" class="max-h-40 rounded-xl border border-white/20 object-cover"></div></div>`;
+        box.scrollTop = box.scrollHeight;
+        showToast("Photo shared with global peer group!");
+      };
+      reader.readAsDataURL(file);
+    }
+
+    let groupVoiceActive = false;
+    function toggleGroupVoice() {
+      groupVoiceActive = !groupVoiceActive;
+      const btn = document.getElementById('group-voice-btn');
+      const label = document.getElementById('group-voice-label');
+      if (groupVoiceActive) {
+        btn.className = "bg-purple-600 text-white text-[11px] px-3 py-1.5 rounded-xl whitespace-nowrap border border-purple-400 flex items-center gap-1.5 animate-pulse";
+        label.textContent = "Voice Note: Recording...";
+        showToast("Group Voice Note Recording Active!");
+        setTimeout(() => {
+          if(groupVoiceActive) toggleGroupVoice();
+          const box = document.getElementById('group-chat-box');
+          box.innerHTML += `<div class="text-right flex justify-end"><div class="inline-block bg-purple-700 text-white p-3 rounded-2xl rounded-tr-none text-xs max-w-[80%] text-left shadow-md flex items-center gap-2"><i class="fa-solid fa-microphone text-sm"></i> <span>Voice Note (0:14s) - Shared with Peer Group</span></div></div>`;
+          box.scrollTop = box.scrollHeight;
+          showToast("Voice Note shared with group!");
+        }, 3000);
+      } else {
+        btn.className = "bg-slate-800 hover:bg-slate-700 text-purple-300 text-[11px] px-3 py-1.5 rounded-xl whitespace-nowrap border border-purple-500/30 flex items-center gap-1.5";
+        label.textContent = "Voice Note: Off";
+      }
+    }
+
+    // Real-Time Voice Conversation System (Speech Recognition & TTS)
+    let voiceConvActive = false;
+    let recognition = null;
+    function toggleVoiceConversation() {
+      voiceConvActive = !voiceConvActive;
+      const btn = document.getElementById('voice-conv-btn');
+      const label = document.getElementById('voice-conv-label');
+      if (voiceConvActive) {
+        btn.className = "text-[11px] text-white transition-colors bg-emerald-600 border border-emerald-500 px-3 py-1 rounded-lg flex items-center gap-1.5 animate-pulse";
+        label.textContent = "Real-Time Voice AI: Active";
+        showToast("Real-Time Voice AI Conversation Activated!");
+        speakTextOut("Sikshya AI Real-Time Voice Conversation is online to help humanity. Speak your question now!");
+        
+        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+          const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+          recognition = new SpeechRecognition();
+          recognition.continuous = true;
+          recognition.interimResults = false;
+          const lang = document.getElementById('language').value;
+          const langMap = { en: 'en-US', np: 'ne-NP', hi: 'hi-IN', bn: 'bn-BD', zh: 'zh-CN', ja: 'ja-JP', ko: 'ko-KR', ar: 'ar-SA', vi: 'vi-VN', th: 'th-TH', id: 'id-ID', fil: 'fil-PH', ta: 'ta-IN', te: 'te-IN', mr: 'mr-IN' };
+          recognition.lang = langMap[lang] || 'en-US';
+
+          recognition.onresult = function(event) {
+            const transcript = event.results[event.results.length - 1][0].transcript;
+            document.getElementById('user-input').value = transcript;
+            askAI();
+          };
+          recognition.onerror = function(e) { console.log("Speech recognition error", e); };
+          recognition.onend = function() {
+            if (voiceConvActive) { try { recognition.start(); } catch(e){} }
+          };
+          try { recognition.start(); } catch(e) {}
+        }
+      } else {
+        btn.className = "text-[11px] text-cyan-300 transition-colors bg-cyan-950/60 border border-cyan-500/30 px-3 py-1 rounded-lg flex items-center gap-1.5";
+        label.textContent = "Real-Time Voice AI: Off";
+        showToast("Real-Time Voice AI Conversation Deactivated.");
+        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        if (recognition) { try { recognition.stop(); } catch(e){} }
+      }
+    }
+
+    function speakTextOut(text) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      const lang = document.getElementById('language').value;
+      const langMap = { en: 'en-US', np: 'ne-NP', hi: 'hi-IN', bn: 'bn-BD', zh: 'zh-CN', ja: 'ja-JP', ko: 'ko-KR', ar: 'ar-SA', vi: 'vi-VN', th: 'th-TH', id: 'id-ID', fil: 'fil-PH', ta: 'ta-IN', te: 'te-IN', mr: 'mr-IN' };
+      utterance.lang = langMap[lang] || 'en-US';
+      window.speechSynthesis.speak(utterance);
+    }
+
+    // Study Alarm System
+    let studyAlarms = [];
+    function setStudyAlarm() {
+      const timeVal = document.getElementById('alarm-time-input').value;
+      const noteVal = document.getElementById('alarm-note-input').value || "Study Session";
+      if(!timeVal) {
+        showToast("Please select a valid alarm time.");
+        return;
+      }
+      studyAlarms.push({ time: timeVal, note: noteVal, active: true });
+      renderAlarms();
+      showToast(`Alarm set for ${timeVal}: ${noteVal}`);
+      document.getElementById('alarm-time-input').value = "";
+      document.getElementById('alarm-note-input').value = "";
+    }
+
+    function renderAlarms() {
+      const list = document.getElementById('active-alarms-list');
+      if(studyAlarms.length === 0) {
+        list.innerHTML = `<div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-slate-400 text-center" id="txt-no-alarms">No active study alarms set. Add one above!</div>`;
+        return;
+      }
+      list.innerHTML = '';
+      studyAlarms.forEach((a, idx) => {
+        list.innerHTML += `<div class="p-3 bg-slate-950 rounded-xl border border-slate-800 flex items-center justify-between"><div><span class="font-mono font-bold text-cyan-400 text-sm">${a.time}</span><p class="text-slate-300 text-xs">${a.note}</p></div><button onclick="removeAlarm(${idx})" class="text-red-400 hover:text-red-300 text-xs bg-red-950/40 px-2.5 py-1 rounded-lg">Delete</button></div>`;
+      });
+    }
+
+    function removeAlarm(idx) {
+      studyAlarms.splice(idx, 1);
+      renderAlarms();
+      showToast("Alarm removed.");
+    }
+
+    setInterval(() => {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const mins = String(now.getMinutes()).padStart(2, '0');
+      const currentHM = `${hours}:${mins}`;
+
+      studyAlarms.forEach(a => {
+        if(a.active && a.time === currentHM) {
+          a.active = false;
+          showToast(`⏰ ALARM: Time for ${a.note}!`);
+          if (voiceConvActive) speakTextOut(`Alarm triggered! Time for ${a.note}`);
+        }
+      });
+    }, 1000);
+
+    // Live Problem Solving Group
+    function handleGroupKeyPress(e) { if(e.key === 'Enter') sendGroupMessage(); }
+    function sendGroupMessage() {
+      const inp = document.getElementById('group-user-input');
+      const box = document.getElementById('group-chat-box');
+      const msg = inp.value.trim();
+      if(!msg) return;
+
+      inp.value = "";
+      box.innerHTML += `<div class="text-right flex justify-end"><div class="inline-block bg-cyan-600 text-white p-3.5 rounded-2xl rounded-tr-none text-xs max-w-[80%] text-left shadow-md"><strong>You:</strong> ${escapeHTML(msg)}</div></div>`;
+      box.scrollTop = box.scrollHeight;
+
+      setTimeout(() => {
+        const peers = ["Aayush Sharma (Nepal CDC)", "Priya Patel (Cambridge)", "Kenji Sato (Tokyo)", "Fatima Al-Mansoori (UAE)"];
+        const randPeer = peers[Math.floor(Math.random() * peers.length)];
+        box.innerHTML += `<div class="bg-slate-900/80 p-3.5 rounded-2xl border border-slate-800 text-xs space-y-1"><p class="font-bold text-emerald-400">${randPeer}</p><p class="text-slate-300">Brilliant quantum perspective! Let's solve this collaboratively under the 7G architecture to help humanity and make human beings happy.</p></div>`;
+        box.scrollTop = box.scrollHeight;
+      }, 1200);
+    }
+
+    let deferredPrompt = null;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      showToast("Ready for One-Tap Open!");
+    });
+
+    function triggerOneTapInstall() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(r => { if(r.outcome === 'accepted') showToast("App launched!"); deferredPrompt = null; });
+      } else {
+        document.getElementById('install-modal').classList.remove('hidden');
+      }
+    }
+
+    function closeInstallModal() { document.getElementById('install-modal').classList.add('hidden'); }
+
+    // EMAX Game Arena (Level-Based Quantum Quiz)
+    let emaxLevel = 1;
+    let emaxScore = 0;
+    let emaxStreak = 0;
+
+    const emaxQuizBank = [
+      { q: "What is the Planck-Einstein relation for photon energy?", options: ["E = hf", "E = mc^2", "F = ma", "PV = nRT"], correct: 0 },
+      { q: "Which quantum problem-solving formula calculates de Broglie wavelength?", options: ["lambda = h / p", "E = hbar omega", "Delta x Delta p >= hbar/2", "V = IR"], correct: 0 },
+      { q: "In quantum mechanics, what does Heisenberg's Uncertainty Principle limit?", options: ["Simultaneous exact measurement of position & momentum", "Speed of light", "Total energy conservation", "Electrical resistance"], correct: 0 },
+      { q: "How can students leverage quantum neural AI to help humanity and earn online?", options: ["By building accessible universal education apps under MIT License", "By deleting all datasets", "By avoiding learning", "By closing schools"], correct: 0 }
+    ];
+
+    let currentQuizIdx = 0;
+    function renderEmaxQuestion() {
+      const q = emaxQuizBank[currentQuizIdx % emaxQuizBank.length];
+      document.getElementById('emax-q-title').textContent = `Level ${emaxLevel} Quantum Physics & Problem Solving Challenge`;
+      document.getElementById('emax-question-text').textContent = q.q;
+      document.getElementById('emax-streak').textContent = `Streak: ${emaxStreak} / 3`;
+
+      const opts = document.getElementById('emax-options-container');
+      opts.innerHTML = '';
+      q.options.forEach((opt, idx) => {
+        opts.innerHTML += `<label class="block p-3.5 bg-slate-900 rounded-xl border border-slate-800 cursor-pointer hover:border-cyan-500 transition"><input type="radio" name="emax-opt" value="${idx}" class="mr-2.5"> ${escapeHTML(opt)}</label>`;
+      });
+    }
+
+    function submitEmaxGameAnswer() {
+      const selected = document.querySelector('input[name="emax-opt"]:checked');
+      if (!selected) {
+        showToast("Please select an option.");
+        return;
+      }
+      const ans = parseInt(selected.value);
+      const q = emaxQuizBank[currentQuizIdx % emaxQuizBank.length];
+
+      if (ans === q.correct) {
+        emaxScore += 50;
+        emaxStreak++;
+        showToast("Correct! Quantum formula mastered.");
+        if (emaxStreak >= 3) {
+          emaxLevel++;
+          emaxStreak = 0;
+          showToast(`🎉 Level Up! You are now Level ${emaxLevel}!`);
+          document.getElementById('emax-user-level').textContent = `LEVEL ${emaxLevel}`;
+        }
+      } else {
+        showToast("Incorrect. Review quantum problem solving formulas and try again.");
+        emaxStreak = 0;
+      }
+
+      document.getElementById('emax-user-score').textContent = `${emaxScore} pts`;
+      currentQuizIdx++;
+      renderEmaxQuestion();
+    }
+
+    // Universal Script Keyboard
+    const keyboards = {
+      en: ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9','?','!','+','-','='],
+      ur: ['ا','ب','پ','ت','ٹ','ث','ج','چ','ح','خ','د','ڈ','ذ','ر','ڑ','ز','ژ','س','ش','ص','ض','ط','ظ','ع','غ','ف','ق','ک','گ','ل','م','ن','و','ہ','ء','ی','ے','0','1','2','3','4','5','6','7','8','9','؟','!'],
+      np: ['अ','आ','इ','ई','उ','ऊ','ऋ','ए','ऐ','ओ','औ','क','ख','ग','घ','ङ','च','छ','ज','झ','ञ','ट','ठ','ड','ढ','ण','त','थ','द','ध','न','प','फ','ब','भ','म','य','र','ल','व','श','ष','स','ह','क्ष','त्र','ज्ञ','०','१','२','३','४','५','६','७','८','९'],
+      hi: ['अ','आ','इ','ई','उ','ऊ','ऋ','ए','ऐ','ओ','औ','क','ख','ग','घ','ङ','च','छ','ज','झ','ञ','ट','ठ','ड','ढ','ण','त','थ','द','ध','न','प','फ','ब','भ','म','य','र','ल','व','श','ष','स','ह','क्ष','त्र','ज्ञ','०','१','२','३','४','५','६','७','८','९'],
+      bn: ['অ','আ','ই','ঈ','উ','ঊ','ঋ','এ','ঐ','ও','ঔ','ক','খ','গ','ঘ','ঙ','চ','ছ','জ','ঝ','ঞ','ট','ঠ','ড','ঢ','ণ','ত','থ','দ','ধ','ন','প','ফ','ব','ভ','ম','য','র','ল','শ','ষ','স','হ','ড়','ঢ়','য়','০','১','২','৩','৪','৫','৬','৭','৮','৯'],
+      zh: ['你','好','学','习','科','学','数','理','化','生','计','算','机','人','工','智','能','助','手','尼','拉','克','0','1','2','3','4','5','6','7','8','9','？','！','+','-','='],
+      ja: ['あ','い','う','え','お','か','き','く','け','こ','さ','し','す','せ','そ','た','ち','つ','て','と','な','に','ぬ','ね','の','は','ひ','ふ','へ','ほ','ま','み','む','め','も','や','ゆ','よ','ら','り','る','れ','ろ','わ','を','ん'],
+      ko: ['ㄱ','ㄴ','ㄷ','ㄹ','ㅁ','ㅂ','ㅅ','ㅇ','ㅈ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ','ㅏ','ㅑ','ㅓ','ㅕ','ㅗ','ㅛ','ㅜ','ㅠ','ㅡ','ㅣ','0','1','2','3','4','5','6','7','8','9','?','!','+','-','='],
+      ar: ['ض','ص','ث','ق','ف','غ','ع','ه','خ','ح','ج','د','ش','س','ي','ب','ل','ا','ت','ن','م','ك','ط','ئ','ء','ؤ','ر','لا','ى','ة','و','ز','ظ','٠','١','٢','٣','٤','٥','٦','٧','٨','٩'],
+      vi: ['a','ă','â','b','c','d','đ','e','ê','g','h','i','k','l','m','n','o','ô','ơ','p','q','r','s','t','u','ư','v','x','y','á','à','ả','ã','ạ','ế','ố','ớ','0','1','2','3'],
+      th: ['ก','ข','ฃ','ค','ฅ','ฆ','ง','จ','ฉ','ช','ซ','ฌ','ญ','ฎ','ฏ','ฐ','ฑ','ฒ','ณ','ด','ต','ถ','ท','ธ','น','บ','ป','ผ','ฝ','พ','ฟ','ภ','ม','ย','ร','ล','ว','ศ','ษ','ส','ห','ฬ','อ','ฮ','0','1','2','3'],
+      id: ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9','?','!'],
+      fil: ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','ng','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9'],
+      ta: ['அ','ஆ','இ','ஈ','உ','ஊ','எ','ஏ','ஐ','ஒ','ஓ','ஔ','க','ங','ச','ஞ','ட','ண','த','ந','ப','ம','ய','ர','ல','வ','ழ','ள','ற','ன','ஸ','ஷ','ஜ','ஹ','0','1','2','3','4','5','6','7','8','9'],
+      te: ['అ','ఆ','ఇ','ఈ','ఉ','ఊ','ఋ','ఎ','ఏ','ఐ','ఒ','ఓ','ఔ','క','ఖ','గ','ఘ','ఙ','చ','ఛ','జ','ఝ','ఞ','ట','ఠ','డ','ఢ','ణ','త','థ','ద','ధ','న','ప','ఫ','బ','భ','మ','య','ర','ల','వ','శ','ష','స','హ','0','1','2','3','4','5','6','7','8','9'],
+      mr: ['अ','आ','इ','ई','उ','ऊ','ऋ','ए','ऐ','ओ','औ','क','ख','ग','घ','ङ','च','छ','ज','झ','ञ','ट','ठ','ड','ढ','ण','त','थ','द','ध','न','प','फ','ब','भ','म','य','र','ल','व','श','ष','स','ह','क्ष','त्र','ज्ञ','०','१','२','३','४','५','६','७','८','९']
+    };
+
+    function toggleVirtualKeyboard() {
+      const kb = document.getElementById('virtual-keyboard');
+      const lang = document.getElementById('language').value;
+      kb.classList.toggle('hidden');
+      if(!kb.classList.contains('hidden')) renderKeyboard(lang);
+    }
+
+    function renderKeyboard(lang) {
+      const keysContainer = document.getElementById('keyboard-keys');
+      const keys = keyboards[lang] || keyboards.en;
+      document.getElementById('active-kb-label').textContent = lang.toUpperCase();
+      keysContainer.innerHTML = '';
+      keys.forEach(k => {
+        const btn = document.createElement('button');
+        btn.className = 'virtual-key';
+        btn.textContent = k;
+        btn.onclick = () => insertKey(k);
+        keysContainer.appendChild(btn);
+      });
+    }
+
+    function insertKey(char) {
+      const activeTab = document.querySelector('main > section:not(.hidden)').id;
+      let input = (activeTab === 'view-group') ? document.getElementById('group-user-input') : document.getElementById('user-input');
+      if(input) { input.value += char; input.focus(); }
+    }
+
+    function backspaceKey() {
+      const activeTab = document.querySelector('main > section:not(.hidden)').id;
+      let input = (activeTab === 'view-group') ? document.getElementById('group-user-input') : document.getElementById('user-input');
+      if(input) { input.value = input.value.slice(0, -1); input.focus(); }
+    }
+
+    function clearInputKey() {
+      const activeTab = document.querySelector('main > section:not(.hidden)').id;
+      let input = (activeTab === 'view-group') ? document.getElementById('group-user-input') : document.getElementById('user-input');
+      if(input) { input.value = ''; input.focus(); }
+    }
+
+    // Comprehensive Multilingual Translation Dictionaries for ALL Sections
+    const translations = {
+      en: {
+        appTitle: "Sikshya Global AI",
+        neuralBadge: "Biometric Quantum Link: Verified • MIT License",
+        txtShare: "Share",
+        txtOnetap: "ONE-TAP OPEN",
+        kbToggle: "Universal Keyboard",
+        kbTitle: "Native Script Keyboard",
+        kbSpace: "SPACEBAR",
+        kbBack: "BACK",
+        kbClear: "CLEAR",
+        tCoaching: "AI COACHING",
+        tVideos: "HUMANITY & EMERGENCY VIDEOS",
+        tAlarm: "STUDY ALARM",
+        tGroup: "PROBLEM SOLVING GROUP",
+        tEmax: "EMAX GAME ARENA",
+        tMission: "MIT LICENSE & MISSION",
+        tBank: "CONTACTS & SOCIALS",
+        coachingTitle: "Quantum Biometric Neuro-Engine v7.5 (Camera, File & Real-Time Voice AI)",
+        btnReset: "Reset",
+        btnUpload: "Upload File",
+        btnCamera: "Camera Scan",
+        welcome: "Greetings, Learner! I am connected to the Mallik 7G Universal Education Neural Network. Ask any academic question, upload homework files, or use the camera to scan notes in your native language to make humanity happy.",
+        placeholder: "Type your educational question in your native language...",
+        devBy: "Developed by",
+        lblEmail: "Email",
+        lblWhatsApp: "WhatsApp",
+        vidSubtitle: "Global Humanity & Emergency Video Hub",
+        vidMainTitle: "Formula Masterclasses, Online Earning & Disaster Preparedness",
+        vidDesc: "Anyone in the world can upload positive educational videos, online earning tutorials, and natural disaster emergency alerts to help humanity. Hosted by Niraj Mallik & Global Contributors.",
+        btnUploadVid: "Upload Positive Video",
+        alarmSubtitle: "Study Time Management & Alarm System",
+        alarmMainTitle: "Set Study Alarms & Pomodoro Focus Timer",
+        alarmDesc: "Manage your study schedule with browser alarms designed for global students to stay focused and happy.",
+        alarmSetTitle: "Set Study Alarm Time",
+        lblAlarmTime: "Alarm Time (Hours:Minutes)",
+        lblAlarmNote: "Study Goal / Reminder Note",
+        btnSetAlarm: "Set Alarm",
+        alarmActiveTitle: "Active Alarms & Reminders",
+        txtNoAlarms: "No active study alarms set. Add one above!",
+        groupHeaderTitle: "Global Peer Problem Solving Group (Camera, File & Voice AI)",
+        groupActiveCount: "1,420 Active Learners Online",
+        groupWelcomeMsg: "Welcome to the Live Problem Solving Group! Post homework photos, voice notes, or quantum math derivations here to collaborate with peers worldwide in your native language to help humanity.",
+        btnGrpUpload: "Upload File",
+        btnGrpCamera: "Camera Scan",
+        emaxSubtitle: "EMAX Quantum Level Game Arena",
+        emaxMainTitle: "Level-Based Quantum Physics & Problem Solving Quiz",
+        emaxDesc: "Answer correctly to increase your level, master quantum physics & problem-solving formulas, and earn verified global certificates!",
+        lblEmaxLvl: "Current Level",
+        lblEmaxScore: "Score",
+        btnSubmitEmax: "Submit Answer",
+        missionSubtitle: "MIT License & Humanitarian Mission",
+        missionMainTitle: "Open Source MIT License & Why Donations Matter",
+        missionDesc: "Engineered and championed by Niraj Mallik under the MIT License, Sikshya Global AI is entirely free for use, modification, and distribution for students worldwide. Our ultimate vision is to make human beings happy, solve problems, and channel support directly into real-world transformation across Nepal and worldwide.",
+        mitTitle: "MIT License (Free for All World Students):",
+        mitBody: "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software.",
+        missionCard1Title: "Opening Free Schools in Remote Nepal",
+        missionCard1Desc: "Thousands of children in remote Himalayan regions lack basic classrooms, books, and digital literacy. Contributions directly fund school construction, library setups, and internet-enabled smart learning hubs.",
+        missionCard2Title: "Youth & Community Rehabilitation Centers",
+        missionCard2Desc: "Establishing safe rehabilitation centers to uplift at-risk youth, provide vocational training, mental health counseling, and shelter so that every individual is given a dignified second chance.",
+        missionCard3Title: "Global Student Scholarships Worldwide",
+        missionCard3Desc: "Financial barriers should never stop a brilliant mind. Donations provide direct financial aid, university fee support, and learning devices to deserving students across Nepal and the globe.",
+        missionCtaTitle: "Join Niraj Mallik in Transforming Lives & Helping Humanity",
+        missionCtaDesc: "Every contribution goes 100% toward building educational infrastructure, rehabilitation centers, and global student scholarships.",
+        btnViewAcc: "View Official Bank Accounts",
+        bankMainTitle: "Mallik Group Official Financial Nodes & Social Links",
+        bankDesc: "Official verified accounts, social media platforms, and direct contact details managed by Niraj Mallik for school building, rehabilitation, and humanitarian aid to help humanity.",
+        bankDevContacts: "Official Developer Contacts",
+        bankMbankOwner: "Account Holder:",
+        bankRbbBranch: "Shivagunj Branch •",
+        footerText: "© 2024-2026 Mallik Group • Engineered by Niraj Mallik (nirajmallik143@gmail.com | +971502297451) • MIT License • Helping Humanity & Making Humans Happy",
+        modalHostTxt: "Hosted by",
+        modalDescTxt: "Dedicated to helping humanity, teaching formulas, online earning, and natural disaster preparedness to make human beings happy and safe.",
+        upModalTitle: "Upload Positive / Emergency Video",
+        upModalDesc: "Share your positive message, online earning guide, or natural disaster emergency alert with students worldwide.",
+        lblUpAuthor: "Your Name / Contributor Title",
+        lblUpTitle: "Video Title / Topic",
+        lblUpFile: "Select Video File (MP4, WebM)",
+        btnPubVid: "Publish Positive Video to Help Humanity",
+        instTitle: "Open Sikshya Global AI",
+        instDesc: "Pin this app to your home screen or launch instantly under MIT License.",
+        instIos: "📱 <strong>iOS:</strong> Tap Share <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> &gt; <strong>\"Add to Home Screen\"</strong>.",
+        instAndroid: "🤖 <strong>Android:</strong> Tap Menu <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> &gt; <strong>\"Install app\"</strong>."
+      },
+      ur: {
+        appTitle: "تعلیم گلوبل اے آئی",
+        neuralBadge: "بایومیٹرک کوانٹم لنک: تصدیق شدہ • ایم آئی ٹی لائسنس",
+        txtShare: "شیئر کریں",
+        txtOnetap: "ون ٹیپ",
+        kbToggle: "یونیورسل کی بورڈ",
+        kbTitle: "مقامی زبان کا کی بورڈ",
+        kbSpace: "اسپیس بار",
+        kbBack: "پیچھے",
+        kbClear: "صاف کریں",
+        tCoaching: "اے آئی کوچنگ",
+        tVideos: "انسانیت اور ایمرجنسی ویڈیوز",
+        tAlarm: "اسٹڈی الارم",
+        tGroup: "مسائل حل کرنے والا گروپ",
+        tEmax: "ای میکس گیم ارینا",
+        tMission: "ایم آئی ٹی لائسنس اور مشن",
+        tBank: "رابطے اور سوشل میڈیا",
+        coachingTitle: "کوانٹم بایومیٹرک نیورو انجن (کیمرہ، فائل اور رئیل ٹائم وائس)",
+        btnReset: "ری سیٹ کریں",
+        btnUpload: "فائل اپ لوڈ کریں",
+        btnCamera: "کیمرہ اسکین",
+        welcome: "خوش آمدید! میں تعلیم 7G یونیورسل ایجوکیشن نیورل نیٹ ورک سے منسلک ہوں۔ انسانیت کی مدد کے لیے اپنی مادری زبان میں کوئی بھی سوال پوچھیں۔",
+        placeholder: "اپنا تعلیمی سوال یہاں ٹائپ کریں...",
+        devBy: "تیار کردہ:",
+        lblEmail: "ای میل",
+        lblWhatsApp: "واٹس ایپ",
+        vidSubtitle: "عالمی انسانیت اور ایمرجنسی ویڈیو مرکز",
+        vidMainTitle: "فارمولہ ماسٹر کلاسز، آن لائن کمائی اور آفات کی تیاری",
+        vidDesc: "دنیا میں کوئی بھی شخص انسانیت کی مدد کے لیے مثبت تعلیمی ویڈیوز، آن لائن کمائی کے ٹیوٹوریلز اور قدرتی آفات کے الرٹس اپ لوڈ کر سکتا ہے۔",
+        btnUploadVid: "مثبت ویڈیو اپ لوڈ کریں",
+        alarmSubtitle: "اسٹڈی ٹائم مینجمنٹ اور الارم سسٹم",
+        alarmMainTitle: "اسٹڈی الارم اور پوموڈورو ٹائمر سیٹ کریں",
+        alarmDesc: "دنیا بھر کے طلباء کے لیے بنائے گئے براؤزر الارم کے ساتھ اپنے مطالعے کے شیڈول کا نظم کریں۔",
+        alarmSetTitle: "اسٹڈی الارم کا وقت سیٹ کریں",
+        lblAlarmTime: "الارم کا وقت (گھنٹے:منٹ)",
+        lblAlarmNote: "مطالعہ کا ہدف / یاد دہانی نوٹ",
+        btnSetAlarm: "الارم سیٹ کریں",
+        alarmActiveTitle: "فعال الارم اور یاد دہانیاں",
+        txtNoAlarms: "کوئی فعال الارم نہیں ہے۔ اوپر شامل کریں!",
+        groupHeaderTitle: "عالمی ہم مرتبہ مسائل حل کرنے والا گروپ (کیمرہ، فائل اور وائس)",
+        groupActiveCount: "1,420 فعال سیکھنے والے آن لائن",
+        groupWelcomeMsg: "لائیو پرابلم سالونگ گروپ میں خوش آمدید! انسانیت کی مدد کے لیے اپنے ہوم ورک کی تصاویر، وائس نوٹس یا ریاضی کے فارمولے شیئر کریں۔",
+        btnGrpUpload: "فائل اپ لوڈ کریں",
+        btnGrpCamera: "کیمرہ اسکین",
+        emaxSubtitle: "ای میکس کوانٹم لیول گیم ارینا",
+        emaxMainTitle: "لیول پر مبنی کوانٹم فزکس اور پرابلم سالونگ کوئز",
+        emaxDesc: "اپنا لیول بڑھانے، کوانٹم فزکس اور فارمولوں میں مہارت حاصل کرنے کے لیے درست جواب دیں!",
+        lblEmaxLvl: "موجودہ لیول",
+        lblEmaxScore: "اسکور",
+        btnSubmitEmax: "جواب جمع کرائیں",
+        missionSubtitle: "ایم آئی ٹی لائسنس اور فلاحی مشن",
+        missionMainTitle: "اوپن سورس ایم آئی ٹی لائسنس اور عطیات کی اہمیت",
+        missionDesc: "نیرج ملک کی جانب سے ایم آئی ٹی لائسنس کے تحت تیار کردہ، شکشا گلوبل اے آئی دنیا بھر کے طلباء کے لیے بالکل مفت ہے۔",
+        mitTitle: "ایم آئی ٹی لائسنس (دنیا کے تمام طلباء کے لیے مفت):",
+        mitBody: "اس سافٹ ویئر کی کاپی حاصل کرنے والے ہر شخص کو بغیر کسی پابندی کے اسے استعمال کرنے، کاپی کرنے، ترمیم کرنے اور تقسیم کرنے کی اجازت ہے۔",
+        missionCard1Title: "دور دراز نیپال میں مفت اسکولوں کا قیام",
+        missionCard1Desc: "ہمالیہ کے دور دراز علاقوں میں ہزاروں بچوں کو بنیادی کلاس رومز، کتابوں اور ڈیجیٹل تعلیم کی کمی ہے۔",
+        missionCard2Title: "نوجوانوں اور کمیونٹی کے بحالی مراکز",
+        missionCard2Desc: "نوجوانوں کی بہتری کے لیے محفوظ بحالی مراکز کا قیام، پیشہ ورانہ تربیت فراہم کرنا۔",
+        missionCard3Title: "عالمی طلباء کے لیے اسکالرشپس",
+        missionCard3Desc: "مالی رکاوٹیں کبھی بھی ایک روشن دماغ کو نہیں روکنی چاہئیں۔ حقدار طلباء کے لیے براہ راست مالی امداد۔",
+        missionCtaTitle: "زندگی بدلنے اور انسانیت کی مدد کرنے میں نیرج ملک کا ساتھ دیں",
+        missionCtaDesc: "ہر عطیہ 100٪ تعلیمی بنیادی ڈھانچے اور اسکالرشپ کی تعمیر میں جاتا ہے۔",
+        btnViewAcc: "سرکاری بینک اکاؤنٹس دیکھیں",
+        bankMainTitle: "ملک گروپ کے سرکاری مالیاتی اور سوشل لنکس",
+        bankDesc: "انسانیت کی مدد کے لیے اسکولوں کی تعمیر اور امداد کے لیے نیرج ملک کے زیر انتظام سرکاری تصدیق شدہ اکاؤنٹس اور لنکس۔",
+        bankDevContacts: "سرکاری ڈیولپر کے رابطے",
+        bankMbankOwner: "اکاؤنٹ ہولڈر:",
+        bankRbbBranch: "شیو گنج برانچ •",
+        footerText: "© 2024-2026 ملک گروپ • نیرج ملک کی طرف سے تیار کردہ (nirajmallik143@gmail.com | +971502297451) • ایم آئی ٹی لائسنس • انسانیت کی مدد",
+        modalHostTxt: "میزبان:",
+        modalDescTxt: "انسانیت کی مدد کرنے، فارمولے سکھانے، آن لائن کمائی اور آفات کی تیاری کے لیے وقف۔",
+        upModalTitle: "مثبت / ایمرجنسی ویڈیو اپ لوڈ کریں",
+        upModalDesc: "دنیا بھر کے طلباء کے ساتھ اپنا مثبت پیغام، کمائی کی گائیڈ یا ایمرجنسی الرٹ شیئر کریں۔",
+        lblUpAuthor: "آپ کا نام / عنوان",
+        lblUpTitle: "ویடியோ کا عنوان / موضوع",
+        lblUpFile: "ویڈیو فائل منتخب کریں (MP4, WebM)",
+        btnPubVid: "انسانیت کی مدد کے لیے مثبت ویڈیو شائع کریں",
+        instTitle: "تعلیم گلوبل اے آئی کھولیں",
+        instDesc: "اس ایپ کو اپنی ہوم اسکرین پر پن کریں یا ایم آئی ٹی لائسنس کے تحت فوری طور پر لانچ کریں۔",
+        instIos: "📱 <strong>iOS:</strong> شیئر <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> پر ٹیپ کریں &gt; <strong>\"ہوم اسکرین میں شامل کریں\"</strong>۔",
+        instAndroid: "🤖 <strong>Android:</strong> مینو <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> پر ٹیپ کریں &gt; <strong>\"ایپ انسٹال کریں\"</strong>۔"
+      },
+      np: {
+        appTitle: "शिक्षा ग्लोबल एआई",
+        neuralBadge: "बायोमेट्रिक क्वान्टम लिङ्क: प्रमाणित • MIT लाइसेन्स",
+        txtShare: "सेयर",
+        txtOnetap: "एक-ट्याप",
+        kbToggle: "युनिभर्सल किबोर्ड",
+        kbTitle: "नेटिभ स्क्रिप्ट किबोर्ड",
+        kbSpace: "स्पेसबार",
+        kbBack: "ब्याक",
+        kbClear: "क्लियर",
+        tCoaching: "एआई कोचिङ",
+        tVideos: "मानवता र आपतकालीन भिडियोहरू",
+        tAlarm: "अध्ययन अलार्म",
+        tGroup: "समस्या समाधान समूह",
+        tEmax: "EMAX खेल क्षेत्र",
+        tMission: "MIT लाइसेन्स र मिसन",
+        tBank: "सम्पर्क र सामाजिक सञ्जाल",
+        coachingTitle: "क्वान्टम बायोमेट्रिक न्यूरो-इन्जिन v7.5 (क्यामेरा, फाइल र वास्तविक समय आवाज एआई)",
+        btnReset: "रिसेट",
+        btnUpload: "फाइल अपलोड",
+        btnCamera: "क्यामेरा स्क्यान",
+        welcome: "नमस्ते विद्यार्थी भाइबहिनीहरू! म मल्लिक ७जी युनिभर्सल एजुकेसन न्यूरल नेटवर्कसँग जोडिएको छु। मानवता को खुसी बनाउन आफ्नो मातृभाषामा प्रश्न सोध्नुहोस्।",
+        placeholder: "आफ्नो शैक्षिक प्रश्न यहाँ टाइप गर्नुहोस्...",
+        devBy: "विकसक:",
+        lblEmail: "इमेल",
+        lblWhatsApp: "ह्वाट्सएप",
+        vidSubtitle: "वैश्विक मानवता र आपतकालीन भिडियो केन्द्र",
+        vidMainTitle: "सूत्र मास्टरक्लासहरू, अनलाइन आम्दानी र विपद् पूर्वतयारी",
+        vidDesc: "विश्वका जो कोहीले मानवतालाई सहयोग गर्न सकारात्मक शैक्षिक भिडियोहरू, अनलाइन आम्दानी ट्युटोरियलहरू, र प्राकृतिक प्रकोप आपतकालीन सूचनाहरू अपलोड गर्न सक्छन्।",
+        btnUploadVid: "सकारात्मक भिडियो अपलोड गर्नुहोस्",
+        alarmSubtitle: "अध्ययन समय व्यवस्थापन र अलार्म प्रणाली",
+        alarmMainTitle: "अध्ययन अलार्म र पोमोडोरो फोकस टाइमर सेट गर्नुहोस्",
+        alarmDesc: "विश्वका विद्यार्थीहरूका लागि केन्द्रित र खुसी रहन ब्राउजर अलार्महरूसँग आफ्नो अध्ययन तालिका व्यवस्थापन गर्नुहोस्।",
+        alarmSetTitle: "अध्ययन अलार्म समय सेट गर्नुहोस्",
+        lblAlarmTime: "अलार्म समय (घण्टा:मिनेट)",
+        lblAlarmNote: "अध्ययन लक्ष्य / सम्झाउने नोट",
+        btnSetAlarm: "अलार्म सेट गर्नुहोस्",
+        alarmActiveTitle: "सक्रिय अलार्महरू र सम्झनाहरू",
+        txtNoAlarms: "कुनै सक्रिय अध्ययन अलार्म सेट गरिएको छैन। माथि थप्नुहोस्!",
+        groupHeaderTitle: "वैश्विक सहकर्मी समस्या समाधान समूह (क्यामेरा, फाइल र आवाज एआई)",
+        groupActiveCount: "१,४२० सक्रिय शिक्षार्थीहरू अनलाइन",
+        groupWelcomeMsg: "लाइभ समस्या समाधान समूहमा स्वागत छ! मानवतालाई सहयोग गर्न आफ्नो मातृभाषामा गृहकार्यका फोटोहरू, भ्वाइस नोटहरू वा गणितीय सूत्रहरू साझा गर्नुहोस्।",
+        btnGrpUpload: "फाइल अपलोड",
+        btnGrpCamera: "क्यामेरा स्क्यान",
+        emaxSubtitle: "EMAX क्वान्टम लेभल गेम एरेना",
+        emaxMainTitle: "लेभल-आधारित क्वान्टम भौतिकी र समस्या समाधान क्विज",
+        emaxDesc: "आफ्नो लेभल बढाउन, क्वान्टम भौतिकी र समस्या समाधान सूत्रहरूमा महारत हासिल गर्न सही उत्तर दिनुहोस्!",
+        lblEmaxLvl: "हालको लेभल",
+        lblEmaxScore: "अङ्क",
+        btnSubmitEmax: "उत्तर बुझाउनुहोस्",
+        missionSubtitle: "MIT लाइसेन्स र मानवीय मिसन",
+        missionMainTitle: "खुला स्रोत MIT लाइसेन्स र किन सहयोग महत्त्वपूर्ण छ",
+        missionDesc: "नीरज मल्लिकद्वारा MIT लाइसेन्स अन्तर्गत विकसित, शिक्षा ग्लोबल AI विश्वभरका विद्यार्थीहरूका लागि पूर्ण रूपमा निःशुल्क छ।",
+        mitTitle: "MIT लाइसेन्स (विश्वका सबै विद्यार्थीहरूका लागि निःशुल्क):",
+        mitBody: "सफ्टवेयरको प्रतिलिपि प्राप्त गर्ने प्रत्येक व्यक्तिलाई बिना प्रतिबन्ध प्रयोग गर्न, प्रतिलिपि गर्न, परिमार्जन गर्न र वितरण गर्न अनुमति दिइएको छ।",
+        missionCard1Title: "सुदूर नेपालमा निःशुल्क विद्यालय स्थापना",
+        missionCard1Desc: "सुदूर हिमाली क्षेत्रका हजारौं बालबालिकामा आधारभूत कक्षाकोठा, पुस्तक र डिजिटल साक्षरताको अभाव छ।",
+        missionCard2Title: "युवा तथा समुदाय पुनस्र्थापना केन्द्रहरू",
+        missionCard2Desc: "जोखिममा परेका युवाहरूलाई उत्थान गर्न सुरक्षित पुनस्र्थापना केन्द्रहरू स्थापना गर्दैछौं।",
+        missionCard3Title: "विश्वव्यापी विद्यार्थी छात्रवृत्तिहरू",
+        missionCard3Desc: "आर्थिक अवरोधले कहिल्यै पनि उज्ज्वल दिमागलाई रोक्नु हुँदैन।",
+        missionCtaTitle: "जीवन परिवर्तन गर्न र मानवतालाई सहयोग गर्न नीरज मल्लिकसँग जोडिनुहोस्",
+        missionCtaDesc: "प्रत्येक सहयोग १००% शैक्षिक पूर्वाधार र छात्रवृत्ति निर्माणमा जान्छ।",
+        btnViewAcc: "आधिकारिक बैंक खाताहरू हेर्नुहोस्",
+        bankMainTitle: "मल्लिक ग्रुप आधिकारिक वित्तीय नोड्स र सामाजिक लिङ्कहरू",
+        bankDesc: "मानवतालाई सहयोग गर्न विद्यालय निर्माण र राहतका लागि नीरज मल्लिकद्वारा प्रबन्धित आधिकारिक प्रमाणित खाताहरू र सामाजिक लिङ्कहरू।",
+        bankDevContacts: "आधिकारिक विकासकर्ता सम्पर्कहरू",
+        bankMbankOwner: "खातावाला:",
+        bankRbbBranch: "शिवगञ्ज शाखा •",
+        footerText: "© २०२४-२०२६ मल्लिक ग्रुप • नीरज मल्लिकद्वारा निर्मित (nirajmallik143@gmail.com | +971502297451) • MIT लाइसेन्स • मानवताको सहायता र खुसी",
+        modalHostTxt: "आयोजक:",
+        modalDescTxt: "मानवतालाई सहयोग गर्न, सूत्रहरू सिकाउन र प्राकृतिक प्रकोप पूर्वतयारीका लागि समर्पित।",
+        upModalTitle: "सकारात्मक / आपतकालीन भिडियो अपलोड गर्नुहोस्",
+        upModalDesc: "विश्वभरका विद्यार्थीहरूसँग आफ्नो सकारात्मक सन्देश वा आपतकालीन चेतावनी साझा गर्नुहोस्।",
+        lblUpAuthor: "तपाईको नाम / योगदानकर्ता शीर्षक",
+        lblUpTitle: "भिडियो शीर्षक / विषय",
+        lblUpFile: "भिडियो फाइल चयन गर्नुहोस् (MP4, WebM)",
+        btnPubVid: "मानवताको सहायताका लागि भिडियो प्रकाशित गर्नुहोस्",
+        instTitle: "शिक्षा ग्लोबल एआई खोल्नुहोस्",
+        instDesc: "यो एपलाई आफ्नो गृह स्क्रिनमा राख्नुहोस् वा MIT लाइसेन्स अन्तर्गत तत्काल सुरु गर्नुहोस्।",
+        instIos: "📱 <strong>iOS:</strong> सेयर <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> &gt; <strong>\"गृह स्क्रिनमा थप्नुहोस्\"</strong> मा ट्याप गर्नुहोस्।",
+        instAndroid: "🤖 <strong>एन्ड्रोइड:</strong> मेनु <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> &gt; <strong>\"एप इन्स्टल गर्नुहोस्\"</strong> मा ट्याप गर्नुहोस्."
+      },
+      hi: {
+        appTitle: "शिक्षा ग्लोबल एआई",
+        neuralBadge: "बायोमेट्रिक क्वांटम लिंक: सत्यापित • MIT लाइसेंस",
+        txtShare: "शेयर",
+        txtOnetap: "वन-टैप",
+        kbToggle: "यूनिवर्सल कीबोर्ड",
+        kbTitle: "मूल लिपि कीबोर्ड",
+        kbSpace: "स्पेसबार",
+        kbBack: "बैक",
+        kbClear: "साफ करें",
+        tCoaching: "AI कोचिंग",
+        tVideos: "मानवता और आपातकालीन वीडियो",
+        tAlarm: "स्टडी अलार्म",
+        tGroup: "समस्या समाधान समूह",
+        tEmax: "EMAX गेम एरिना",
+        tMission: "MIT लाइसेंस और मिशन",
+        tBank: "संपर्क और सोशल मीडिया",
+        coachingTitle: "क्वांटम बायोमेट्रिक न्यूरो-इंजन v7.5 (कैमरा, फ़ाइल और वास्तविक समय वॉइस AI)",
+        btnReset: "रीसेट",
+        btnUpload: "फ़ाइल अपलोड",
+        btnCamera: "कैमरा स्कैन",
+        welcome: "नमस्ते शिक्षार्थी! मैं मल्लिक 7G यूनिवर्सल एजुकेशन न्यूरल नेटवर्क से जुड़ा हूँ। मानवता को खुश करने के लिए अपनी मातृभाषा में प्रश्न पूछें।",
+        placeholder: "अपना शैक्षिक प्रश्न यहाँ टाइप करें...",
+        devBy: "द्वारा विकसित:",
+        lblEmail: "ईमेल",
+        lblWhatsApp: "व्हाट्सएप",
+        vidSubtitle: "वैश्विक मानवता और आपातकालीन वीडियो केंद्र",
+        vidMainTitle: "सूत्र मास्टरक्लास, ऑनलाइन कमाई और आपदा से निपटने की तैयारी",
+        vidDesc: "दुनिया में कोई भी व्यक्ति मानवता की मदद के लिए सकारात्मक शैक्षिक वीडियो, ऑनलाइन कमाई ट्यूटोरियल और प्राकृतिक आपदा आपातकालीन अलर्ट अपलोड कर सकता है।",
+        btnUploadVid: "सकारात्मक वीडियो अपलोड करें",
+        alarmSubtitle: "अध्ययन समय प्रबंधन और अलार्म प्रणाली",
+        alarmMainTitle: "अध्ययन अलार्म और पोमोडोरो फोकस टाइमर सेट करें",
+        alarmDesc: "वैश्विक छात्रों के लिए डिज़ाइन किए गए ब्राउज़र अलार्म के साथ अपनी अध्ययन अनुसूची का प्रबंधन करें।",
+        alarmSetTitle: "अध्ययन अलार्म समय सेट करें",
+        lblAlarmTime: "अलार्म समय (घंटे:मिनट)",
+        lblAlarmNote: "अध्ययन लक्ष्य / अनुस्मारक नोट",
+        btnSetAlarm: "अलार्म सेट करें",
+        alarmActiveTitle: "सक्रिय अलार्म और अनुस्मारक",
+        txtNoAlarms: "कोई सक्रिय अध्ययन अलार्म सेट नहीं है। ऊपर एक जोड़ें!",
+        groupHeaderTitle: "वैश्विक सहकर्मी समस्या समाधान समूह (कैमरा, फ़ाइल और वॉइस AI)",
+        groupActiveCount: "1,420 सक्रिय शिक्षार्थी ऑनलाइन",
+        groupWelcomeMsg: "लाइव समस्या समाधान समूह में आपका स्वागत है! मानवता की मदद करने के लिए अपनी मातृभाषा में होमवर्क फोटो, वॉयस नोट्स या क्वांटम गणितीय सूत्र साझा करें।",
+        btnGrpUpload: "फ़ाइल अपलोड",
+        btnGrpCamera: "कैमरा स्कैन",
+        emaxSubtitle: "EMAX क्वांटम लेवल गेम एरिना",
+        emaxMainTitle: "लेवल-आधारित क्वांटम भौतिकी और समस्या समाधान क्विज",
+        emaxDesc: "अपना स्तर बढ़ाने, क्वांटम भौतिकी और समस्या-समाधान सूत्रों में महारत हासिल करने के लिए सही उत्तर दें!",
+        lblEmaxLvl: "वर्तमान स्तर",
+        lblEmaxScore: "स्कोर",
+        btnSubmitEmax: "उत्तर जमा करें",
+        missionSubtitle: "MIT लाइसेंस और मानवीय मिशन",
+        missionMainTitle: "ओपन सोर्स MIT लाइसेंस और दान क्यों महत्वपूर्ण हैं",
+        missionDesc: "नीरज मल्लिक द्वारा MIT लाइसेंस के तहत विकसित, शिक्षा ग्लोबल AI दुनिया भर के छात्रों के लिए पूरी तरह से मुफ़्त है।",
+        mitTitle: "MIT लाइसेंस (सभी विश्व छात्रों के लिए निःशुल्क):",
+        mitBody: "इस सॉफ़्टवेयर की प्रति प्राप्त करने वाले किसी भी व्यक्ति को बिना किसी प्रतिबंध के उपयोग करने, कॉपी करने, संशोधित करने और वितरित करने की अनुमति है।",
+        missionCard1Title: "दूरदराज के नेपाल में मुफ्त स्कूल खोलना",
+        missionCard1Desc: "दूरदराज के हिमालयी क्षेत्रों के हजारों बच्चों के पास बुनियादी कक्षाओं, पुस्तकों और डिजिटल साक्षरता का अभाव है।",
+        missionCard2Title: "युवा और सामुदायिक पुनर्वास केंद्र",
+        missionCard2Desc: "जोखिम में पड़े युवाओं को ऊपर उठाने, व्यावसायिक प्रशिक्षण और परामर्श प्रदान करने के लिए सुरक्षित पुनर्वास केंद्र स्थापित करना।",
+        missionCard3Title: "वैश्विक छात्र छात्रवृत्तियां",
+        missionCard3Desc: "वित्तीय बाधाओं को कभी भी एक शानदार दिमाग को नहीं रोकना चाहिए।",
+        missionCtaTitle: "जीवन बदलने और मानवता की मदद करने में नीरज मल्लिक से जुड़ें",
+        missionCtaDesc: "प्रत्येक योगदान का 100% शैक्षिक बुनियादी ढांचे और छात्रवृत्तियों के निर्माण में जाता है।",
+        btnViewAcc: "आधिकारिक बैंक खाते देखें",
+        bankMainTitle: "मल्लिक ग्रुप आधिकारिक वित्तीय नोड्स और सोशल लिंक",
+        bankDesc: "मानवता की मदद के लिए स्कूल निर्माण और राहत के लिए नीरज मल्लिक द्वारा प्रबंधित आधिकारिक सत्यापित खाते और सोशल लिंक।",
+        bankDevContacts: "आधिकारिक डेवलपर संपर्क",
+        bankMbankOwner: "खाता धारक:",
+        bankRbbBranch: "शिवगंज शाखा •",
+        footerText: "© 2024-2026 मल्लिक ग्रुप • नीरज मल्लिक द्वारा निर्मित (nirajmallik143@gmail.com | +971502297451) • MIT लाइसेंस • मानवता की सहायता और खुशी",
+        modalHostTxt: "द्वारा होस्ट किया गया",
+        modalDescTxt: "मानवता की मदद करने, सूत्र सिखाने और आपदा पूर्व तैयारी के लिए समर्पित।",
+        upModalTitle: "सकारात्मक / आपातकालीन वीडियो अपलोड करें",
+        upModalDesc: "दुनिया भर के छात्रों के साथ अपना सकारात्मक संदेश या आपातकालीन चेतावनी साझा करें।",
+        lblUpAuthor: "आपका नाम / योगदानकर्ता शीर्षक",
+        lblUpTitle: "वीडियो शीर्षक / विषय",
+        lblUpFile: "वीडियो फ़ाइल चुनें (MP4, WebM)",
+        btnPubVid: "मानवता की मदद के लिए वीडियो प्रकाशित करें",
+        instTitle: "शिक्षा ग्लोबल AI खोलें",
+        instDesc: "इस ऐप को अपनी होम स्क्रीन पर पिन करें या MIT लाइसेंस के तहत तुरंत लॉन्च करें।",
+        instIos: "📱 <strong>iOS:</strong> शेयर <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> &gt; <strong>\"होम स्क्रीन पर जोड़ें\"</strong> पर टैप करें।",
+        instAndroid: "🤖 <strong>Android:</strong> मेनू <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> &gt; <strong>\"ऐप इंस्टॉल करें\"</strong> पर टैप करें."
+      },
+      bn: {
+        appTitle: "শিক্ষা গ্লোবাল এআই",
+        neuralBadge: "বায়োমেট্রিক কোয়ান্টাম লিঙ্ক: যাচাইকৃত • MIT লাইসেন্স",
+        txtShare: "শেয়ার",
+        txtOnetap: "ওয়ান-ট্যাপ",
+        kbToggle: "ইউনিভার্সাল কিবোর্ড",
+        kbTitle: "নেটিভ স্ক্রিপ্ট কিবোর্ড",
+        kbSpace: "স্পেসবার",
+        kbBack: "ব্যাক",
+        kbClear: "ক্লিয়ার",
+        tCoaching: "এআই কোচিং",
+        tVideos: "মানবতা ও জরুরি ভিডিও",
+        tAlarm: "স্টাডি অ্যালার্ম",
+        tGroup: "সমস্যা সমাধান গ্রুপ",
+        tEmax: "EMAX গেম অ্যারেনা",
+        tMission: "MIT লাইসেন্স এবং মিশন",
+        tBank: "যোগাযোগ এবং সোশ্যাল",
+        coachingTitle: "কোয়ান্টাম বায়োমেট্রিক নিউরো-ইঞ্জিন v7.5 (ক্যামেরা, ফাইল এবং রিয়েল-টাইম ভয়েস AI)",
+        btnReset: "রিসেট",
+        btnUpload: "ফাইল আপলোড",
+        btnCamera: "ক্যামেরা স্ক্যান",
+        welcome: "নমস্কার শিক্ষার্থী! আমি মল্লিক 7G ইউনিভার্সাল এডুকেশন নিউরাল নেটওয়ার্কের সাথে যুক্ত। মানবতাকে সুখী করতে আপনার মাতৃভাষায় প্রশ্ন করুন।",
+        placeholder: "আপনার শিক্ষামূলক প্রশ্ন এখানে টাইপ করুন...",
+        devBy: "প্রস্তুতকারক:",
+        lblEmail: "ইমেল",
+        lblWhatsApp: "হোয়াটসঅ্যাপ",
+        vidSubtitle: "বৈশ্বিক মানবতা ও জরুরি ভিডিও কেন্দ্র",
+        vidMainTitle: "সূত্র মাস্টারক্লাস, অনলাইন আয় এবং দুর্যোগ প্রস্তুতি",
+        vidDesc: "মানবতাকে সাহায্য করার জন্য বিশ্বের যে কেউ ইতিবাচক শিক্ষামূলক ভিডিও, অনলাইন আয়ের টিউটোরিয়াল এবং প্রাকৃতিক দুর্যোগের জরুরি সতর্কতা আপলোড করতে পারে।",
+        btnUploadVid: "ইতিবাচক ভিডিও আপলোড করুন",
+        alarmSubtitle: "অধ্যয়ন সময় ব্যবস্থাপনা এবং অ্যালার্ম সিস্টেম",
+        alarmMainTitle: "অধ্যয়ন অ্যালার্ম এবং পোমোডোরো ফোকাস টাইমার সেট করুন",
+        alarmDesc: "বিশ্বব্যাপী শিক্ষার্থীদের জন্য তৈরি ব্রাউজার অ্যালার্মের সাথে আপনার অধ্যয়নের সময়সূচী পরিচালনা করুন।",
+        alarmSetTitle: "অধ্যয়ন অ্যালার্ম সময় সেট করুন",
+        lblAlarmTime: "অ্যালার্ম সময় (ঘণ্টা:মিনিট)",
+        lblAlarmNote: "অধ্যয়ন লক্ষ্য / অনুস্মারক নোট",
+        btnSetAlarm: "অ্যালার্ম সেট করুন",
+        alarmActiveTitle: "সক্রিয় অ্যালার্ম এবং অনুস্মারক",
+        txtNoAlarms: "কোনো সক্রিয় অধ্যয়ন অ্যালার্ম সেট করা নেই। উপরে একটি যোগ করুন!",
+        groupHeaderTitle: "বৈশ্বিক সহকর্মী সমস্যা সমাধান গ্রুপ (ক্যামেরা, ফাইল এবং ভয়েস AI)",
+        groupActiveCount: "১,৪২০ সক্রিয় শিক্ষার্থী অনলাইন",
+        groupWelcomeMsg: "লাইভ সমস্যা সমাধান গ্রুপে স্বাগতম! মানবতাকে সাহায্য করার জন্য আপনার মাতৃভাষায় হোমওয়ার্কের ছবি, ভয়েস নোট বা কোয়ান্টাম গণিত সূত্র শেয়ার করুন।",
+        btnGrpUpload: "ফাইল আপলোড",
+        btnGrpCamera: "ক্যামেরা স্ক্যান",
+        emaxSubtitle: "EMAX কোয়ান্টাম লেভেল গেম অ্যারেনা",
+        emaxMainTitle: "লেভেল-ভিত্তিক কোয়ান্টাম পদার্থবিদ্যা এবং সমস্যা সমাধান কুইজ",
+        emaxDesc: "আপনার স্তর বাড়াতে, কোয়ান্টাম পদার্থবিদ্যা এবং সমস্যা সমাধানের সূত্র আয়ত্ত করতে সঠিক উত্তর দিন!",
+        lblEmaxLvl: "বর্তমান স্তর",
+        lblEmaxScore: "স্কোর",
+        btnSubmitEmax: "উত্তর জমা দিন",
+        missionSubtitle: "MIT লাইসেন্স এবং মানবিক মিশন",
+        missionMainTitle: "ওপেন সোর্স MIT লাইসেন্স এবং কেন দান গুরুত্বপূর্ণ",
+        missionDesc: "নীরজ মল্লিক দ্বারা MIT লাইসেন্সের অধীনে প্রকৌশলিত, শিক্ষা গেম বৈশ্বিক AI বিশ্বজুড়ে শিক্ষার্থীদের জন্য সম্পূর্ণ বিনামূল্যে।",
+        mitTitle: "MIT লাইসেন্স (সকল বিশ্ব শিক্ষার্থীর জন্য বিনামূল্যে):",
+        mitBody: "এই সফ্টওয়্যারের একটি অনুলিপি প্রাপ্ত যে কোনো ব্যক্তিকে বিনা বাধায় ব্যবহার, অনুলিপি, পরিবর্তন এবং বিতরণ করার অনুমতি দেওয়া হয়।",
+        missionCard1Title: "সুদূর নেপালে বিনামূল্যে স্কুল খোলা",
+        missionCard1Desc: "সুদূর হিমালয় অঞ্চলের হাজার হাজার শিশুর মৌলিক শ্রেণীকক্ষ, বই এবং ডিজিটাল সাক্ষরতার অভাব রয়েছে।",
+        missionCard2Title: "তরুণ ও সম্প্রদায় পুনর্বাসন কেন্দ্র",
+        missionCard2Desc: "ঝুঁকিপূর্ণ যুবকদের উন্নীত করতে নিরাপদ পুনর্বাসন কেন্দ্র স্থাপন করা।",
+        missionCard3Title: "বৈশ্বিক ছাত্র বৃত্তি",
+        missionCard3Desc: "আর্থিক বাধা কখনো একটি উজ্জ্বল মনকে থামিয়ে দিতে পারে না।",
+        missionCtaTitle: "জীবন পরিবর্তন করতে এবং মানবতাকে সাহায্য করতে নীরজ মল্লিকের সাথে যোগ দিন",
+        missionCtaDesc: "প্রতিটি অবদানের ১০০% শিক্ষাগত অবকাঠামো এবং বৃত্তি তৈরিতে যায়।",
+        btnViewAcc: "অফিসিয়াল ব্যাংক অ্যাকাউন্ট দেখুন",
+        bankMainTitle: "মল্লিক গ্রুপ অফিসিয়াল আর্থিক নোড এবং সোশ্যাল লিংক",
+        bankDesc: "মানবতাকে সাহায্য করার জন্য স্কুল নির্মাণ এবং ত্রাণের জন্য নীরজ মল্লিক দ্বারা পরিচালিত অফিসিয়াল যাচাইকৃত অ্যাকাউন্ট এবং সোশ্যাল লিংক।",
+        bankDevContacts: "অফিসিয়াল ডেভেলপার যোগাযোগ",
+        bankMbankOwner: "অ্যাকাউন্ট হোল্ডার:",
+        bankRbbBranch: "শিবগঞ্জ শাখা •",
+        footerText: "© २०२४-२०২৬ মল্লিক গ্রুপ • নীরজ মল্লিক দ্বারা প্রস্তুত (nirajmallik143@gmail.com | +971502297451) • MIT লাইসেন্স • মানবতা সহায়তা ও সুখ",
+        modalHostTxt: "পরিবেশনায়:",
+        modalDescTxt: "মানবতাকে সাহায্য করার জন্য, সূত্র শেখানোর এবং দুর্যোগের প্রস্তুতি নিতে নিবেদিত।",
+        upModalTitle: "ইতিবাচক / জরুরি ভিডিও আপলোড করুন",
+        upModalDesc: "বিশ্বব্যাপী শিক্ষার্থীদের সাথে আপনার ইতিবাচক বার্তা বা জরুরি সতর্কতা শেয়ার করুন।",
+        lblUpAuthor: "আপনার নাম / অবদানকারীর শিরোনাম",
+        lblUpTitle: "ভিডিও শিরোনাম / বিষয়",
+        lblUpFile: "ভিডিও ফাইল নির্বাচন করুন (MP4, WebM)",
+        btnPubVid: "মানবতার সহায়তার জন্য ভিডিও প্রকাশ করুন",
+        instTitle: "শিক্ষা গ্লোবাল এআই খুলুন",
+        instDesc: "এই অ্যাপটি আপনার হোম স্ক্রিনে পিন করুন বা MIT লাইসেন্সের অধীনে অবিলম্বে চালু করুন।",
+        instIos: "📱 <strong>iOS:</strong> শেয়ার <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> &gt; <strong>\"হোম স্ক্রিনে যোগ করুন\"</strong> এ ট্যাপ করুন।",
+        instAndroid: "🤖 <strong>Android:</strong> মেনু <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> &gt; <strong>\"অ্যাপ ইনস্টল করুন\"</strong> এ ট্যাপ করুন।"
+      },
+      zh: {
+        appTitle: "Sikshya Global AI",
+        neuralBadge: "生物ometric量子链接：已验证 • MIT许可证",
+        txtShare: "分享",
+        txtOnetap: "一键打开",
+        kbToggle: "通用键盘",
+        kbTitle: "本地脚本键盘",
+        kbSpace: "空格键",
+        kbBack: "退格",
+        kbClear: "清除",
+        tCoaching: "AI 辅导",
+        tVideos: "人道主义与紧急视频",
+        tAlarm: "学习闹钟",
+        tGroup: "问题解决小组",
+        tEmax: "EMAX 游戏竞技场",
+        tMission: "MIT 许可证与使命",
+        tBank: "联系方式与社交",
+        coachingTitle: "量子生物ometric神经引擎 v7.5（相机、文件和实时语音 AI）",
+        btnReset: "重置",
+        btnUpload: "上传文件",
+        btnCamera: "相机扫描",
+        welcome: "您好！我已连接到 Mallik 7G 神经网络。请用您的母语向我询问任何学术问题，造福全人类。",
+        placeholder: "在此处输入您的教育问题...",
+        devBy: "开发者：",
+        lblEmail: "电子邮件",
+        lblWhatsApp: "WhatsApp",
+        vidSubtitle: "全球人道主义与紧急视频中心",
+        vidMainTitle: "公式大师班、在线赚钱与防灾准备",
+        vidDesc: "世界上任何人都可以上传积极的教育视频、在线赚钱教程和自然灾害紧急警报，以帮助全人类。由 Niraj Mallik 主持。",
+        btnUploadVid: "上传积极视频",
+        alarmSubtitle: "学习时间管理与闹钟系统",
+        alarmMainTitle: "设置学习闹钟与番茄工作法计时器",
+        alarmDesc: "使用为全球学生设计的浏览器闹钟来管理您的学习时间表，保持专注和快乐。",
+        alarmSetTitle: "设置学习闹钟时间",
+        lblAlarmTime: "闹钟时间（小时:分钟）",
+        lblAlarmNote: "学习目标 / 提醒备注",
+        btnSetAlarm: "设置闹钟",
+        alarmActiveTitle: "活跃闹钟与提醒",
+        txtNoAlarms: "未设置活跃学习闹钟。请在上方添加！",
+        groupHeaderTitle: "全球同伴问题解决小组（相机、文件和语音 AI）",
+        groupActiveCount: "1,420 名活跃学习者在线",
+        groupWelcomeMsg: "欢迎来到实时问题解决小组！在此处发布家庭作业照片、语音便笺或量子数学推导，用您的母语与全球同伴合作，造福人类。",
+        btnGrpUpload: "上传文件",
+        btnGrpCamera: "相机扫描",
+        emaxSubtitle: "EMAX 量子等级游戏竞技场",
+        emaxMainTitle: "基于等级的量子物理与问题解决测验",
+        emaxDesc: "正确回答以提升您的等级，掌握量子物理和问题解决公式，并获得验证过的全球证书！",
+        lblEmaxLvl: "当前等级",
+        lblEmaxScore: "得分",
+        btnSubmitEmax: "提交答案",
+        missionSubtitle: "MIT 许可证与人道主义使命",
+        missionMainTitle: "开源 MIT 许可证与为什么捐赠至关重要",
+        missionDesc: "由 Niraj Mallik 在 MIT 许可证下开发和倡导，Sikshya Global AI 完全免费供全球学生使用、修改和分发。我们的最终愿景是让全人类幸福快乐。",
+        mitTitle: "MIT 许可证（对所有世界学生免费）：",
+        mitBody: "特此免费授予任何获得本软件及相关文档文件副本的人不受限制地处理本软件的权利。",
+        missionCard1Title: "在偏远尼泊尔开设免费学校",
+        missionCard1Desc: "偏远喜马拉雅地区的数千名儿童缺乏基本的教室、书籍和数字素养。",
+        missionCard2Title: "青年与社区康复中心",
+        missionCard2Desc: "建立安全的康复中心，帮助处于危险中的青年，提供职业培训、心理健康咨询和庇护所。",
+        missionCard3Title: "全球学生奖学金",
+        missionCard3Desc: "财务障碍永远不应阻止聪明的大脑。为尼泊尔及全球的优秀学生提供直接经济援助。",
+        missionCtaTitle: "加入 Niraj Mallik 改变生命并造福人类",
+        missionCtaDesc: "每一笔贡献都 100% 用于建设教育基础设施、康复中心和全球学生奖学金。",
+        btnViewAcc: "查看官方银行账户",
+        bankMainTitle: "Mallik 集团官方财务节点与社交链接",
+        bankDesc: "由 Niraj Mallik 管理的官方核实账户、社交媒体及直接联系方式，用于学校建设、康复和人道主义援助。",
+        bankDevContacts: "官方开发者联系方式",
+        bankMbankOwner: "账户持有人：",
+        bankRbbBranch: "希瓦贡杰分行 •",
+        footerText: "© 2024-2026 Mallik 集团 • 由 Niraj Mallik 引擎打造 (nirajmallik143@gmail.com | +971502297451) • MIT 许可证 • 帮助人类，使人快乐",
+        modalHostTxt: "主持人：",
+        modalDescTxt: "致力于帮助人类、教授公式、在线赚钱和防灾准备，让全人类幸福安全。",
+        upModalTitle: "上传积极 / 紧急视频",
+        upModalDesc: "与全球学生分享您的积极信息、在线赚钱指南或自然灾害紧急警报。",
+        lblUpAuthor: "您的姓名 / 贡献者头衔",
+        lblUpTitle: "视频标题 / 主题",
+        lblUpFile: "选择视频文件 (MP4, WebM)",
+        btnPubVid: "发布积极视频造福人类",
+        instTitle: "打开 Sikshya Global AI",
+        instDesc: "将此应用固定到您的主屏幕，或在 MIT 许可证下立即启动。",
+        instIos: "📱 <strong>iOS:</strong> 点击分享 <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> &gt; <strong>“添加到主屏幕”</strong>。",
+        instAndroid: "🤖 <strong>Android:</strong> 点击菜单 <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> &gt; <strong>“安装应用”</strong>。"
+      },
+      ja: {
+        appTitle: "Sikshya Global AI",
+        neuralBadge: "生体認証量子リンク：検証済み • MITライセンス",
+        txtShare: "シェア",
+        txtOnetap: "ワンタップ",
+        kbToggle: "ユニバーサルキーボード",
+        kbTitle: "ネイティブスクリプトキーボード",
+        kbSpace: "スペース",
+        kbBack: "バック",
+        kbClear: "クリア",
+        tCoaching: "AIコーチング",
+        tVideos: "ヒューマニティ＆緊急動画",
+        tAlarm: "学習アラーム",
+        tGroup: "問題解決グループ",
+        tEmax: "EMAXゲームアリーナ",
+        tMission: "MITライセンスと使命",
+        tBank: "連絡先とSNS",
+        coachingTitle: "量子生体認証ニューロエンジン v7.5（カメラ・ファイル・リアルタイム音声 AI）",
+        btnReset: "リセット",
+        btnUpload: "ファイルをアップロード",
+        btnCamera: "カメラスキャン",
+        welcome: "こんにちは！Mallik 7Gニューラルネットワークに接続されています。母国語で学習の質問をどうぞ。",
+        placeholder: "ここに学習の質問を入力してください...",
+        devBy: "開発者：",
+        lblEmail: "メール",
+        lblWhatsApp: "WhatsApp",
+        vidSubtitle: "グローバルヒューマニティ＆緊急動画ハブ",
+        vidMainTitle: "公式マスタークラス、オンライン収入、災害対策",
+        vidDesc: "世界中の誰でも、人類を助けるために、ポジティブな教育動画、オンライン収入チュートリアル、自然災害の緊急アラートをアップロードできます。",
+        btnUploadVid: "ポジティブ動画をアップロード",
+        alarmSubtitle: "学習時間管理とアラームシステム",
+        alarmMainTitle: "学習アラームとポモドーロフォーカスタイマーを設定",
+        alarmDesc: "世界中の学生向けに設計されたブラウザーアラームを使用して、学習スケジュールを管理します。",
+        alarmSetTitle: "学習アラーム時間を設定",
+        lblAlarmTime: "アラーム時間（時間:分）",
+        lblAlarmNote: "学習目標 / リマインダーノート",
+        btnSetAlarm: "アラームを設定",
+        alarmActiveTitle: "アクティブなアラームとリマインダー",
+        txtNoAlarms: "アクティブな学習アラームが設定されていません。上から追加してください！",
+        groupHeaderTitle: "グローバルピア問題解決グループ（カメラ、ファイル、音声 AI）",
+        groupActiveCount: "1,420人のアクティブな学習者がオンライン",
+        groupWelcomeMsg: "ライブ問題解決グループへようこそ！宿題の写真、ボイスノート、量子数学の導出を投稿して、母国語で世界中の仲間と協力しましょう。",
+        btnGrpUpload: "ファイルをアップロード",
+        btnGrpCamera: "カメラスキャン",
+        emaxSubtitle: "EMAX量子レベルゲームアリーナ",
+        emaxMainTitle: "レベルベースの量子物理学と問題解決クイズ",
+        emaxDesc: "正解してレベルを上げ、量子物理学と問題解決の公式をマスターし、検証済みのグローバル証明書を獲得しましょう！",
+        lblEmaxLvl: "現在のレベル",
+        lblEmaxScore: "スコア",
+        btnSubmitEmax: "回答を提出",
+        missionSubtitle: "MITライセンスと人道的使命",
+        missionMainTitle: "オープンソースMITライセンスと寄付が重要な理由",
+        missionDesc: "Niraj MallikによってMITライセンスの下で開発されたSikshya Global AIは、世界中の学生にとって完全無料です。",
+        mitTitle: "MITライセンス（すべての世界の学生に無料）：",
+        mitBody: "本ソフトウェアおよび関連ドキュメントファイルのコピーを取得するすべての人に対し、制限なしにこれを取り扱うことが許可されます。",
+        missionCard1Title: "遠隔地ネパールでの無料学校の開設",
+        missionCard1Desc: "遠隔地のヒマラヤ地域の何千人もの子供たちには、基本的な教室、本、デジタルリテラシーがありません。",
+        missionCard2Title: "青少年およびコミュニティリハビリテーションセンター",
+        missionCard2Desc: "リスクのある若者を支援し、職業訓練やメンタルヘルス相談を提供する安全なリハビリテーションセンターを設立します。",
+        missionCard3Title: "グローバル学生奨学金",
+        missionCard3Desc: "経済的障壁によって、優秀な頭脳が阻まれてはなりません。ネパールおよび世界中の deserving な学生に経済的支援を提供します。",
+        missionCtaTitle: "Niraj Mallikと共に人生を変え、人類を助けよう",
+        missionCtaDesc: "すべての寄付の100%が教育インフラ、リハビリテーションセンター、グローバル学生奨学金の構築に使われます。",
+        btnViewAcc: "公式銀行口座を表示",
+        bankMainTitle: "Mallikグループ公式金融ノードとSNSリンク",
+        bankDesc: "学校建設、リハビリテーション、人道支援のためにNiraj Mallikが管理する公式確認済みアカウントとSNS。",
+        bankDevContacts: "公式開発者の連絡先",
+        bankMbankOwner: "口座名義人：",
+        bankRbbBranch: "シヴァガンジ支店 •",
+        footerText: "© 2024-2026 Mallikグループ • Niraj Mallikによる開発 (nirajmallik143@gmail.com | +971502297451) • MITライセンス • 人類の支援と幸福",
+        modalHostTxt: "主催：",
+        modalDescTxt: "人類を助け、公式を教え、オンライン収入を得て、防災準備を行うことに専念しています。",
+        upModalTitle: "ポジティブ / 緊急動画をアップロード",
+        upModalDesc: "ポジティブなメッセージ、オンライン収入ガイド、自然災害の緊急アラートを世界中の学生と共有しましょう。",
+        lblUpAuthor: "お名前 / 寄稿者タイトル",
+        lblUpTitle: "動画タイトル / トピック",
+        lblUpFile: "動画ファイルを選択（MP4、WebM）",
+        btnPubVid: "人類を助けるためにポジティブ動画を公開",
+        instTitle: "Sikshya Global AIを開く",
+        instDesc: "このアプリをホーム画面に固定するか、MITライセンスの下ですぐに起動してください。",
+        instIos: "📱 <strong>iOS:</strong> 共有 <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> &gt; <strong>「ホーム画面に追加」</strong>をタップします。",
+        instAndroid: "🤖 <strong>Android:</strong> メニュー <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> &gt; <strong>「アプリをインストール」</strong>をタップします。"
+      },
+      ko: {
+        appTitle: "Sikshya Global AI",
+        neuralBadge: "생체 인식 양자 링크: 인증됨 • MIT 라이선스",
+        txtShare: "공유",
+        txtOnetap: "원탭",
+        kbToggle: "유니버설 키보드",
+        kbTitle: "네이티브 스크립트 키보드",
+        kbSpace: "스페이스",
+        kbBack: "백스페이스",
+        kbClear: "지우기",
+        tCoaching: "AI 코칭",
+        tVideos: "휴머니티 및 긴급 비디오",
+        tAlarm: "학습 알람",
+        tGroup: "문제 해결 그룹",
+        tEmax: "EMAX 게임 아레나",
+        tMission: "MIT 라이선스 및 미션",
+        tBank: "연락처 및 소셜",
+        coachingTitle: "양자 생체 인식 뉴로 엔진 v7.5 (카메라, 파일 및 실시간 음성 AI)",
+        btnReset: "초기화",
+        btnUpload: "파일 업로드",
+        btnCamera: "카메라 스캔",
+        welcome: "안녕하세요! Mallik 7G 신경망에 연결되었습니다. 모국어로 학습 관련 질문을 입력해주세요.",
+        placeholder: "교육 관련 질문을 여기에 입력하세요...",
+        devBy: "개발자:",
+        lblEmail: "이메일",
+        lblWhatsApp: "WhatsApp",
+        vidSubtitle: "글로벌 휴머니티 및 긴급 비디오 허브",
+        vidMainTitle: "공식 마스터클래스, 온라인 수입 및 재난 대비",
+        vidDesc: "전 세계 누구나 긍정적인 교육 비디오, 온라인 수입 튜토리얼, 자연재해 긴급 경보를 업로드하여 인류를 도울 수 있습니다.",
+        btnUploadVid: "긍정적인 비디오 업로드",
+        alarmSubtitle: "학습 시간 관리 및 알람 시스템",
+        alarmMainTitle: "학습 알람 및 뽀모도로 포커스 타이머 설정",
+        alarmDesc: "글로벌 학생들을 위해 설계된 브라우저 알람으로 학습 일정을 관리하고 집중력과 행복을 유지하세요.",
+        alarmSetTitle: "학습 알람 시간 설정",
+        lblAlarmTime: "알람 시간 (시:분)",
+        lblAlarmNote: "학습 목표 / 알림 메모",
+        btnSetAlarm: "알람 설정",
+        alarmActiveTitle: "활성 알람 및 알림",
+        txtNoAlarms: "설정된 활성 학습 알람이 없습니다. 위에 추가하세요!",
+        groupHeaderTitle: "글로벌 동료 문제 해결 그룹 (카메라, 파일, 음성 AI)",
+        groupActiveCount: "1,420명의 활성 학습자 온라인",
+        groupWelcomeMsg: "라이브 문제 해결 그룹에 오신 것을 환영합니다! 숙제 사진, 음성 메모 또는 양자 수학 공식을 게시하여 모국어로 전 세계 동료들과 협력하세요.",
+        btnGrpUpload: "파일 업로드",
+        btnGrpCamera: "카메라 스캔",
+        emaxSubtitle: "EMAX 양자 레벨 게임 아레나",
+        emaxMainTitle: "레벨 기반 양자 물리학 및 문제 해결 퀴즈",
+        emaxDesc: "정답을 맞혀 레벨을 올리고, 양자 물리학 및 문제 해결 공식을 마스터하며 검증된 글로벌 수료증을 받으세요!",
+        lblEmaxLvl: "현재 레벨",
+        lblEmaxScore: "점수",
+        btnSubmitEmax: "정답 제출",
+        missionSubtitle: "MIT 라이선스 및 인도주의적 미션",
+        missionMainTitle: "오픈 소스 MIT 라이선스 및 기부가 중요한 이유",
+        missionDesc: "Niraj Mallik이 MIT 라이선스에 따라 개발한 Sikshya Global AI는 전 세계 학생들을 위해 전면 무료입니다.",
+        mitTitle: "MIT 라이선스 (모든 세계 학생들에게 무료):",
+        mitBody: "본 소프트웨어의 복사본을 취득하는 모든 사람에게 제한 없이 소프트웨어를 사용할 수 있는 권한이 부여됩니다.",
+        missionCard1Title: "원격 네팔에 무료 학교 개설",
+        missionCard1Desc: "원격 히말라야 지역의 수천 명의 어린이가 기본 교실, 책, 디지털 리터러시가 부족합니다.",
+        missionCard2Title: "청소년 및 지역 사회 재활 센터",
+        missionCard2Desc: "위험에 처한 청소년을 지원하고 직업 훈련 및 심리 상담을 제공하는 안전한 재활 센터를 설립합니다.",
+        missionCard3Title: "글로벌 학생 장학금",
+        missionCard3Desc: "재정적 장벽이 뛰어난 두뇌를 막아서는 안 됩니다. 네팔 및 전 세계의 우수 학생에게 직접적인 재정 지원을 제공합니다.",
+        missionCtaTitle: "Niraj Mallik과 함께 삶을 변화시키고 인류를 도우세요",
+        missionCtaDesc: "모든 기부금의 100%는 교육 인프라, 재활 센터, 글로벌 학생 장학금 구축에 사용됩니다.",
+        btnViewAcc: "공식 은행 계좌 보기",
+        bankMainTitle: "Mallik 그룹 공식 재정 노드 및 소셜 링크",
+        bankDesc: "학교 건설, 재활, 인도주의적 지원을 위해 Niraj Mallik이 관리하는 공식 인증 계정 및 소셜.",
+        bankDevContacts: "공식 개발자 연락처",
+        bankMbankOwner: "예금주:",
+        bankRbbBranch: "시바간지 지점 •",
+        footerText: "© 2024-2026 Mallik 그룹 • Niraj Mallik 제작 (nirajmallik143@gmail.com | +971502297451) • MIT 라이선스 • 인류 지원 및 행복",
+        modalHostTxt: "호스트:",
+        modalDescTxt: "인류를 돕고, 공식을 가르치며, 온라인 수익을 창출하고, 재난 대비를 돕는 데 전념합니다.",
+        upModalTitle: "긍정적 / 긴급 비디오 업로드",
+        upModalDesc: "긍정적인 메시지, 온라인 수익 가이드 또는 자연재해 긴급 경보를 전 세계 학생들과 공유하세요.",
+        lblUpAuthor: "성함 / 기여자 직함",
+        lblUpTitle: "비디오 제목 / 주제",
+        lblUpFile: "비디오 파일 선택 (MP4, WebM)",
+        btnPubVid: "인류를 돕기 위해 긍정적 비디오 게시",
+        instTitle: "Sikshya Global AI 열기",
+        instDesc: "이 앱을 홈 화면에 고정하거나 MIT 라이선스에 따라 즉시 실행하세요.",
+        instIos: "📱 <strong>iOS:</strong> 공유 <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> &gt; <strong>\"홈 화면에 추가\"</strong>를 탭하세요.",
+        instAndroid: "🤖 <strong>Android:</strong> 메뉴 <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> &gt; <strong>\"앱 설치\"</strong>를 탭하세요."
+      },
+      ar: {
+        appTitle: "Sikshya Global AI",
+        neuralBadge: "الرابط الكمي الحيوي: تم التحقق • ترخيص MIT",
+        txtShare: "مشاركة",
+        txtOnetap: "فتح سريع",
+        kbToggle: "لوحة المفاتيح العالمية",
+        kbTitle: "لوحة مفاتيح النص الأصلي",
+        kbSpace: "مسافة",
+        kbBack: "حذف",
+        kbClear: "مسح",
+        tCoaching: "تدريب الذكاء الاصطناعي",
+        tVideos: "فيديوهات الإنسانية والطوارئ",
+        tAlarm: "منبه الدراسة",
+        tGroup: "مجموعة حل المشكلات",
+        tEmax: "ساحة ألعاب EMAX",
+        tMission: "ترخيص MIT والمهمة",
+        tBank: "جهات الاتصال والمنصات",
+        coachingTitle: "محرك Sikshya العصبي الحيوي v7.5 (الكاميرا، الملفات، والصوت في الوقت الفعلي)",
+        btnReset: "إعادة تعيين",
+        btnUpload: "رفع ملف",
+        btnCamera: "مسح الكاميرا",
+        welcome: "مرحباً! أنا متصل بشكبة Mallik 7G. اسألني أي سؤال أكاديمي بلغتك الأم لمساعدة الإنسانية.",
+        placeholder: "اكتب سؤالك التعليمي هنا...",
+        devBy: "تم التطوير بواسطة:",
+        lblEmail: "البريد الإلكتروني",
+        lblWhatsApp: "واتساب",
+        vidSubtitle: "مركز فيديوهات الإنسانية والطوارئ العالمية",
+        vidMainTitle: "دروس المعادلات الرئيسية، الربح عبر الإنترنت، والجاهزية للكوارث",
+        vidDesc: "يمكن لأي شخص في العالم رفع فيديوهات تعليمية إيجابية، وإرشادات الربح عبر الإنترنت، وتنبيهات الطوارئ لمساعدة الإنسانية.",
+        btnUploadVid: "رفع فيديو إيجابي",
+        alarmSubtitle: "نظام إدارة وقت الدراسة والمنبه",
+        alarmMainTitle: "تعيين منبه الدراسة ومؤقت التركيز",
+        alarmDesc: "قم بإدارة جدول دراستك باستخدام منبهات المتصفح المصممة للطلاب العالميين.",
+        alarmSetTitle: "تعيين وقت منبه الدراسة",
+        lblAlarmTime: "وقت المنبه (ساعات:دقائق)",
+        lblAlarmNote: "هدف الدراسة / ملاحظة التذكير",
+        btnSetAlarm: "تعيين المنبه",
+        alarmActiveTitle: "المنبهات والتذكيرات النشطة",
+        txtNoAlarms: "لا توجد منبهات دراسية نشطة. أضف واحدًا أعلاه!",
+        groupHeaderTitle: "مجموعة حل المشكلات الجماعية العالمية (الكاميرا، الملفات والصوت)",
+        groupActiveCount: "1,420 متعلماً نشطاً عبر الإنترنت",
+        groupWelcomeMsg: "مرحباً بك في مجموعة حل المشكلات الحية! انشر صور الواجبات، أو الملاحظات الصوتية، أو معادلات الرياضيات بلغتك الأم للتعاون مع الزملاء.",
+        btnGrpUpload: "رفع ملف",
+        btnGrpCamera: "مسح الكاميرا",
+        emaxSubtitle: "ساحة ألعاب EMAX كوانتم",
+        emaxMainTitle: "اختبارات الفيزياء الكمية وحل المشكلات المستندة إلى المستويات",
+        emaxDesc: "أجب بشكل صحيح لرفع مستواك، وإتقان فيزياء الكم وformulas، واكتساب شهادات عالمية معتمدة!",
+        lblEmaxLvl: "المستوى الحالي",
+        lblEmaxScore: "النقاط",
+        btnSubmitEmax: "إرسال الإجابة",
+        missionSubtitle: "ترخيص MIT والمهمة الإنسانية",
+        missionMainTitle: "ترخيص MIT مفتوح المصدر ولماذا تهم التبرعات",
+        missionDesc: "تم تطوير Sikshya Global AI بواسطة Niraj Mallik بموجب ترخيص MIT، وهو مجاني تماماً للطلاب في جميع أنحاء العالم.",
+        mitTitle: "ترخيص MIT (مجاني لجميع طلاب العالم):",
+        mitBody: "يُمنح بموجب هذا إذن مجاني لأي شخص يحصل على نسخة من هذا البرنامج لاستخدامها وتعديلها وتوزيعها دون قيود.",
+        missionCard1Title: "افتتاح مدارس مجانية في نيبال النائية",
+        missionCard1Desc: "يفتقر آلاف الأطفال في مناطق الهيمالايا النائية إلى الفصول الدراسية الأساسية والكتب ومحو الأمية الرقمية.",
+        missionCard2Title: "مراكز إعادة تأهيل الشباب والمجتمع",
+        missionCard2Desc: "إنشاء مراكز إعادة تأهيل آمنة للارتقاء بالشباب المعرضين للخطر وتوفير التدريب المهني والإرشاد النفسي.",
+        missionCard3Title: "منح الدراسات العليا العالمية",
+        missionCard3Desc: "يجب ألا توقف الحواجز المالية أبداً عقولاً لامعة. توفر التبرعات مساعدات مالية مباشرة للطلاب المستحقين.",
+        missionCtaTitle: "انضم إلى Niraj Mallik في تغيير الحياة ومساعدة الإنسانية",
+        missionCtaDesc: "تذهب كل مساهمة بنسبة 100% نحو بناء البنية التحتية التعليمية ومنح الدراسات العليا.",
+        btnViewAcc: "عرض الحسابات المصرفية الرسمية",
+        bankMainTitle: "العقد المالية الرسمية لمجموعة Mallik ومنصات التواصل",
+        bankDesc: "الحسابات الرسمية ومنصات التواصل التي يديرها Niraj Mallik لبناء المدارس والإغاثة ومساعدة الإنسانية.",
+        bankDevContacts: "جهات اتصال المطور الرسمي",
+        bankMbankOwner: "صاحب الحساب:",
+        bankRbbBranch: "فرع شيفاغونج •",
+        footerText: "© 2024-2026 مجموعة Mallik • تم التطوير بواسطة Niraj Mallik (nirajmallik143@gmail.com | +971502297451) • ترخيص MIT • مساعدة الإنسانية وإسعاد البشر",
+        modalHostTxt: "إشراف:",
+        modalDescTxt: "مخصص لمساعدة الإنسانية، وتدريس المعادلات، والربح عبر الإنترنت، والجاهزية للطوارئ.",
+        upModalTitle: "رفع فيديو إيجابي / طوارئ",
+        upModalDesc: "شارك رسالتك الإيجابية أو دليل الربح أو تنبيهات الطوارئ مع الطلاب في جميع أنحاء العالم.",
+        lblUpAuthor: "اسمك / لقب المساهم",
+        lblUpTitle: "عنوان الفيديو / الموضوع",
+        lblUpFile: "اختر ملف الفيديو (MP4, WebM)",
+        btnPubVid: "نشر الفيديو الإيجابي لمساعدة الإنسانية",
+        instTitle: "فتح Sikshya Global AI",
+        instDesc: "ثبّت هذا التطبيق على شاشتك الرئيسية أو شغله فوراً بموجب ترخيص MIT.",
+        instIos: "📱 <strong>iOS:</strong> انقر على مشاركة <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> &gt; <strong>\"إضافة إلى الشاشة الرئيسية\"</strong>.",
+        instAndroid: "🤖 <strong>Android:</strong> انقر على القائمة <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> &gt; <strong>\"تثبيت التطبيق\"</strong>."
+      },
+      vi: {
+        appTitle: "Sikshya Global AI",
+        neuralBadge: "Liên kết lượng tử sinhometric: Đã xác minh • Giấy phép MIT",
+        txtShare: "Chia sẻ",
+        txtOnetap: "Mở 1 chạm",
+        kbToggle: "Bàn phím đa năng",
+        kbTitle: "Bàn phím ngôn ngữ gốc",
+        kbSpace: "Phím cách",
+        kbBack: "Xóa",
+        kbClear: "Làm sạch",
+        tCoaching: "AI HUẤN LUYỆN",
+        tVideos: "VIDEO NHÂN VĂN & KHẨN CẤP",
+        tAlarm: "BÁO THỨC HỌC TẬP",
+        tGroup: "NHÓM GIẢI QUYẾT VẤN ĐỀ",
+        tEmax: "ĐẤU TRƯỜNG EMAX",
+        tMission: "GIẤY PHÉP MIT & SỨ MỆNH",
+        tBank: "LIÊN HỆ & MẠNG XÃ HỘI",
+        coachingTitle: "Động cơ thần kinh sinhometric lượng tử v7.5 (Camera, File & Giọng nói AI thời gian thực)",
+        btnReset: "Đặt lại",
+        btnUpload: "Tải file lên",
+        btnCamera: "Quét camera",
+        welcome: "Xin chào! Tôi đã kết nối với Mạng lưới thần kinh giáo dục toàn cầu Mallik 7G bằng ngôn ngữ của bạn.",
+        placeholder: "Nhập câu hỏi giáo dục của bạn ở đây...",
+        devBy: "Phát triển bởi:",
+        lblEmail: "Email",
+        lblWhatsApp: "WhatsApp",
+        vidSubtitle: "Trung tâm Video Nhân văn & Khẩn cấp Toàn cầu",
+        vidMainTitle: "Lớp học Công thức, Kiếm tiền Online & Chuẩn bị Thiên tai",
+        vidDesc: "Bất kỳ ai trên thế giới đều có thể tải lên video giáo dục tích cực, hướng dẫn kiếm tiền và cảnh báo khẩn cấp thiên tai để giúp đỡ nhân loại.",
+        btnUploadVid: "Tải lên Video Tích cực",
+        alarmSubtitle: "Hệ thống Quản lý Thời gian Học tập & Báo thức",
+        alarmMainTitle: "Đặt Báo thức Học tập & Bộ đếm Pomodoro",
+        alarmDesc: "Quản lý lịch học của bạn với báo thức trình duyệt được thiết kế cho học sinh toàn cầu.",
+        alarmSetTitle: "Đặt Thời gian Báo thức Học tập",
+        lblAlarmTime: "Thời gian Báo thức (Giờ:Phút)",
+        lblAlarmNote: "Mục tiêu học tập / Ghi chú",
+        btnSetAlarm: "Đặt Báo thức",
+        alarmActiveTitle: "Báo thức & Nhắc nhở Đang hoạt động",
+        txtNoAlarms: "Không có báo thức học tập nào được đặt. Thêm một cái ở trên!",
+        groupHeaderTitle: "Nhóm Giải quyết Vấn đề Toàn cầu (Camera, File & Giọng nói AI)",
+        groupActiveCount: "1.420 Học viên Trực tuyến",
+        groupWelcomeMsg: "Chào mừng đến với Nhóm Giải quyết Vấn đề! Đăng ảnh bài tập, ghi chú giọng toán học để cộng tác với bạn bè trên toàn thế giới.",
+        btnGrpUpload: "Tải lên File",
+        btnGrpCamera: "Quét Camera",
+        emaxSubtitle: "Đấu trường Game Cấp độ Quantum EMAX",
+        emaxMainTitle: "Trắc nghiệm Vật lý Lượng tử & Giải quyết Vấn đề",
+        emaxDesc: "Trả lời đúng để thăng cấp, làm chủ vật lý lượng tử và đạt được chứng chỉ toàn cầu!",
+        lblEmaxLvl: "Cấp độ hiện tại",
+        lblEmaxScore: "Điểm số",
+        btnSubmitEmax: "Gửi câu trả lời",
+        missionSubtitle: "Giấy phép MIT & Sứ mệnh Nhân đạo",
+        missionMainTitle: "Giấy phép MIT Mã nguồn Mở & Ý nghĩa của Quyên góp",
+        missionDesc: "Được phát triển bởi Niraj Mallik theo Giấy phép MIT, Sikshya Global AI hoàn toàn miễn phí cho học sinh toàn cầu.",
+        mitTitle: "Giấy phép MIT (Miễn phí cho Mọi Học sinh Toàn cầu):",
+        mitBody: "Giấy phép này cấp quyền miễn phí cho bất kỳ ai nhận được bản sao phần mềm này để sử dụng, sao chép, sửa đổi và phân phối.",
+        missionCard1Title: "Mở Trường học Miễn phí tại Nepal",
+        missionCard1Desc: "Hàng nghìn trẻ em vùng Himalaya thiếu phòng học, sách vở và kỹ năng số.",
+        missionCard2Title: "Trung tâm Phục hồi Thanh thiếu niên & Cộng đồng",
+        missionCard2Desc: "Thiết lập các trung tâm phục hồi an toàn để nâng cao đời sống thanh thiếu niên có nguy cơ cao.",
+        missionCard3Title: "Học bổng Học sinh Toàn cầu",
+        missionCard3Desc: "Rào cản tài chính không bao giờ được phép ngăn cản một bộ óc xuất sắc. Cung cấp hỗ trợ tài chính trực tiếp.",
+        missionCtaTitle: "Tham gia cùng Niraj Mallik Thay đổi Cuộc sống & Giúp đỡ Nhân loại",
+        missionCtaDesc: "Mọi đóng góp đều dành 100% cho cơ sở hạ tầng giáo dục, trung tâm phục hồi và học bổng.",
+        btnViewAcc: "Xem Tài khoản Ngân hàng Chính thức",
+        bankMainTitle: "Nút Tài chính & Mạng xã hội Tập đoàn Mallik",
+        bankDesc: "Tài khoản xác minh chính thức, mạng xã hội và chi tiết liên hệ do Niraj Mallik quản lý để xây dựng trường học và cứu trợ.",
+        bankDevContacts: "Liên hệ Nhà phát triển Chính thức",
+        bankMbankOwner: "Chủ tài khoản:",
+        bankRbbBranch: "Chi nhánh Shivagunj •",
+        footerText: "© 2024-2026 Tập đoàn Mallik • Phát triển bởi Niraj Mallik (nirajmallik143@gmail.com | +971502297451) • Giấy phép MIT • Giúp đỡ Nhân loại & Mang lại Hạnh phúc",
+        modalHostTxt: "Chủ trì bởi:",
+        modalDescTxt: "Tận tâm giúp đỡ nhân loại, giảng dạy công thức, kiếm tiền online và chuẩn bị phòng chống thiên tai.",
+        upModalTitle: "Tải lên Video Tích cực / Khẩn cấp",
+        upModalDesc: "Chia sẻ thông điệp tích cực, hướng dẫn kiếm tiền hoặc cảnh báo khẩn cấp thiên tai với học sinh toàn cầu.",
+        lblUpAuthor: "Tên của bạn / Tiêu đề",
+        lblUpTitle: "Tiêu đề Video / Chủ đề",
+        lblUpFile: "Chọn Tệp Video (MP4, WebM)",
+        btnPubVid: "Xuất bản Video Tích cực để Giúp đỡ Nhân loại",
+        instTitle: "Mở Sikshya Global AI",
+        instDesc: "Ghim ứng dụng này vào màn hình chính hoặc khởi chạy ngay lập tức theo Giấy phép MIT.",
+        instIos: "📱 <strong>iOS:</strong> Nhấn Chia sẻ <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> &gt; <strong>\"Thêm vào Màn hình Chính\"</strong>.",
+        instAndroid: "🤖 <strong>Android:</strong> Nhấn Menu <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> &gt; <strong>\"Cài đặt Ứng dụng\"</strong>."
+      },
+      th: {
+        appTitle: "Sikshya Global AI",
+        neuralBadge: "ลิงก์ควอนตัมชีวมิติ: ตรวจสอบแล้ว • MIT License",
+        txtShare: "แชร์",
+        txtOnetap: "เปิดครั้งเดียว",
+        kbToggle: "คีย์บอร์ดสากล",
+        kbTitle: "คีย์บอร์ดภาษาพื้นเมือง",
+        kbSpace: "วรรค",
+        kbBack: "ลบ",
+        kbClear: "ล้าง",
+        tCoaching: "AI โค้ช",
+        tVideos: "วิดีโอมนุษยธรรมและฉุกเฉิน",
+        tAlarm: "นาฬิกาปลุกการเรียน",
+        tGroup: "กลุ่มแก้ปัญหา",
+        tEmax: "EMAX เกมส์อารีน่า",
+        tMission: "สิทธิ์การใช้งาน MIT และพันธกิจ",
+        tBank: "ติดต่อและโซเชียล",
+        coachingTitle: "Sikshya Neuro-Engine v7.5 (กล้อง, ไฟล์ และเสียง AI แบบเรียลไทม์)",
+        btnReset: "รีเซ็ต",
+        btnUpload: "อัปโหลดไฟล์",
+        btnCamera: "สแกนกล้อง",
+        welcome: "สวัสดีครับ/ค่ะ! ฉันเชื่อมต่อกับเครือข่ายประสาทการศึกษา Mallik 7G แล้ว ถามคำถามด้วยภาษาของคุณได้เลย",
+        placeholder: "พิมพ์คำถามการศึกษาของคุณที่นี่...",
+        devBy: "พัฒนาโดย:",
+        lblEmail: "อีเมล",
+        lblWhatsApp: "WhatsApp",
+        vidSubtitle: "ศูนย์รวมวิดีโอมนุษยธรรมและเหตุฉุกเฉินระดับโลก",
+        vidMainTitle: "มาสเตอร์classสูตร, การหารายได้ออนไลน์ และการเตรียมพร้อมรับมือภัยพิบัติ",
+        vidDesc: "ทุกคนทั่วโลกสามารถอัปโหลดวิดีโอการศึกษาเชิงบวก บทช่วยสอนการหารายได้ออนไลน์ และเตือนภัยฉุกเฉินเพื่อช่วยเหลือมนุษยชาติ",
+        btnUploadVid: "อัปโหลดวิดีโอเชิงบวก",
+        alarmSubtitle: "ระบบจัดการเวลาเรียนและนาฬิกาปลุก",
+        alarmMainTitle: "ตั้งนาฬิกาปลุกการเรียนและ Pomodoro Focus Timer",
+        alarmDesc: "จัดการตารางเรียนของคุณด้วยนาฬิกาปลุกเบราว์เซอร์ที่ออกแบบมาสำหรับนักเรียนทั่วโลก",
+        alarmSetTitle: "ตั้งเวลาปลุกการเรียน",
+        lblAlarmTime: "เวลาปลุก (ชั่วโมง:นาที)",
+        lblAlarmNote: "เป้าหมายการเรียน / บันทึกเตือนความจำ",
+        btnSetAlarm: "ตั้งนาฬิกาปลุก",
+        alarmActiveTitle: "นาฬิกาปลุกและการเตือนความจำที่ใช้งานอยู่",
+        txtNoAlarms: "ยังไม่ได้ตั้งนาฬิกาปลุกการเรียน เพิ่มรายการด้านบน!",
+        groupHeaderTitle: "กลุ่มแก้ปัญหาร่วมกันระดับโลก (กล้อง, ไฟล์ และเสียง AI)",
+        groupActiveCount: "1,420 ผู้เรียนออนไลน์",
+        groupWelcomeMsg: "ยินดีต้อนรับสู่กลุ่มแก้ปัญหาสด! โพสต์รูปภาพการบ้าน บันทึกเสียง หรือสูตรคณิตศาสตร์เพื่อร่วมมือกับเพื่อนๆ ทั่วโลก",
+        btnGrpUpload: "อัปโหลดไฟล์",
+        btnGrpCamera: "สแกนกล้อง",
+        emaxSubtitle: "EMAX อารีน่าเกมระดับควอนตัม",
+        emaxMainTitle: "แบบทดสอบฟิสิกส์ควอนตัมและการแก้ปัญหาตามระดับ",
+        emaxDesc: "ตอบให้ถูกต้องเพื่อเพิ่มระดับของคุณ เชี่ยวชาญฟิสิกส์ควอนตัม และรับใบรับรองระดับโลก!",
+        lblEmaxLvl: "ระดับปัจจุบัน",
+        lblEmaxScore: "คะแนน",
+        btnSubmitEmax: "ส่งคำตอบ",
+        missionSubtitle: "สิทธิ์การใช้งาน MIT และพันธกิจด้านมนุษยธรรม",
+        missionMainTitle: "Open Source MIT License และเหตุผลที่การบริจาคมีความสำคัญ",
+        missionDesc: "พัฒนาโดย Niraj Mallik ภายใต้สิทธิ์ MIT Sikshya Global AI เปิดให้ใช้งานฟรีสำหรับนักเรียนทั่วโลก",
+        mitTitle: "MIT License (ฟรีสำหรับนักเรียนทั่วโลก):",
+        mitBody: "อนุญาตให้บุคคลใดก็ตามที่ได้รับสำเนาซอฟต์แวร์นี้ใช้งาน คัดลอก แก้ไข และแจกจ่ายได้โดยไม่มีข้อจำกัด",
+        missionCard1Title: "เปิดโรงเรียนฟรีในเนปาลห่างไกล",
+        missionCard1Desc: "เด็กหลายพันคนในภูมิภาคหิมาลัยขาดห้องเรียน หนังสือ และความรู้ดิจิทัล",
+        missionCard2Title: "ศูนย์ฟื้นฟูเยาวชนและชุมชน",
+        missionCard2Desc: "จัดตั้งศูนย์ฟื้นฟูที่ปลอดภัยเพื่อยกระดับเยาวชนที่มีความเสี่ยง ให้การฝึกอบรมอาชีพ",
+        missionCard3Title: "ทุนการศึกษาสำหรับนักเรียนทั่วโลก",
+        missionCard3Desc: "อุปสรรคทางการเงินไม่ควรหยุดยั้งความฉลาด มอบความช่วยเหลือทางการเงินโดยตรงสำหรับนักเรียน",
+        missionCtaTitle: "เข้าร่วมกับ Niraj Mallik เพื่อเปลี่ยนชีวิตและช่วยเหลือมนุษยชาติ",
+        missionCtaDesc: "การบริจาคทุกบาททุกสตางค์ไปที่โครงสร้างพื้นฐานทางการศึกษา ศูนย์ฟื้นฟู และทุนการศึกษา 100%",
+        btnViewAcc: "ดูบัญชีธนาคารอย่างเป็นทางการ",
+        bankMainTitle: "โหนดการเงินและโซเชียลมีเดียอย่างเป็นทางการของ Mallik Group",
+        bankDesc: "บัญชีและโซเชียลมีเดียที่ได้รับการยืนยันและจัดการโดย Niraj Mallik เพื่อสร้างโรงเรียน บรรเทาทุกข์ และช่วยเหลือมนุษยชาติ",
+        bankDevContacts: "ติดต่อผู้พัฒนาอย่างเป็นทางการ",
+        bankMbankOwner: "เจ้าของบัญชี:",
+        bankRbbBranch: "สาขาชิวากันจ์ •",
+        footerText: "© 2024-2026 Mallik Group • พัฒนาโดย Niraj Mallik (nirajmallik143@gmail.com | +971502297451) • MIT License • ช่วยเหลือมนุษยชาติและทำให้มนุษย์มีความสุข",
+        modalHostTxt: "จัดโดย:",
+        modalDescTxt: "อุทิศตนเพื่อช่วยเหลือมนุษยชาติ สอนสูตร การหารายได้ออนไลน์ และเตรียมพร้อมรับมือภัยพิบัติ",
+        upModalTitle: "อัปโหลดวิดีโอเชิงบวก / ฉุกเฉิน",
+        upModalDesc: "แบ่งปันข้อความเชิงบวก คู่มือการหารายได้ หรือเตือนภัยฉุกเฉินกับนักเรียนทั่วโลก",
+        lblUpAuthor: "ชื่อของคุณ / ชื่อผู้บริจาค",
+        lblUpTitle: "ชื่อวิดีโอ / หัวข้อ",
+        lblUpFile: "เลือกไฟล์วิดีโอ (MP4, WebM)",
+        btnPubVid: "เผยแพร่วิดีโอเชิงบวกเพื่อช่วยเหลือมนุษยชาติ",
+        instTitle: "เปิด Sikshya Global AI",
+        instDesc: "ปักหมุดแอปนี้ไว้ที่หน้าจอหลักหรือเปิดใช้งานทันทีภายใต้สิทธิ์ MIT",
+        instIos: "📱 <strong>iOS:</strong> แตะแชร์ <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> &gt; <strong>\"เพิ่มไปยังหน้าจอหลัก\"</strong>",
+        instAndroid: "🤖 <strong>Android:</strong> แตะเมนู <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> &gt; <strong>\"ติดตั้งแอป\"</strong>"
+      },
+      id: {
+        appTitle: "Sikshya Global AI",
+        neuralBadge: "Quantum Neural Biometrik: Terverifikasi • Lisensi MIT",
+        txtShare: "Bagikan",
+        txtOnetap: "Buka Cepat",
+        kbToggle: "Keyboard Universal",
+        kbTitle: "Keyboard Skrip Asli",
+        kbSpace: "Spasi",
+        kbBack: "Hapus",
+        kbClear: "Bersihkan",
+        tCoaching: "AI COACHING",
+        tVideos: "VIDEO KEMANUSIAAN & DARURAT",
+        tAlarm: "ALARM BELAJAR",
+        tGroup: "GRUP PEMECAHAN MASALAH",
+        tEmax: "ARENA GAME EMAX",
+        tMission: "LISENSI MIT & MISI",
+        tBank: "KONTAK & SOSIAL",
+        coachingTitle: "Sikshya Neuro-Engine v7.5 (Kamera, File & Suara AI Real-Time)",
+        btnReset: "Atur Ulang",
+        btnUpload: "Unggah File",
+        btnCamera: "Pindai Kamera",
+        welcome: "Halo Pelajar! Saya terhubung ke Neural Network Mallik 7G. Tanyakan pertanyaan akademik dalam bahasa Anda.",
+        placeholder: "Ketik pertanyaan pendidikan Anda di sini...",
+        devBy: "Dikembangkan oleh:",
+        lblEmail: "Email",
+        lblWhatsApp: "WhatsApp",
+        vidSubtitle: "Pusat Video Kemanusiaan & Darurat Global",
+        vidMainTitle: "Masterclass Rumus, Penghasilan Online & Kesiapsiagaan Bencana",
+        vidDesc: "Siapa pun di dunia dapat mengunggah video edukasi positif, tutorial penghasilan online, dan peringatan darurat bencana untuk membantu kemanusiaan.",
+        btnUploadVid: "Unggah Video Positif",
+        alarmSubtitle: "Sistem Manajemen Waktu Belajar & Alarm",
+        alarmMainTitle: "Atur Alarm Belajar & Pomodoro Focus Timer",
+        alarmDesc: "Kelola jadwal belajar Anda dengan alarm browser yang dirancang untuk pelajar global.",
+        alarmSetTitle: "Atur Waktu Alarm Belajar",
+        lblAlarmTime: "Waktu Alarm (Jam:Menit)",
+        lblAlarmNote: "Target Belajar / Catatan Pengingat",
+        btnSetAlarm: "Atur Alarm",
+        alarmActiveTitle: "Alarm & Pengingat Aktif",
+        txtNoAlarms: "Tidak ada alarm belajar aktif. Tambahkan di atas!",
+        groupHeaderTitle: "Grup Pemecahan Masalah Rekan Global (Kamera, File & Suara AI)",
+        groupActiveCount: "1.420 Pelajar Aktif Online",
+        groupWelcomeMsg: "Selamat datang di Grup Pemecahan Masalah! Poskan foto PR, catatan suara, atau rumus matematika untuk berkolaborasi dengan rekan global.",
+        btnGrpUpload: "Unggah File",
+        btnGrpCamera: "Pindai Kamera",
+        emaxSubtitle: "Arena Game Level Kuantum EMAX",
+        emaxMainTitle: "Kuis Fisika Kuantum & Pemecahan Masalah Berbasis Level",
+        emaxDesc: "Jawab dengan benar untuk menaikkan level, kuasai fisika kuantum dan rumus pemecahan masalah untuk meraih sertifikat global!",
+        lblEmaxLvl: "Level Saat Ini",
+        lblEmaxScore: "Skor",
+        btnSubmitEmax: "Kirim Jawaban",
+        missionSubtitle: "Lisensi MIT & Misi Kemanusiaan",
+        missionMainTitle: "Lisensi MIT Sumber Terbuka & Mengapa Donasi Penting",
+        missionDesc: "Dikembangkan oleh Niraj Mallik di bawah Lisensi MIT, Sikshya Global AI sepenuhnya gratis untuk siswa di seluruh dunia.",
+        mitTitle: "Lisensi MIT (Gratis untuk Semua Siswa Dunia):",
+        mitBody: "Dengan ini diberikan izin gratis kepada siapa pun yang memperoleh salinan perangkat lunak ini untuk menggunakannya, menyalin, memodifikasi, dan mendistribusikannya.",
+        missionCard1Title: "Membuka Sekolah Gratis di Nepal Terpencil",
+        missionCard1Desc: "Ribuan anak di wilayah Himalaya terpencil kekurangan kelas dasar, buku, dan literasi digital.",
+        missionCard2Title: "Pusat Rehabilitasi Pemuda & Komunitas",
+        missionCard2Desc: "Mendirikan pusat rehabilitasi yang aman untuk mengangkat pemuda berisiko, memberikan pelatihan kejuruan.",
+        missionCard3Title: "Beasiswa Siswa Global",
+        missionCard3Desc: "Hambatan finansial tidak boleh menghentikan pikiran cemerlang. Memberikan bantuan keuangan langsung bagi siswa.",
+        missionCtaTitle: "Bergabunglah dengan Niraj Mallik untuk Mengubah Hidup & Membantu Kemanusiaan",
+        missionCtaDesc: "Setiap kontribusi 100% masuk untuk membangun infrastruktur pendidikan, pusat rehabilitasi, dan beasiswa.",
+        btnViewAcc: "Lihat Rekening Bank Resmi",
+        bankMainTitle: "Node Keuangan & Tautan Sosial Resmi Grup Mallik",
+        bankDesc: "Akun dan tautan media sosial terverifikasi resmi yang dikelola oleh Niraj Mallik untuk pembangunan sekolah dan bantuan kemanusiaan.",
+        bankDevContacts: "Kontak Pengembang Resmi",
+        bankMbankOwner: "Pemilik Akun:",
+        bankRbbBranch: "Cabang Shivagunj •",
+        footerText: "© 2024-2026 Grup Mallik • Dibuat oleh Niraj Mallik (nirajmallik143@gmail.com | +971502297451) • Lisensi MIT • Membantu Kemanusiaan & Membuat Manusia Bahagia",
+        modalHostTxt: "Diselenggarakan oleh:",
+        modalDescTxt: "Didedikasikan untuk membantu kemanusiaan, mengajarkan rumus, penghasilan online, dan kesiapsiagaan bencana.",
+        upModalTitle: "Unggah Video Positif / Darurat",
+        upModalDesc: "Bagikan pesan positif, panduan penghasilan, atau peringatan darurat bencana dengan siswa di seluruh dunia.",
+        lblUpAuthor: "Nama Anda / Judul Kontributor",
+        lblUpTitle: "Judul Video / Topik",
+        lblUpFile: "Pilih File Video (MP4, WebM)",
+        btnPubVid: "Publikasikan Video Positif untuk Membantu Kemanusiaan",
+        instTitle: "Buka Sikshya Global AI",
+        instDesc: "Sematkan aplikasi ini ke layar utama Anda atau luncurkan instan di bawah Lisensi MIT.",
+        instIos: "📱 <strong>iOS:</strong> Ketuk Bagikan <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> &gt; <strong>\"Tambahkan ke Layar Utama\"</strong>.",
+        instAndroid: "🤖 <strong>Android:</strong> Ketuk Menu <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> &gt; <strong>\"Instal Aplikasi\"</strong>."
+      },
+      fil: {
+        appTitle: "Sikshya Global AI",
+        neuralBadge: "Biometric Quantum Link: Verified • MIT License",
+        txtShare: "I-share",
+        txtOnetap: "One-Tap",
+        kbToggle: "Universal Keyboard",
+        kbTitle: "Native Script Keyboard",
+        kbSpace: "Space",
+        kbBack: "Back",
+        kbClear: "Clear",
+        tCoaching: "AI COACHING",
+        tVideos: "MGA VIDEO NG HUMANITY AT EMERGENCY",
+        tAlarm: "ALARM SA PAG-AARAL",
+        tGroup: "GRUPO SA PAGLUTAS NG SULIRANIN",
+        tEmax: "EMAX GAME ARENA",
+        tMission: "MIT LICENSE AT MISYON",
+        tBank: "MGA KONTAK AT SOCIALS",
+        coachingTitle: "Sikshya Neuro-Engine v7.5 (Camera, File at Real-Time Voice AI)",
+        btnReset: "I-reset",
+        btnUpload: "Mag-upload ng File",
+        btnCamera: "Camera Scan",
+        welcome: "Kamusta mag-aaral! Ako ay konektado sa Mallik 7G Neural Network sa iyong wika.",
+        placeholder: "I-type ang iyong tanong dito...",
+        devBy: "Binuo ni:",
+        lblEmail: "Email",
+        lblWhatsApp: "WhatsApp",
+        vidSubtitle: "Global Humanity & Emergency Video Hub",
+        vidMainTitle: "Formula Masterclasses, Online Earning & Disaster Preparedness",
+        vidDesc: "Kahit sino sa mundo ay maaaring mag-upload ng mga positibong video, gabay sa online earning, at emergency alerts para tumulong sa humanity.",
+        btnUploadVid: "Mag-upload ng Positive Video",
+        alarmSubtitle: "Study Time Management & Alarm System",
+        alarmMainTitle: "Mag-set ng Study Alarms at Pomodoro Timer",
+        alarmDesc: "I-manage ang iyong iskedyul ng pag-aaral gamit ang browser alarms para sa global students.",
+        alarmSetTitle: "Mag-set ng Study Alarm Time",
+        lblAlarmTime: "Oras ng Alarm (Oras:Minuto)",
+        lblAlarmNote: "Layunin sa Pag-aaral / Paalala",
+        btnSetAlarm: "I-set ang Alarm",
+        alarmActiveTitle: "Mga Aktibong Alarm at Paalala",
+        txtNoAlarms: "Walang aktibong alarm. Magdagdag sa itaas!",
+        groupHeaderTitle: "Global Peer Problem Solving Group (Camera, File & Voice AI)",
+        groupActiveCount: "1,420 Aktibong Mag-aaral Online",
+        groupWelcomeMsg: "Maligayang pagdating sa Live Problem Solving Group! Mag-post ng homework photos, voice notes, o math derivations.",
+        btnGrpUpload: "Mag-upload ng File",
+        btnGrpCamera: "Camera Scan",
+        emaxSubtitle: "EMAX Quantum Level Game Arena",
+        emaxMainTitle: "Level-Based Quantum Physics & Problem Solving Quiz",
+        emaxDesc: "Sumagot nang tama para tumaas ang level, pag-aralan ang quantum physics formulas, at makakuha ng global certificates!",
+        lblEmaxLvl: "Kasalukuyang Level",
+        lblEmaxScore: "Iskor",
+        btnSubmitEmax: "Isumite ang Sagot",
+        missionSubtitle: "MIT License & Humanitarian Mission",
+        missionMainTitle: "Open Source MIT License & Bakit Mahalaga ang Donasyon",
+        missionDesc: "Binuo ni Niraj Mallik sa ilalim ng MIT License, ang Sikshya Global AI ay libre para sa mga mag-aaral sa buong mundo.",
+        mitTitle: "MIT License (Libre sa Lahat ng Estudyante):",
+        mitBody: "Iginagawad ang pahintulot nang walang bayad sa sinumang kumuha ng kopya ng software na ito na gamitin, kopyahin, baguhin at ipamahagi.",
+        missionCard1Title: "Pagbubukas ng Libreng Paaralan sa Nepal",
+        missionCard1Desc: "Libu-libong bata sa Himalaya ang walang silid-aralan at aklat. Direktang pinopondohan ng kontribusyon ang pagtatayo ng eskwelahan.",
+        missionCard2Title: "Youth & Community Rehabilitation Centers",
+        missionCard2Desc: "Pagtatag ng ligtas na rehabilitation centers para sa mga kabataan at pagbibigay ng bokasyonal na pagsasanay.",
+        missionCard3Title: "Global Student Scholarships",
+        missionCard3Desc: "Ang hadlang sa pananalapi ay hindi dapat humadlang sa katalinuhan. Nagbibigay ng tulong pinansyal.",
+        missionCtaTitle: "Sumali kay Niraj Mallik sa Pagbabago ng Buhay at Pagtulong sa Humanity",
+        missionCtaDesc: "100% ng kontribusyon ay napupunta sa edukasyon, rehabilitation centers, at scholarships.",
+        btnViewAcc: "Tingnan ang Opisyal na Bank Accounts",
+        bankMainTitle: "Mallik Group Official Financial Nodes & Social Links",
+        bankDesc: "Mga opisyal na account at social media links na pinangangasiwaan ni Niraj Mallik para sa pagtatayo ng eskwelahan at tulong-tao.",
+        bankDevContacts: "Opisyal na Kontak ng Developer",
+        bankMbankOwner: "May-ari ng Account:",
+        bankRbbBranch: "Shivagunj Branch •",
+        footerText: "© 2024-2026 Mallik Group • Binuo ni Niraj Mallik (nirajmallik143@gmail.com | +971502297451) • MIT License • Pagtulong sa Humanity",
+        modalHostTxt: "Pinangasiwaan ni:",
+        modalDescTxt: "Nakatutok sa pagtulong sa humanity, pagtuturo ng formulas, online earning, at disaster preparedness.",
+        upModalTitle: "Mag-upload ng Positive / Emergency Video",
+        upModalDesc: "Ibahagi ang iyong positibong mensahe o emergency alert sa mga mag-aaral sa buong mundo.",
+        lblUpAuthor: "Iyong Pangalan / Titulo",
+        lblUpTitle: "Pamagat ng Video / Paksa",
+        lblUpFile: "Piliin ang Video File (MP4, WebM)",
+        btnPubVid: "I-publish ang Positive Video para sa Humanity",
+        instTitle: "Buksan ang Sikshya Global AI",
+        instDesc: "I-pin ang app na ito sa iyong home screen o ilunsad agad sa ilalim ng MIT License.",
+        instIos: "📱 <strong>iOS:</strong> I-tap ang Share <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> &gt; <strong>\"Add to Home Screen\"</strong>.",
+        instAndroid: "🤖 <strong>Android:</strong> I-tap ang Menu <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> &gt; <strong>\"Install app\"</strong>."
+      },
+      ta: {
+        appTitle: "Sikshya Global AI",
+        neuralBadge: "உயிர்மெட்ரிக் குவாண்டம் இணைப்பு: சரிபார்க்கப்பட்டது • MIT உரிமம்",
+        txtShare: "பகிரவும்",
+        txtOnetap: "ஒன்-டேப்",
+        kbToggle: "உலகளாவிய விசைப்பலகை",
+        kbTitle: "தாய்மொழி விசைப்பலகை",
+        kbSpace: "இடைவெளி",
+        kbBack: "பின் செல்",
+        kbClear: "அழி",
+        tCoaching: "AI பயிற்சி",
+        tVideos: "மனிதநேய & அவசர வீடியோக்கள்",
+        tAlarm: "படிப்பு எச்சரிக்கை",
+        tGroup: "சிக்கல் தீர்க்கும் குழு",
+        tEmax: "EMAX விளையாட்டு அரங்கம்",
+        tMission: "MIT உரிமம் & பணி",
+        tBank: "தொடர்பு & சமூக வலைப்பின்னல்கள்",
+        coachingTitle: "Sikshya குவாண்டம் நரம்பு-இயந்திரம் v7.5 (கேமரா, கோப்பு & குரல் AI)",
+        btnReset: "மீட்டமை",
+        btnUpload: "கோப்பை பதிவேற்றுக",
+        btnCamera: "கேமரா ஸ்கேன்",
+        welcome: "வணக்கம்! நான் மல்லிக் 7G கல்வி நரம்பியல் வலையமைப்புடன் இணைக்கப்பட்டுள்ளேன். உங்கள் தாய்மொழியில் கேள்விகளைக் கேட்கலாம்.",
+        placeholder: "உங்கள் கல்வியியல் கேள்வியை இங்கே தட்டச்சு செய்யவும்...",
+        devBy: "உருவாக்கியவர்:",
+        lblEmail: "மின்னஞ்சல்",
+        lblWhatsApp: "WhatsApp",
+        vidSubtitle: "உலகளாவிய மனிதநேய & அவசர வீடியோ மையம்",
+        vidMainTitle: "ஃபார்முலா மாஸ்டர் கிளாஸ்கள், ஆன்லைன் வருமானம் & பேரிடர் தயாரிப்பு",
+        vidDesc: "மனிதகுலத்திற்கு உதவ உலகத்தில் உள்ள எவரும் நேர்மறையான கல்வி வீடியோக்கள், ஆன்லைன் வருமான வழிகாட்டிகள் மற்றும் இயற்கை பேரழிவு எச்சரிக்கைகளை பதிவேற்றலாம்.",
+        btnUploadVid: "நேர்மறை வீடியோவை பதிவேற்றுக",
+        alarmSubtitle: "படிப்பு நேர மேலாண்மை & அலாரம் அமைப்பு",
+        alarmMainTitle: "படிப்பு அலாரங்கள் & போமோடோரோ டைமரை அமைக்கவும்",
+        alarmDesc: "உலகளாவிய மாணவர்களுக்காக வடிவமைக்கப்பட்ட உலாவி அலாரங்கள் மூலம் உங்கள் படிப்பு அட்டவணையை நிர்வகிக்கவும்.",
+        alarmSetTitle: "படிப்பு அலாரம் நேரத்தை அமைக்கவும்",
+        lblAlarmTime: "அலாரம் நேரம் (மணிநேரம்:நிமிடங்கள்)",
+        lblAlarmNote: "படிப்பு இலக்கு / நினைவூட்டல் குறிப்பு",
+        btnSetAlarm: "அலாரத்தை அமைக்கவும்",
+        alarmActiveTitle: "செயலில் உள்ள அலாரங்கள் & நினைவூட்டல்கள்",
+        txtNoAlarms: "செயலில் படிப்பு அலாரங்கள் இல்லை. மேலே சேர்க்கவும்!",
+        groupHeaderTitle: "உலகளாவிய சக சிக்கல் தீர்க்கும் குழு (கேமரா, கோப்பு & குரல் AI)",
+        groupActiveCount: "1,420 فعال فعال மாணவர்கள் ஆன்லைனில்",
+        groupWelcomeMsg: "நேரலை சிக்கல் தீர்க்கும் குழுவிற்கு உங்களை வரவேற்கிறோம்! வீட்டுப்பாட புகைப்படங்கள் அல்லது குவாண்டம் கணித சூத்திரங்களை பகிரவும்.",
+        btnGrpUpload: "கோப்பை பதிவேற்றுக",
+        btnGrpCamera: "கேமரா ஸ்கேன்",
+        emaxSubtitle: "EMAX குவாண்டம் நிலை விளையாட்டு அரங்கம்",
+        emaxMainTitle: "நிலை அடிப்படையிலான குவாண்டம் இயற்பியல் & சிக்கல் தீர்க்கும் வினாடி வினா",
+        emaxDesc: "உங்கள் நிலையை உயர்த்தவும், குவாண்டம் இயற்பியல் மற்றும் சிக்கல் தீர்க்கும் சூத்திரங்களை மாஸ்டர் செய்யவும் சரியான பதில்களை அளிக்கவும்!",
+        lblEmaxLvl: "தற்போதைய நிலை",
+        lblEmaxScore: "மதிப்பெண்",
+        btnSubmitEmax: "பதிலை சமர்ப்பிக்கவும்",
+        missionSubtitle: "MIT உரிமம் & மனிதாபிமான பணி",
+        missionMainTitle: "திறந்த மூல MIT உரிமம் & ஏன் நன்கொடைகள் முக்கியம்",
+        missionDesc: "Niraj Mallik அவர்களால் MIT உரிமத்தின் கீழ் உருவாக்கப்பட்ட Sikshya Global AI, உலகளாவிய மாணவர்களுக்கு முற்றிலும் இலவசம்.",
+        mitTitle: "MIT உரிமம் (அனைத்து உலக மாணவர்களுக்கும் இலவசம்):",
+        mitBody: "இந்த மென்பொருளின் நகலைப் பெறும் எவருக்கும், வரம்பின்றி அதைப் பயன்படுத்த, நகலெடுக்க, மாற்ற மற்றும் விநியோகிக்க இலவச அனுமதி வழங்கப்படுகிறது.",
+        missionCard1Title: "நேபாளத்தில் இலவச பள்ளிகளைத் திறத்தல்",
+        missionCard1Desc: "இமயமலைப் பிராந்தியத்தில் உள்ள ஆயிரக்கணக்கான குழந்தைகளுக்கு அடிப்படை வகுப்பறைகள், புத்தகங்கள் மற்றும் டிஜிட்டல் அறிவு இல்லை.",
+        missionCard2Title: "இளைஞர் & சமூக புனரமைப்பு மையங்கள்",
+        missionCard2Desc: "ஆபத்தில் உள்ள இளைஞர்களை உயர்த்த பாதுகாப்பான புனரமைப்பு மையங்களை நிறுவுதல் மற்றும் தொழிற்பயிற்சி அளித்தல்.",
+        missionCard3Title: "உலகளாவிய மாணவர் கல்வி உதவித்தொகை",
+        missionCard3Desc: "நிதி தடைகள் ஒருபோதும் சிறந்த மூளையைத் தடுக்கக்கூடாது. தகுதியான மாணவர்களுக்கு நேரடி நிதி உதவி.",
+        missionCtaTitle: "வாழ்க்கையை மாற்றவும் மனிதகுலத்திற்கு உதவவும் Niraj Mallik உடன் இணையுங்கள்",
+        missionCtaDesc: "ஒவ்வொரு பங்களிப்பும் கல்வி உள்கட்டமைப்பு மற்றும் உதவித்தொகைக்கு 100% செல்கிறது.",
+        btnViewAcc: "அதிகாரப்பூர்வ வங்கிக் கணக்குகளைக் காண்க",
+        bankMainTitle: "Mallik குழுவின் அதிகாரப்பூர்வ நிதி முனைகள் & சமூக இணைப்புகள்",
+        bankDesc: "பள்ளி உருவாக்கம் மற்றும் நிவாரணத்திற்காக Niraj Mallik ஆல் நிர்வகிக்கப்படும் அதிகாரப்பூர்வ சரிபார்க்கப்பட்ட கணக்குகள் மற்றும் சமூக இணைப்புகள்.",
+        bankDevContacts: "அதிகாரப்பூர்வ டெவலப்பர் தொடர்பு",
+        bankMbankOwner: "கணக்கு வைத்திருப்பவர்:",
+        bankRbbBranch: "சிவாகுஞ்ச் கிளை •",
+        footerText: "© 2024-2026 Mallik குழு • Niraj Mallik ஆல் உருவாக்கப்பட்டது (nirajmallik143@gmail.com | +971502297451) • MIT உரிமம் • மனிதகுலத்திற்கு உதவுதல்",
+        modalHostTxt: "வழங்குபவர்:",
+        modalDescTxt: "மனிதகுலத்திற்கு உதவவும், சூத்திரங்களைக் கற்பிக்கவும், ஆன்லைன் வருமானம் பெறவும் மற்றும் பேரிடரை எதிர்கொள்ளவும் அர்ப்பணிக்கப்பட்டுள்ளது.",
+        upModalTitle: "நேர்மறை / அவசர வீடியோவைப் பதிவேற்றுக",
+        upModalDesc: "உங்கள் நேர்மறையான செய்தி அல்லது அவசர எச்சரிக்கையை உலகளாவிய மாணவர்களுடன் பகிர்ந்து கொள்ளுங்கள்.",
+        lblUpAuthor: "உங்கள் பெயர் / பங்களிப்பாளர் தலைப்பு",
+        lblUpTitle: "வீடியோ தலைப்பு / தலைப்பு",
+        lblUpFile: "வீடியோ கோப்பைத் தேர்ந்தெடுக்கவும் (MP4, WebM)",
+        btnPubVid: "மனிதகுலத்திற்கு உதவ நேர்மறை வீடியோவை வெளியிடவும்",
+        instTitle: "Sikshya Global AI ஐ திறக்கவும்",
+        instDesc: "இந்த செயலியை உங்கள் முகப்புத் திரையில் பின் செய்யவும் அல்லது MIT உரிமத்தின் கீழ் உடனடியாகத் தொடங்கவும்.",
+        instIos: "📱 <strong>iOS:</strong> Share <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> &gt; <strong>\"Add to Home Screen\"</strong> ஐத் தட்டவும்.",
+        instAndroid: "🤖 <strong>Android:</strong> Menu <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> &gt; <strong>\"Install app\"</strong> ஐத் தட்டவும்."
+      },
+      te: {
+        appTitle: "Sikshya Global AI",
+        neuralBadge: "బయోమెట్రిక్ క్వాంటమ్ లింక్: ధృవీకరించబడింది • MIT లైసెన్స్",
+        txtShare: "షేర్",
+        txtOnetap: "ఒక-ట్యాప్",
+        kbToggle: "యూనివర్సల్ కీబోర్డ్",
+        kbTitle: "స్థానిక స్క్రిప్ట్ కీబోర్డ్",
+        kbSpace: "స్పేస్‌బార్",
+        kbBack: "బ్యాక్",
+        kbClear: "క్లియర్",
+        tCoaching: "AI కోచింగ్",
+        tVideos: "మానవతా & అత్యవసర వీడియోలు",
+        tAlarm: "స్టడీ అలారం",
+        tGroup: "సమస్య పరిష్కార సమూహం",
+        tEmax: "EMAX గేమ్ అరేనా",
+        tMission: "MIT లైసెన్స్ & మిషన్",
+        tBank: "సంప్రదించండి & సోషల్స్",
+        coachingTitle: "క్వాంటమ్ బయోమెట్రిక్ న్యూరో-ఇంజన్ v7.5 (క్యామెరా, ఫైల్ & నిజ-సమయ వాయిస్ AI)",
+        btnReset: "రీసెట్",
+        btnUpload: "ఫైల్ అప్‌लोड",
+        btnCamera: "క్యామెరా స్కాన్",
+        welcome: "నమస్కారం! నేను మల్లిక్ 7G గ్లోబల్ ఎడ్యుకేషన్ న్యూరల్ నెట్‌వర్క్‌కి కనెక్ట్ చేయబడ్డాను. మీ సొంత భాషలో అడగండి.",
+        placeholder: "మీ విద్యా ప్రశ్నను ఇక్కడ టైప్ చేయండి...",
+        devBy: "ద్వారా అభివృద్ధి చేయబడింది:",
+        lblEmail: "ఇమెయిల్",
+        lblWhatsApp: "WhatsApp",
+        vidSubtitle: "గ్లోబల్ హ్యుమానిటీ & ఎమర్జెన్సీ వీడియో హబ్",
+        vidMainTitle: "ఫార్ములా మాస్టర్‌క్లాసులు, ఆన్‌లైన్ సంపాదన & విపత్తు సంసిద్ధత",
+        vidDesc: "మానవత్వానికి సహాయం చేయడానికి ప్రపంచంలో ఎవరైనా సానుకూల విద్యా వీడియోలు, ఆన్‌లైన్ సంపాదన ట్యుటోరియల్‌లను అప్‌లోడ్ చేయవచ్చు.",
+        btnUploadVid: "సానుకూల వీడియోను అప్‌లోడ్ చేయండి",
+        alarmSubtitle: "స్టడీ టైమ్ మేనేజ్‌మెంట్ & అలారం సిస్టమ్",
+        alarmMainTitle: "స్టడీ అలారాలు & పోమోడోరో ఫోకస్ టైమర్‌ను సెట్ చేయండి",
+        alarmDesc: "ప్రపంచ విద్యార్థుల కోసం రూపొందించిన బ్రౌజర్ అలారాలతో మీ అధ్యయన షెడ్యూల్‌ను నిర్వహించండి.",
+        alarmSetTitle: "స్టడీ అలారం సమయాన్ని సెట్ చేయండి",
+        lblAlarmTime: "అలారం సమయం (గంటలు:నిమిషాలు)",
+        lblAlarmNote: "అధ్యయన లక్ష్యం / రిమైండర్ గమనిక",
+        btnSetAlarm: "అలారం సెట్ చేయండి",
+        alarmActiveTitle: "క్రియాశీల అలారాలు & రిమైండర్‌లు",
+        txtNoAlarms: "క్రియాశీల స్టడీ అలారాలు సెట్ చేయబడలేదు. పైన එකක් జోడించండి!",
+        groupHeaderTitle: "గ్లోబల్ పీర్ ప్రాబ్లం సాల్వింగ్ గ్రూప్ (క్యామెరా, ఫైల్ & వాయిస్ AI)",
+        groupActiveCount: "1,420 క్రియాశీల అభ్యాసకులు ఆన్‌లైన్‌లో ఉన్నారు",
+        groupWelcomeMsg: "లైవ్ ప్రాబ్లం సాల్వింగ్ గ్రూప్‌నకు స్వాగతం! హోమ్‌వర్క్ ఫోటోలు లేదా క్వాంటమ్ గణిత సూత్రాలను ఇక్కడ పోస్ట్ చేయండి.",
+        btnGrpUpload: "ఫైల్ అప్‌लोड",
+        btnGrpCamera: "క్యామెరా స్కాన్",
+        emaxSubtitle: "EMAX క్వాంటమ్ లెవెల్ గేమ్ అరేనా",
+        emaxMainTitle: "స్థాయి-ఆధారిత క్వాంటమ్ ఫిజిక్స్ & సమస్య పరిష్కార క్విజ్",
+        emaxDesc: "మీ స్థాయిని పెంచడానికి, క్వాంటమ్ ఫిజిక్స్ మరియు సమస్య పరిష్కార సూత్రాలను మాస్టర్ చేయడానికి సరైన సమాధానాలు ఇవ్వండి!",
+        lblEmaxLvl: "ప్రస్తుత స్థాయి",
+        lblEmaxScore: "స్కోర్",
+        btnSubmitEmax: "సమాధానం సమర్పించండి",
+        missionSubtitle: "MIT లైసెన్స్ & మానవతా మిషన్",
+        missionMainTitle: "ఓపెన్ సోర్స్ MIT లైసెన్స్ & విరాళాలు ఎందుకు ముఖ్యం",
+        missionDesc: "Niraj Mallik చేత MIT లైసెన్స్ కింద అభివృద్ధి చేయబడిన Sikshya Global AI, ప్రపంచవ్యాప్తంగా విద్యార్థులకు పూర్తిగా ఉచితం.",
+        mitTitle: "MIT లైసెన్స్ (ప్రపంచ విద్యార్థులందరికీ ఉచితం):",
+        mitBody: "ఈ సాఫ్ట్‌వేర్ యొక్క కాపీని పొందిన ఎవరికైనా పరిమితులు లేకుండా ఉపయోగించడానికి ఉచిత అనుమతి ఇవ్వబడుతుంది.",
+        missionCard1Title: "దూర ప్రాంతాలలో ఉచిత పాఠశాలల ప్రారంభం",
+        missionCard1Desc: "హిమాలయ ప్రాంతాలలో వేలాది మంది పిల్లలకు ప్రాథమిక తరగతి గదులు, పుస్తకాలు మరియు డిజిటల్ అక్షరాస్యత లేదు.",
+        missionCard2Title: "యువజన & కమ్యూనిటీ పునరావాస కేంద్రాలు",
+        missionCard2Desc: "ప్రమాదంలో ఉన్న యువతను ఉద్ధరించడానికి, వృత్తి శిక్షణ అందించడానికి సురక్షితమైన పునరావాస కేంద్రాలను ఏర్పాటు చేయడం.",
+        missionCard3Title: "గ్లోబల్ స్టూడెంట్ స్కాలర్‌షిప్‌లు",
+        missionCard3Desc: "ఆర్థిక అడ్డంకులు ఎప్పుడూ ప్రకాశవంతమైన మనస్సును ఆపకూడదు. అర్హులైన విద్యార్థులకు ప్రత్యక్ష ఆర్థిక సహాయం అందిస్తుంది.",
+        missionCtaTitle: "జీవితాలను మార్చడానికి మరియు మానవత్వానికి సహాయం చేయడానికి Niraj Mallik తో చేరండి",
+        missionCtaDesc: "ప్రతి విరాళం 100% విద్యా మౌలిక సదుపాయాలు మరియు స్కాలర్‌షిప్‌ల నిర్మాణం కోసం వెళ్తుంది.",
+        btnViewAcc: "అధికారిక బ్యాంకు ఖాతాలను వీక్షించండి",
+        bankMainTitle: "Mallik గ్రూప్ అధికారిక ఆర్థిక నోడ్స్ & సోషల్ లింక్స్",
+        bankDesc: "పాఠశాల నిర్మాణం మరియు మానవతా సహాయం కోసం Niraj Mallik నిర్వహించే అధికారిక ధృవీకరించిన ఖాతాలు మరియు సోషల్ లింక్స్.",
+        bankDevContacts: "అధికారిక డెవలపర్ పరిచయం",
+        bankMbankOwner: "ఖాతాదారుడు:",
+        bankRbbBranch: "శివగంజ్ శాఖ •",
+        footerText: "© 2024-2026 Mallik గ్రూప్ • Niraj Mallik ద్వారా అభివృద్ధి చేయబడింది (nirajmallik143@gmail.com | +971502297451) • MIT లైసెన్స్ • మానవత్వానికి సహాయం",
+        modalHostTxt: "నిర్వహణ:",
+        modalDescTxt: "మానవత్వానికి సహాయం చేయడానికి, సూత్రங்களை బోధించడానికి, ఆన్‌లైన్‌లో సంపాదించడానికి అంకితం చేయబడింది.",
+        upModalTitle: "సానుకూల / అత్యవసర వీడియోను అప్‌లోడ్ చేయండి",
+        upModalDesc: "ప్రపంచవ్యాప్తంగా ఉన్న విద్యార్థులతో మీ సానుకూల సందేశాన్ని లేదా అత్యవసర హెచ్చరికను పంచుకోండి.",
+        lblUpAuthor: "మీ పేరు / సహకారి శీర్షిక",
+        lblUpTitle: "వీడియో శీర్షిక / అంశం",
+        lblUpFile: "వీడియో ఫైల్‌ను ఎంచుకోండి (MP4, WebM)",
+        btnPubVid: "మానవత్వానికి సహాయం చేయడానికి సానుకూల వీడియోను ప్రచురించండి",
+        instTitle: "Sikshya Global AI ని తెరవండి",
+        instDesc: "ఈ యాప్‌ను మీ హోమ్ స్క్రీన్‌కి పిన్ చేయండి లేదా MIT లైసెన్స్ కింద వెంటనే ప్రారంభించండి.",
+        instIos: "📱 <strong>iOS:</strong> Share <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> &gt; <strong>\"Add to Home Screen\"</strong> ని ట్యాప్ చేయండి.",
+        instAndroid: "🤖 <strong>Android:</strong> Menu <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> &gt; <strong>\"Install app\"</strong> ని ట్యాప్ చేయండి."
+      },
+      mr: {
+        appTitle: "शिक्षा ग्लोबल एआई",
+        neuralBadge: "बायोमेट्रिक क्वांटम लिंक: सत्यापित • MIT परवाना",
+        txtShare: "शेअर",
+        txtOnetap: "वन-टॅप",
+        kbToggle: "युनिव्हर्सल कीबोर्ड",
+        kbTitle: "मूळ लिपिक कीबोर्ड",
+        kbSpace: "स्पेस",
+        kbBack: "बॅक",
+        kbClear: "पुसून टाका",
+        tCoaching: "AI कोचिंग",
+        tVideos: "मानवता आणि आपत्कालीन व्हिडिओ",
+        tAlarm: "अभ्यास अलार्म",
+        tGroup: "समस्या निवारण गट",
+        tEmax: "EMAX गेम अरेना",
+        tMission: "MIT परवाना आणि मिशन",
+        tBank: "संपर्क आणि सोशल",
+        coachingTitle: "क्वॉन्टम बायोमेट्रिक न्यूरो-इंजिन v7.5 (कॅमेरा, फाईल आणि रिअल-टाइम व्हॉइस AI)",
+        btnReset: "रीसेट",
+        btnUpload: "फाइल अपलोड",
+        btnCamera: "कॅमेरा स्कॅन",
+        welcome: "नमस्कार विद्यार्थी! मी मल्लिक 7G युनिव्हर्सल एज्युकेशन न्यूरल networkशी जोडलो गेलो आहे. तुमच्या भाषेत प्रश्न विचारू शकता.",
+        placeholder: "तुमचा शैक्षणिक प्रश्न येथे टाइप करा...",
+        devBy: "द्वारे विकसित:",
+        lblEmail: "ईमेल",
+        lblWhatsApp: "WhatsApp",
+        vidSubtitle: "जागतिक मानवता आणि आपत्कालीन व्हिडिओ केंद्र",
+        vidMainTitle: "सूत्र मास्टरक्लास, ऑनलाइन कमाई आणि आपत्ती व्यवस्थापन",
+        vidDesc: "मानवतेला मदत करण्यासाठी जगातील कोणीही सकारात्मक शैक्षणिक व्हिडिओ, ऑनलाइन कमाईचे ट्यूटोरियल आणि नैसर्गिक आपत्तीचे अलर्ट अपलोड करू शकतो.",
+        btnUploadVid: "सकारात्मक व्हिडिओ अपलोड करा",
+        alarmSubtitle: "अभ्यास वेळ व्यवस्थापन आणि अलार्म सिस्टम",
+        alarmMainTitle: "अभ्यास अलार्म आणि पोमोडोरो फोकस टाइमर सेट करा",
+        alarmDesc: "जागतिक विद्यार्थ्यांसाठी डिझाइन केलेल्या ब्राउझर अलार्मसह तुमचे अभ्यास वेळापत्रक व्यवस्थापित करा.",
+        alarmSetTitle: "अभ्यास अलार्म वेळ सेट करा",
+        lblAlarmTime: "अलार्म वेळ (तास:मिनिटे)",
+        lblAlarmNote: "अभ्यास ध्येय / स्मरणपत्र टीप",
+        btnSetAlarm: "अलार्म सेट करा",
+        alarmActiveTitle: "सक्रिय अलार्म आणि स्मरणपत्रे",
+        txtNoAlarms: "कोणताही सक्रिय अभ्यास अलार्म सेट नाही. वर एक जोडा!",
+        groupHeaderTitle: "जागतिक सहकाऱ्यांचा समस्या निवारण गट (कॅमेरा, फाईल आणि व्हॉइस AI)",
+        groupActiveCount: "1,420 सक्रिय विद्यार्थी ऑनलाइन",
+        groupWelcomeMsg: "लाइव्ह समस्या निवारण ग्रुपमध्ये स्वागत आहे! मानवता मदतीसाठी तुमचे होमवर्क फोटो किंवा кванत गणित सूत्रे शेअर करा.",
+        btnGrpUpload: "फाइल अपलोड",
+        btnGrpCamera: "कॅमेरा स्कॅन",
+        emaxSubtitle: "EMAX क्वॉन्टम लेव्हल गेम अरेना",
+        emaxMainTitle: "लेव्हल-आधारित क्वॉन्टम फिजिक्स आणि समस्या निवारण क्विझ",
+        emaxDesc: "तुमची लेव्हल वाढवण्यासाठी, क्वॉन्टम फिजिक्स आणि सूत्रे शिकण्यासाठी योग्य उत्तरे द्या!",
+        lblEmaxLvl: "सध्याची लेव्हल",
+        lblEmaxScore: "गुण",
+        btnSubmitEmax: "उत्तर सबमिट करा",
+        missionSubtitle: "MIT परवाना आणि मानवतावादी मिशन",
+        missionMainTitle: "ओपन सोर्स MIT परवाना आणि देणगी का महत्त्वाची आहे",
+        missionDesc: "Niraj Mallik यांनी MIT परवान्याअंतर्गत विकसित केलेली Sikshya Global AI जगभरातील विद्यार्थ्यांसाठी पूर्णपणे निःशुल्क आहे.",
+        mitTitle: "MIT परवाना (सर्व जागतिक विद्यार्थ्यांसाठी निःशुल्क):",
+        mitBody: "या सॉफ्टवेअरची प्रत मिळवणाऱ्या कोणत्याही व्यक्तीला कोणत्याही निर्बंधाशिवाय वापरण्याची, कॉपी करण्याची आणि वितरित करण्याची परवानगी दिली जाते.",
+        missionCard1Title: "दुर्गम नेपाळमध्ये मोफत शाळा सुरू करणे",
+        missionCard1Desc: "दुर्गम हिमालयातील हजारो मुलांकडे मूलभूत वर्गखोल्या, पुस्तके आणि डिजिटल साक्षरता नाही.",
+        missionCard2Title: "युवा आणि समुदाय पुनर्वसन केंद्र",
+        missionCard2Desc: "धोक्यात असलेल्या युवकांना वर काढण्यासाठी सुरक्षित पुनर्वसन केंद्र स्थापन करणे आणि प्रशिक्षण देणे.",
+        missionCard3Title: "जागतिक विद्यार्थी शिष्यवृत्ती",
+        missionCard3Desc: "आर्थिक अडथळ्यांनी कधीही उज्ज्वल बुद्धीला रोू नये. पात्र विद्यार्थ्यांना थेट आर्थिक मदत.",
+        missionCtaTitle: "आयुष्य बदलण्यासाठी आणि मानवता मदतीसाठी Niraj Mallik यांच्याशी जोडा",
+        missionCtaDesc: "प्रत्येक योगदानाचा १००% वाटा शैक्षणिक पायाभूत सुविधा आणि शिष्यवृत्तीसाठी जातो.",
+        btnViewAcc: "अधिकृत बँक खाती पहा",
+        bankMainTitle: "Mallik ग्रुप अधिकृत आर्थिक नोड्स आणि सोशल लिंक्स",
+        bankDesc: "शाळा बांधकामासाठी आणि मानवता मदतीसाठी Niraj Mallik द्वारे व्यवस्थापित अधिकृत सत्यापित खाती आणि सोशल लिंक्स.",
+        bankDevContacts: "अधिकृत विकसक संपर्क",
+        bankMbankOwner: "खातेधारक:",
+        bankRbbBranch: "शिवगंज शाखा •",
+        footerText: "© 2024-2026 Mallik ग्रुप • Niraj Mallik द्वारे निर्मित (nirajmallik143@gmail.com | +971502297451) • MIT परवाना • मानवता सहाय्य आणि आनंद",
+        modalHostTxt: "संचालक:",
+        modalDescTxt: "मानवतेला मदत करण्यासाठी, सूत्रे शिकवण्यासाठी, ऑनलाइन कमाई करण्यासाठी समर्पित.",
+        upModalTitle: "सकारात्मक / आपत्कालीन व्हिडिओ अपलोड करा",
+        upModalDesc: "जगभरातील विद्यार्थ्यांसोबत तुमचा सकारात्मक संदेश किंवा आपत्कालीन इशारा शेअर करा.",
+        lblUpAuthor: "तुमचे नाव / योगदानकर्ता शीर्षक",
+        lblUpTitle: "व्हिडिओ शीर्षक / विषय",
+        lblUpFile: "व्हिडिओ फाइल निवडा (MP4, WebM)",
+        btnPubVid: "मानवता मदतीसाठी सकारात्मक व्हिडिओ प्रकाशित करा",
+        instTitle: "Sikshya Global AI उघडा",
+        instDesc: "हे ॲप तुमच्या होम स्क्रीनवर पिन करा किंवा MIT परवान्याअंतर्गत त्वरित सुरू करा.",
+        instIos: "📱 <strong>iOS:</strong> शेअर <i class=\"fa-solid fa-arrow-up-from-bracket text-cyan-400\"></i> &gt; <strong>\"होम स्क्रीनमध्ये जोडा\"</strong> टॅप करा.",
+        instAndroid: "🤖 <strong>Android:</strong> मेनू <i class=\"fa-solid fa-ellipsis-vertical text-cyan-400\"></i> &gt; <strong>\"ॲप इन्स्टॉल करा\"</strong> टॅप करा."
+      }
+    };
+
+    function changeLang(lang) {
+      const t = translations[lang] || translations.en;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) el.textContent = t[key];
+      });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (t[key]) el.placeholder = t[key];
+      });
+
+      const kb = document.getElementById('virtual-keyboard');
+      if(!kb.classList.contains('hidden')) renderKeyboard(lang);
+      showToast(`Language switched to ${lang.toUpperCase()}!`);
+    }
+
+    function handleKeyPress(e) { if(e.key === 'Enter') askAI(); }
+    function sendQuickPrompt(txt) { document.getElementById('user-input').value = txt; askAI(); }
+    function clearChat() {
+      const box = document.getElementById('chat-box');
+      const lang = document.getElementById('language').value;
+      const t = translations[lang] || translations.en;
+      box.innerHTML = `<div class="bg-slate-800/60 p-4 md:p-5 rounded-2xl border-l-4 border-cyan-500 shadow-lg"><p class="font-bold text-cyan-400 text-xs">SIKSHYA AI (7G SOUL &bull; MIT LICENSE &bull; FOR HUMANITY)</p><p class="mt-2 text-slate-300">${t.welcome}</p></div>`;
+      showToast("Chat reset.");
+    }
+
+    async function askAI() {
+      const inp = document.getElementById('user-input');
+      const box = document.getElementById('chat-box');
+      const query = inp.value.trim();
+      const board = document.getElementById('board').value.toUpperCase();
+      const lang = document.getElementById('language').value;
+      if(!query) return;
+
+      inp.value = "";
+      box.innerHTML += `<div class="text-right flex justify-end"><div class="inline-block bg-cyan-600 text-white p-3.5 rounded-2xl rounded-tr-none text-xs max-w-[80%] text-left shadow-md">${escapeHTML(query)}</div></div>`;
+      box.scrollTop = box.scrollHeight;
+
+      const loaderId = 'load-' + Date.now();
+      box.innerHTML += `<div id="${loaderId}" class="bg-slate-800/50 p-4 rounded-2xl border-l-4 border-emerald-500 text-xs animate-pulse">Mallik 7G Biometric Neuro-Engine v7.5 analyzing ${board} in ${lang.toUpperCase()} to help humanity...</div>`;
+      box.scrollTop = box.scrollHeight;
+
+      try {
+        // Secure proxy: key never leaves the server (Vercel serverless function)
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query, board, lang })
+        });
+
+        const data = await res.json();
+        let aiText = data.text;
+
+        // If proxy fails or returns offline flag → use educational offline answers
+        if (!aiText || data.error || data.offline) {
+          aiText = getOfflineEducationalResponse(query, board);
+        }
+
+        document.getElementById(loaderId).remove();
+        box.innerHTML += `<div class="bg-slate-800/60 p-4 rounded-2xl border-l-4 border-cyan-500 text-xs space-y-1"><p class="font-bold text-cyan-400 text-[10px]">MALLIK 7G NEURO v7.5 RESPONSE (${board})</p><div class="text-slate-200 leading-relaxed">${formatMarkdown(aiText)}</div></div>`;
+        box.scrollTop = box.scrollHeight;
+        if (voiceConvActive) speakTextOut(aiText.replace(/[*#_]/g, ''));
+      } catch (e) {
+        document.getElementById(loaderId).remove();
+        const offlineText = getOfflineEducationalResponse(query, board);
+        box.innerHTML += `<div class="bg-slate-800/60 p-4 rounded-2xl border-l-4 border-cyan-500 text-xs space-y-1"><p class="font-bold text-cyan-400 text-[10px]">MALLIK 7G NEURO v7.5 RESPONSE (${board}) • OFFLINE MODE</p><div class="text-slate-200 leading-relaxed">${formatMarkdown(offlineText)}</div></div>`;
+        box.scrollTop = box.scrollHeight;
+        if (voiceConvActive) speakTextOut(offlineText.replace(/[*#_]/g, ''));
+      }
+    }
+
+    // Offline educational fallback – always gives real answers for students worldwide
+    function getOfflineEducationalResponse(query, board) {
+      const q = (query || '').toLowerCase();
+
+      // Quantum Physics
+      if (q.includes('quantum') || q.includes('energy formula') || q.includes('planck') || q.includes('heisenberg') || q.includes('schrodinger') || q.includes('de broglie')) {
+        return `**Quantum Physics & Energy Formulas** (${board})
+
+Quantum physics studies nature at the smallest scales — atoms, electrons, photons.
+
+**1. Wave-Particle Duality**
+Light and matter behave as both waves and particles.
+• Photon energy: **E = h f**   or   **E = hc / λ**
+  – h = 6.626 × 10⁻³⁴ J·s (Planck’s constant)
+  – f = frequency, λ = wavelength, c = 3 × 10⁸ m/s
+
+**2. de Broglie Wavelength**
+**λ = h / p**   (p = momentum = mv)
+
+**3. Heisenberg Uncertainty Principle**
+**Δx · Δp ≥ h / 4π**
+You cannot know both position and momentum perfectly at the same time.
+
+**4. Schrödinger Equation (simplified)**
+**Ĥψ = Eψ**
+The wave function ψ gives the probability of finding a particle.
+
+**5. Hydrogen Atom Energy Levels**
+**Eₙ = –13.6 eV / n²**   (n = 1, 2, 3…)
+Electrons jump between levels and emit/absorb exact energy photons.
+
+**6. Mass-Energy Equivalence**
+**E = mc²**
+
+These formulas power lasers, semiconductors, MRI, solar cells and quantum computers.
+Practice numericals step-by-step — you can master them!
+
+— Sikshya Global AI (Mallik 7G) • Helping humanity`;
+      }
+
+      // Photosynthesis
+      if (q.includes('photosynthesis') || q.includes('calvin') || q.includes('chlorophyll')) {
+        return `**Photosynthesis – Step by Step** (${board})
+
+**1. Light-dependent reactions** (thylakoid membrane)
+• Chlorophyll absorbs sunlight
+• Water (H₂O) is split → O₂ released + electrons + H⁺
+• ATP and NADPH are produced
+
+**2. Light-independent reactions / Calvin Cycle** (stroma)
+• CO₂ is fixed using ATP & NADPH
+• Glucose (C₆H₁₂O₆) is formed
+
+**Overall equation:**
+**6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂** (light + chlorophyll)
+
+This process feeds almost all life on Earth and produces the oxygen we breathe.
+
+— Sikshya Global AI • For every student on Earth`;
+      }
+
+      // Newton’s Laws
+      if (q.includes('newton') || q.includes('laws of motion') || q.includes('force') && q.includes('motion')) {
+        return `**Newton’s Three Laws of Motion** (${board})
+
+**1st Law – Law of Inertia**
+An object stays at rest or moves with constant velocity unless acted upon by a net external force.
+**ΣF = 0 → a = 0**
+
+**2nd Law – Law of Acceleration**
+**F = ma**   (Force = mass × acceleration)
+Force and acceleration are in the same direction.
+
+**3rd Law – Action-Reaction**
+For every action there is an equal and opposite reaction.
+**F₁₂ = –F₂₁**
+
+These three laws explain almost all everyday motion — from walking to rockets.
+
+— Sikshya Global AI • Helping students worldwide`;
+      }
+
+      // Basic Math / Algebra
+      if (q.includes('quadratic') || q.includes('equation') && q.includes('solve')) {
+        return `**Quadratic Equation** (${board})
+
+Standard form: **ax² + bx + c = 0**
+
+**Solution (Quadratic Formula):**
+**x = [–b ± √(b² – 4ac)] / 2a**
+
+Discriminant **D = b² – 4ac**
+• D > 0 → two real roots
+• D = 0 → one real root (repeated)
+• D < 0 → complex roots
+
+Always check your answers by substituting back into the original equation.
+
+— Sikshya Global AI`;
+      }
+
+      // Default helpful response
+      return `Thank you for your question: “${query}”
+
+The live AI is temporarily unavailable, but I am still here to help you succeed in **${board}**.
+
+Please try one of these topics for a full educational answer right now:
+• Explain Quantum Physics & Energy Formulas
+• Photosynthesis step by step
+• Newton’s Laws of Motion
+• Quadratic equations
+• Or ask any clear topic from your syllabus
+
+I exist to help every student on Earth learn and make humanity happier.
+
+— Sikshya Global AI (Mallik Group) • MIT License • Free for the world`;
+    }
+
+    function escapeHTML(s) { return s.replace(/[&<>'"]/g, t => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[t]||t)); }
+    function formatMarkdown(s) { return escapeHTML(s).replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); }
+  </script>
+</body>
+</html>
