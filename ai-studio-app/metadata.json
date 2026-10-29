@@ -1,0 +1,6 @@
+{
+  "name": "Sikshya Global AI",
+  "description": "Free Universal Education AI powered by Google Gemini under MIT License by Niraj Mallik (Mallik Group 7G Quantum Architecture). Multilingual coaching, camera homework scanner, real-time voice, quantum biometric verification, video hub, and study alarm.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
