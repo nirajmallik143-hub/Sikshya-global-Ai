@@ -1,0 +1,31 @@
+{
+  "id": "/",
+  "name": "Sikshya Global AI",
+  "short_name": "Sikshya 7G",
+  "description": "Free Universal Education AI powered by Google Gemini under MIT License by Niraj Mallik (Mallik Group 7G Quantum Architecture).",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0A0F1C",
+  "theme_color": "#00D4FF",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=192&auto=format&fit=crop",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=512&auto=format&fit=crop",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=512&auto=format&fit=crop",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    }
+  ]
+}
