@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --brand-cyan: #00D4FF;
+  --brand-purple: #7B2FFF;
+  --bg-deep: #0A0F1C;
+}
+
+body {
+  background: linear-gradient(180deg, #0A0F1C 0%, #05070F 50%, #02040A 100%);
+  color: #e2e8f0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.glass-card {
+  background: rgba(13, 21, 39, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.nav-tab-active {
+  background: linear-gradient(135deg, #00D4FF, #0284c7) !important;
+  color: white !important;
+  box-shadow: 0 4px 18px rgba(0, 212, 255, 0.4);
+}
+
+.virtual-key {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 2px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  font-size: 13px;
+  user-select: none;
+}
+
+.virtual-key:hover {
+  background: #273549;
+  border-color: rgba(0, 212, 255, 0.4);
+}
+
+.virtual-key:active {
+  background: #00D4FF;
+  color: #0A0F1C;
+  transform: scale(0.95);
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090e1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
