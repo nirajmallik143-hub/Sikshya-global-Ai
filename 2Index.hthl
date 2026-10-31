@@ -1,0 +1,55 @@
+<script>
+/**
+ * Sikshya Global AI - Anti-Gravity Floating Physics Engine
+ * Developed by Niraj Mallik (Mallik Group) under MIT License
+ */
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Anti-Gravity Quantum Floating Physics Initialized.");
+    
+    // Inject Anti-Gravity Keyframe Animations dynamically if not present
+    if (!document.getElementById("anti-gravity-styles")) {
+        const agStyle = document.createElement("style");
+        agStyle.id = "anti-gravity-styles";
+        agStyle.innerHTML = `
+            @keyframes antiGravityFloat {
+                0% { transform: translateY(0px) rotate(0deg); }
+                50% { transform: translateY(-8px) rotate(0.5deg); }
+                100% { transform: translateY(0px) rotate(0deg); }
+            }
+            @keyframes antiGravityGlowPulse {
+                0%, 100% { box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15); border-color: rgba(0, 212, 255, 0.3); }
+                50% { box-shadow: 0 15px 40px rgba(0, 212, 255, 0.35); border-color: rgba(0, 212, 255, 0.7); }
+            }
+            .anti-gravity-card {
+                animation: antiGravityFloat 6s ease-in-out infinite, antiGravityGlowPulse 4s ease-in-out infinite;
+                transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+            .anti-gravity-card:hover {
+                transform: translateY(-6px) scale(1.01);
+            }
+        `;
+        document.head.appendChild(agStyle);
+    }
+
+    // Apply anti-gravity class to primary glass cards
+    const cards = document.querySelectorAll('.glass-card');
+    cards.forEach((card, index) => {
+        card.classList.add('anti-gravity-card');
+        // Stagger animation timing so elements float smoothly out of sync
+        card.style.animationDelay = `${index * 0.4}s`;
+    });
+});
+
+// Interactive Anti-Gravity Levitation Toggle
+function toggleAntiGravityMode() {
+    const body = document.body;
+    body.classList.toggle('anti-gravity-active');
+    const isActive = body.classList.contains('anti-gravity-active');
+    
+    if (isActive) {
+        alert("🚀 Anti-Gravity Levitation Mode Activated! Spacetime curvature reduced for enhanced learning.");
+    } else {
+        alert("⚓ Standard Earth Gravity Restored.");
+    }
+}
+</script>
